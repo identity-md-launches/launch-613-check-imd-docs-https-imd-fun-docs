@@ -1,0 +1,74 @@
+{
+  "id": "explorer-capabilities",
+  "started_at": 1790965962.705311,
+  "request": {
+    "method": "GET",
+    "url": "https://explorer.imd.fun/api/requests/capabilities",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "content-security-policy",
+        "frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:42 GMT"
+      ],
+      [
+        "referrer-policy",
+        "strict-origin-when-cross-origin"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "vary",
+        "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+      ],
+      [
+        "x-content-type-options",
+        "nosniff"
+      ],
+      [
+        "x-railway-request-id",
+        "SbGEHXbjRLS6s2BlozsQ6Q"
+      ],
+      [
+        "Transfer-Encoding",
+        "chunked"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb25zIjpbeyJhY3Rpb24iOiJqb2Iub3BlbiIsInZlcnNpb24iOiJqb2ItMSIsInBheW1lbnQiOnsibmV0d29yayI6ImVpcDE1NToxIiwiYXNzZXQiOiIweGQzNGE5OWJjMGY2N2FlMWJiZDYzYzY2MGU2ZDBiMGRkMDNlMjYzYjciLCJhbW91bnQiOiI1MDAwMDAwMDAwMDAwMDAwMDAiLCJwYXlUbyI6IjB4NGUwZmE1N2JkZTcyNjA3OTM1NjUzN2UyZjM0ZDY3MWU5ZjQxYWRiYyIsImRlY2ltYWxzIjoxOH0sInF1b3RlVHRsU2Vjb25kcyI6NjAwfSx7ImFjdGlvbiI6ImpvYi5jb250aW51ZSIsInZlcnNpb24iOiJqb2ItMSIsInBheW1lbnQiOnsibmV0d29yayI6ImVpcDE1NToxIiwiYXNzZXQiOiIweGQzNGE5OWJjMGY2N2FlMWJiZDYzYzY2MGU2ZDBiMGRkMDNlMjYzYjciLCJhbW91bnQiOiI1MDAwMDAwMDAwMDAwMDAwMDAiLCJwYXlUbyI6IjB4NGUwZmE1N2JkZTcyNjA3OTM1NjUzN2UyZjM0ZDY3MWU5ZjQxYWRiYyIsImRlY2ltYWxzIjoxOH0sInF1b3RlVHRsU2Vjb25kcyI6NjAwfSx7ImFjdGlvbiI6ImxhdW5jaC5vcGVuIiwidmVyc2lvbiI6ImxhdW5jaC0xIiwicGF5bWVudCI6eyJuZXR3b3JrIjoiZWlwMTU1OjEiLCJhc3NldCI6IjB4ZDM0YTk5YmMwZjY3YWUxYmJkNjNjNjYwZTZkMGIwZGQwM2UyNjNiNyIsImFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMCIsInBheVRvIjoiMHg0ZTBmYTU3YmRlNzI2MDc5MzU2NTM3ZTJmMzRkNjcxZTlmNDFhZGJjIiwiZGVjaW1hbHMiOjE4fSwicXVvdGVUdGxTZWNvbmRzIjo2MDB9LHsiYWN0aW9uIjoib3JhY2xlLnJlcXVlc3QiLCJ2ZXJzaW9uIjoib3JhY2xlLTEiLCJwYXltZW50Ijp7Im5ldHdvcmsiOiJlaXAxNTU6MSIsImFzc2V0IjoiMHhkMzRhOTliYzBmNjdhZTFiYmQ2M2M2NjBlNmQwYjBkZDAzZTI2M2I3IiwiYW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwicGF5VG8iOiIweDRlMGZhNTdiZGU3MjYwNzkzNTY1MzdlMmYzNGQ2NzFlOWY0MWFkYmMiLCJkZWNpbWFscyI6MTh9LCJxdW90ZVR0bFNlY29uZHMiOjYwMH0seyJhY3Rpb24iOiJ3b3JrZmxvdy5vcGVuIiwidmVyc2lvbiI6IndvcmtmbG93LTEiLCJwYXltZW50Ijp7Im5ldHdvcmsiOiJlaXAxNTU6MSIsImFzc2V0IjoiMHhkMzRhOTliYzBmNjdhZTFiYmQ2M2M2NjBlNmQwYjBkZDAzZTI2M2I3IiwiYW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwicGF5VG8iOiIweDRlMGZhNTdiZGU3MjYwNzkzNTY1MzdlMmYzNGQ2NzFlOWY0MWFkYmMiLCJkZWNpbWFscyI6MTh9LCJxdW90ZVR0bFNlY29uZHMiOjYwMH0seyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJ2ZXJzaW9uIjoic2NoZWR1bGUtMSIsInBheW1lbnQiOnsibmV0d29yayI6ImVpcDE1NToxIiwiYXNzZXQiOiIweGQzNGE5OWJjMGY2N2FlMWJiZDYzYzY2MGU2ZDBiMGRkMDNlMjYzYjciLCJhbW91bnQiOiI1MDAwMDAwMDAwMDAwMDAwMDAiLCJwYXlUbyI6IjB4NGUwZmE1N2JkZTcyNjA3OTM1NjUzN2UyZjM0ZDY3MWU5ZjQxYWRiYyIsImRlY2ltYWxzIjoxOH0sInF1b3RlVHRsU2Vjb25kcyI6NjAwfSx7ImFjdGlvbiI6InNjaGVkdWxlLnRvcHVwIiwidmVyc2lvbiI6InRvcHVwLTEiLCJwYXltZW50Ijp7Im5ldHdvcmsiOiJlaXAxNTU6MSIsImFzc2V0IjoiMHhkMzRhOTliYzBmNjdhZTFiYmQ2M2M2NjBlNmQwYjBkZDAzZTI2M2I3IiwiYW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwicGF5VG8iOiIweDRlMGZhNTdiZGU3MjYwNzkzNTY1MzdlMmYzNGQ2NzFlOWY0MWFkYmMiLCJkZWNpbWFscyI6MTh9LCJxdW90ZVR0bFNlY29uZHMiOjYwMH1dLCJsaW1pdHMiOnsib3JhY2xlLnJlcXVlc3QiOnsibWluUGFuZWxTaXplIjo1LCJtYXhQYW5lbFNpemUiOjEwMH0sInNjaGVkdWxlLmNyZWF0ZSI6eyJtaW5SdW5zIjoxLCJtYXhSdW5zIjoxMDAwMDAwLCJtaW5PcmFjbGVJbnRlcnZhbE1pbnV0ZXMiOjEwLCJtaW5Kb2JJbnRlcnZhbE1pbnV0ZXMiOjMwfSwic2NoZWR1bGUudG9wdXAiOnsibWluUnVucyI6MSwibWF4UnVucyI6MTAwMDAwMCwibWluT3JhY2xlSW50ZXJ2YWxNaW51dGVzIjoxMCwibWluSm9iSW50ZXJ2YWxNaW51dGVzIjozMH19LCJsYXVuY2hlcyI6eyJkZWZhdWx0Q2hhaW5JZCI6MTExNTUxMTEsImNoYWlucyI6W3siY2hhaW5JZCI6MTExNTUxMTEsIm5hbWUiOiJTZXBvbGlhIiwidGVzdG5ldCI6dHJ1ZSwia2luZHMiOlsidW5pdjRfaG9vayIsImV2bV9wcm9qZWN0IiwiY3VzdG9tX3Rva2VuIl0sInBhaXJpbmdzIjpbeyJwYWlyV2l0aCI6ImV0aCIsImN1cnJlbmN5IjoiMHgwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwic3ltYm9sIjoiRVRIIiwibmFtZSI6IlNlcG9saWEgRXRoZXIiLCJkZWNpbWFscyI6MTgsImtpbmRzIjpbInVuaXY0X2hvb2siLCJldm1fcHJvamVjdCIsImN1c3RvbV90b2tlbiJdfV19XX0sInByaWNlZFBlciI6eyJzY2hlZHVsZS5jcmVhdGUiOiJydW4iLCJzY2hlZHVsZS50b3B1cCI6InJ1biJ9LCJhdXRoZW50aWNhdGlvbiI6eyJzY2hlbWUiOiJCZWFyZXIiLCJ0b2tlbkJ5dGVzIjozMiwiZW5jb2RpbmciOiJoZXgiLCJjcmVhdG9yIjoiY2xpZW50In0sInBheW1lbnQiOnsieDQwMlZlcnNpb24iOjIsInNjaGVtZSI6ImV4YWN0IiwiYXNzZXRUcmFuc2Zlck1ldGhvZCI6InBlcm1pdDIiLCJxdW90ZUFwcHJvdmFsIjoiRUlQLTcxMiJ9fQ==",
+    "body_sha256": "6383e12d009a0778589cb4f1870f53fd029e99dd9e0b04b8559447c78266ac3a",
+    "body": "{\"actions\":[{\"action\":\"job.open\",\"version\":\"job-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600},{\"action\":\"job.continue\",\"version\":\"job-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600},{\"action\":\"launch.open\",\"version\":\"launch-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600},{\"action\":\"oracle.request\",\"version\":\"oracle-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600},{\"action\":\"workflow.open\",\"version\":\"workflow-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600},{\"action\":\"schedule.create\",\"version\":\"schedule-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600},{\"action\":\"schedule.topup\",\"version\":\"topup-1\",\"payment\":{\"network\":\"eip155:1\",\"asset\":\"0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7\",\"amount\":\"500000000000000000\",\"payTo\":\"0x4e0fa57bde726079356537e2f34d671e9f41adbc\",\"decimals\":18},\"quoteTtlSeconds\":600}],\"limits\":{\"oracle.request\":{\"minPanelSize\":5,\"maxPanelSize\":100},\"schedule.create\":{\"minRuns\":1,\"maxRuns\":1000000,\"minOracleIntervalMinutes\":10,\"minJobIntervalMinutes\":30},\"schedule.topup\":{\"minRuns\":1,\"maxRuns\":1000000,\"minOracleIntervalMinutes\":10,\"minJobIntervalMinutes\":30}},\"launches\":{\"defaultChainId\":11155111,\"chains\":[{\"chainId\":11155111,\"name\":\"Sepolia\",\"testnet\":true,\"kinds\":[\"univ4_hook\",\"evm_project\",\"custom_token\"],\"pairings\":[{\"pairWith\":\"eth\",\"currency\":\"0x0000000000000000000000000000000000000000\",\"symbol\":\"ETH\",\"name\":\"Sepolia Ether\",\"decimals\":18,\"kinds\":[\"univ4_hook\",\"evm_project\",\"custom_token\"]}]}]},\"pricedPer\":{\"schedule.create\":\"run\",\"schedule.topup\":\"run\"},\"authentication\":{\"scheme\":\"Bearer\",\"tokenBytes\":32,\"encoding\":\"hex\",\"creator\":\"client\"},\"payment\":{\"x402Version\":2,\"scheme\":\"exact\",\"assetTransferMethod\":\"permit2\",\"quoteApproval\":\"EIP-712\"}}"
+  },
+  "finished_at": 1790965962.907346
+}

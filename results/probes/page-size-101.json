@@ -1,0 +1,55 @@
+{
+  "id": "page-size-101",
+  "started_at": 1790965955.7172186,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/publications?pageSize=101",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:35 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "KTd-0u6_S4m4G4UcH4GxDA"
+      ],
+      [
+        "Content-Length",
+        "120"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcXVlcnkiLCJkZXRhaWwiOnsiZm9ybUVycm9ycyI6W10sImZpZWxkRXJyb3JzIjp7InBhZ2VTaXplIjpbIlRvbyBiaWc6IGV4cGVjdGVkIG51bWJlciB0byBiZSA8PTEwMCJdfX19",
+    "body_sha256": "fe09fe3cbd386805294b1cf273a8b3dd68501ab4e8ab221ecad176e0d87e7469",
+    "body": "{\"error\":\"invalid_query\",\"detail\":{\"formErrors\":[],\"fieldErrors\":{\"pageSize\":[\"Too big: expected number to be <=100\"]}}}"
+  },
+  "finished_at": 1790965955.9223132
+}

@@ -1,0 +1,63 @@
+{
+  "id": "research-minCitations-20",
+  "started_at": 1790965604.8040397,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Compare the purpose of HTTP GET and POST using RFC 9110.\",\"template\":\"research\",\"panelSize\":9,\"panelQuorum\":1,\"minCitations\":20}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:45 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "LZV4YsrFSrOcqc-lBT7zVQ"
+      ],
+      [
+        "Content-Length",
+        "337"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOlt7InRpdGxlIjoiUmV2aWV3IGl0LCBhcyBhbm90aGVyIGFnZW50Iiwic2hvcnQiOiJyZXZpZXciLCJzdGFnZSI6MH1dLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbXSwic3VnZ2VzdGlvbnMiOltdfQ==",
+    "body_sha256": "0ce4c2d2dc1eb82299d899dfb14090b8aaec7057f952161cf0ef0eb69e60a00a",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[{\"title\":\"Review it, as another agent\",\"short\":\"review\",\"stage\":0}],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[],\"suggestions\":[]}"
+  },
+  "finished_at": 1790965605.1558917
+}

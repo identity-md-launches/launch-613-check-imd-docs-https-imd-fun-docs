@@ -1,0 +1,55 @@
+{
+  "id": "wallet-earnings",
+  "started_at": 1790965871.5249267,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/wallets/0x0000000000000000000000000000000000000000/earnings?limit=1",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:11 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ofMiE6AcQK-mee4ko3UVLg"
+      ],
+      [
+        "Content-Length",
+        "91"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJ3YWxsZXQiOiIweDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAiLCJjb3VudCI6MCwibmV4dCI6bnVsbCwiZWFybmluZ3MiOltdfQ==",
+    "body_sha256": "8c9b0b8ae9675eb1acc2d6c54225196c083b0b74184ae606faa2417458fc2a0f",
+    "body": "{\"wallet\":\"0x0000000000000000000000000000000000000000\",\"count\":0,\"next\":null,\"earnings\":[]}"
+  },
+  "finished_at": 1790965871.7348244
+}

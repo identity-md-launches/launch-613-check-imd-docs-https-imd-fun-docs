@@ -1,0 +1,75 @@
+{
+  "id": "explorer-activity",
+  "started_at": 1790965455.2108524,
+  "request": {
+    "method": "GET",
+    "url": "https://explorer.imd.fun/api/activity",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "content-security-policy",
+        "frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+      ],
+      [
+        "Content-Type",
+        "application/json"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:24:15 GMT"
+      ],
+      [
+        "referrer-policy",
+        "strict-origin-when-cross-origin"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "vary",
+        "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+      ],
+      [
+        "x-content-type-options",
+        "nosniff"
+      ],
+      [
+        "x-railway-request-id",
+        "7SUWAaypS6GvY-bVAax-fw"
+      ],
+      [
+        "Transfer-Encoding",
+        "chunked"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhdCI6MTc5MDk2NTQ1MDI2MywicmVhY2hhYmxlIjp0cnVlLCJ3b3JrZmxvd3MiOjEsImpvYnMiOjE3LCJvcmFjbGUiOjAsIndvcmtpbmciOjE4LCJ0b3RhbCI6MTgsInN0ZXBzIjpbNTAsMTIsMzgsNzQsMjIsNDYsMjQxMjMsNTE1Miw1MTU1LDI0OTY5LDgsNyw5LDcsOCw4LDksOSw4LDI1LDExLDksNDksMjhdfQ==",
+    "body_sha256": "d8b5ba5491b0ac5d1cea350d3ec520136cea20fefb3da863e0e8f1e149015355",
+    "body": "{\"at\":1790965450263,\"reachable\":true,\"workflows\":1,\"jobs\":17,\"oracle\":0,\"working\":18,\"total\":18,\"steps\":[50,12,38,74,22,46,24123,5152,5155,24969,8,7,9,7,8,8,9,9,8,25,11,9,49,28]}"
+  },
+  "finished_at": 1790965455.4185138
+}

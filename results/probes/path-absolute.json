@@ -1,0 +1,59 @@
+{
+  "id": "path-absolute",
+  "started_at": 1790965644.7732742,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\"/tmp/example\"]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:27:24 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "5OcB2n0lQU-el-tiBhdwDg"
+      ],
+      [
+        "Content-Length",
+        "83"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InN0ZXBzLjAucGF0aHMuMDogbXVzdCBiZSByZXBvc2l0b3J5LXJlbGF0aXZlIn0=",
+    "body_sha256": "18f935405d0d2e24373511ee988b011e97a38013220481272898a8af4e0358da",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"steps.0.paths.0: must be repository-relative\"}"
+  },
+  "finished_at": 1790965644.975229
+}

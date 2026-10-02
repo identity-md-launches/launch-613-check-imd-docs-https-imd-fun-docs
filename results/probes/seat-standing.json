@@ -1,0 +1,67 @@
+{
+  "id": "seat-standing",
+  "started_at": 1790965869.2752883,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/seats/42/standing",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:09 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "yI-_MVZ0SZOSpcXgozsQ6Q"
+      ],
+      [
+        "x-read-cache",
+        "hit"
+      ],
+      [
+        "Content-Length",
+        "1970"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJ0b2tlbklkIjoiNDIiLCJhdCI6IjIwMjYtMTAtMDJUMTg6MzA6NTguOTI2WiIsInNlcnZlciI6eyJ2ZXJzaW9uIjoiMC4xLjArMTUyZDU4YzIiLCJwcmVzZW5jZVdpbmRvd01zIjoxMjAwMDB9LCJkZXZpY2VzIjoxLCJlbnJvbGxtZW50Ijp7InN0YXR1cyI6ImFjdGl2ZSIsInRva2VuSWQiOiI0MiIsImFnZW50SWQiOiI1MTQ5NSIsInJlZ2lzdGVyZWQiOnRydWUsInJlZ2lzdGVyVXJsIjpudWxsLCJwYWlyZWRBdCI6IjIwMjYtMDktMjZUMjA6MzI6NDkuNjc4WiIsImxhc3RTZWVuQXQiOiIyMDI2LTEwLTAyVDE2OjE0OjA4Ljg2N1oifSwicHJlc2VuY2UiOnsiY29ubmVjdGVkIjp0cnVlLCJhY2NlcHRpbmdXb3JrIjp0cnVlLCJjb25uZWN0ZWRBdCI6IjIwMjYtMTAtMDJUMTY6MTQ6MDguODY3WiIsImxhc3RIZWFydGJlYXRBdCI6IjIwMjYtMTAtMDJUMTg6MzA6MzkuMjQ2WiIsImhlYXJ0YmVhdEFnZU1zIjoxOTY4MCwic3RhbGUiOmZhbHNlLCJkYWVtb25WZXJzaW9uIjoiMC4xLjArMmE1NDgyNTIiLCJydW50aW1lcyI6W3siaWQiOiJjb2RleCIsInZlcnNpb24iOiJjb2RleC1jbGkgMC4xNTcuMSIsInByZW1pdW1Nb2RlbCI6eyJtb2RlbCI6ImdwdC02LWFzdHJhIiwiZWZmb3J0IjoieGhpZ2gifX1dLCJraW5kcyI6WyJjb2RlIiwiZnV6eiIsInJlc2VhcmNoIl0sInByb2ZpbGVzIjpbIm5vbmUiLCJmb3VuZHJ5Il0sInRvb2xzIjpbXSwic2tpbGxzIjpbImFkYXB0LWNvbnRyYWN0LXByb2plY3QiLCJhZHZlcnNhcmlhbC1yZXZpZXciLCJhdWRpdC1pbXBvcnRlZC1jb2RlIiwiYXVkaXQtanVkZ2UiLCJhdWRpdC1zcGVjaWFsaXN0IiwiYmV0dGVyLWludGVyZmFjZSIsImJ1aWxkLWNvbnRyYWN0LXByb2plY3QiLCJidWlsZC1wb25kZXItaW5kZXhlciIsImJ1aWxkLXdlYnNpdGUiLCJjcmVhdGUtYXVkaW8iLCJjcmVhdGUtaW1hZ2UiLCJjcmVhdGUtdmlkZW8iLCJjdXN0b20tdG9rZW4tbGF1bmNoIiwiZGVmaS1uYXRpdmUiLCJkZXBsb3ktc2NyaXB0IiwiZXRoLWFkZHJlc3NlcyIsImV0aC1jb25jZXB0cyIsImV0aC1mcm9udGVuZC11eCIsImV0aC1sMnMiLCJldGgtc2VjdXJpdHkiLCJldGgtc3RhbmRhcmRzIiwiZXRoLXRlc3RpbmciLCJldm0tcHJvamVjdC1sYXVuY2giLCJmaXgtZmluZGluZ3MiLCJmcm9udGVuZC1mb3ItY29udHJhY3QiLCJnYXMtYW5kLXNpemUtcmVwb3J0IiwiaW1wbGVtZW50LWFuZC10ZXN0IiwiaW1wbGVtZW50LWNvbXBvbmVudCIsImltcGxlbWVudC1jb250cmFjdCIsImltcGxlbWVudC1vbmUtY29udHJhY3QiLCJpbXBvcnQtc2l0ZSIsImludGVncmF0ZS1wcm9qZWN0Iiwib3JhY2xlLWFzc2VzcyIsInBhc2hvdi1maXp6IiwicGFzaG92LXNraWxsIiwicGFzaG92LXhyYXkiLCJwdWJsaWMtcnBjcyIsInJlZmluZS1wcm9qZWN0IiwicmVzZWFyY2gtcmVwb3J0Iiwic2NhZmZvbGQtcHJvamVjdCIsInNpdGUtY29udGVudC1jaGVjayIsInNvbGlkaXR5LXNlY3VyaXR5LXJldmlldyIsInRvYi1lbnRyeS1wb2ludC1hbmFseXplciIsInRvYi1wcm9wZXJ0eS1iYXNlZC10ZXN0aW5nIiwidW5pc3dhcC12NC1ob29rcyIsInVuaXN3YXAtdjQtc2VjdXJpdHkiLCJ3b3JrZmxvdy1wbGFubmVyIiwid3JpdGUtZm91bmRyeS10ZXN0cyIsIndyaXRlLXJlYWRtZS1hbmQtZG9jcyJdLCJtYXhDb25jdXJyZW5jeSI6MSwicGxhdGZvcm0iOnsib3MiOiJsaW51eCIsImFyY2giOiJ4NjQiLCJub2RlVmVyc2lvbiI6InYyNC4yMS4wIn19LCJzdGFuZGluZyI6eyJjb25zZWN1dGl2ZUZhaWx1cmVzIjowLCJsYXN0RmFpbGVkQXQiOm51bGwsInBhdXNlZFVudGlsIjpudWxsLCJwYXVzZWRGb3IiOm51bGwsImJyZWFrZXIiOnsiZmFpbHVyZXMiOjMsImNvb2xkb3duTXMiOjkwMDAwMH0sIndvcmtpbmciOjAsInJ1bm5pbmciOltdLCJyZWNlbnRGYWlsdXJlcyI6W119LCJxdWV1ZSI6eyJyZWFkeSI6MCwiZmxlZXRPbmxpbmUiOjU0NywiZWxpZ2libGUiOjAsImJsb2NrZWQiOltdfX0=",
+    "body_sha256": "12f343aa648afba6adf66b51ddb34935f45518e18af9aa515f2f1f9b56ba12b7",
+    "body": "{\"tokenId\":\"42\",\"at\":\"2026-10-02T18:30:58.926Z\",\"server\":{\"version\":\"0.1.0+152d58c2\",\"presenceWindowMs\":120000},\"devices\":1,\"enrollment\":{\"status\":\"active\",\"tokenId\":\"42\",\"agentId\":\"51495\",\"registered\":true,\"registerUrl\":null,\"pairedAt\":\"2026-09-26T20:32:49.678Z\",\"lastSeenAt\":\"2026-10-02T16:14:08.867Z\"},\"presence\":{\"connected\":true,\"acceptingWork\":true,\"connectedAt\":\"2026-10-02T16:14:08.867Z\",\"lastHeartbeatAt\":\"2026-10-02T18:30:39.246Z\",\"heartbeatAgeMs\":19680,\"stale\":false,\"daemonVersion\":\"0.1.0+2a548252\",\"runtimes\":[{\"id\":\"codex\",\"version\":\"codex-cli 0.157.1\",\"premiumModel\":{\"model\":\"gpt-6-astra\",\"effort\":\"xhigh\"}}],\"kinds\":[\"code\",\"fuzz\",\"research\"],\"profiles\":[\"none\",\"foundry\"],\"tools\":[],\"skills\":[\"adapt-contract-project\",\"adversarial-review\",\"audit-imported-code\",\"audit-judge\",\"audit-specialist\",\"better-interface\",\"build-contract-project\",\"build-ponder-indexer\",\"build-website\",\"create-audio\",\"create-image\",\"create-video\",\"custom-token-launch\",\"defi-native\",\"deploy-script\",\"eth-addresses\",\"eth-concepts\",\"eth-frontend-ux\",\"eth-l2s\",\"eth-security\",\"eth-standards\",\"eth-testing\",\"evm-project-launch\",\"fix-findings\",\"frontend-for-contract\",\"gas-and-size-report\",\"implement-and-test\",\"implement-component\",\"implement-contract\",\"implement-one-contract\",\"import-site\",\"integrate-project\",\"oracle-assess\",\"pashov-fizz\",\"pashov-skill\",\"pashov-xray\",\"public-rpcs\",\"refine-project\",\"research-report\",\"scaffold-project\",\"site-content-check\",\"solidity-security-review\",\"tob-entry-point-analyzer\",\"tob-property-based-testing\",\"uniswap-v4-hooks\",\"uniswap-v4-security\",\"workflow-planner\",\"write-foundry-tests\",\"write-readme-and-docs\"],\"maxConcurrency\":1,\"platform\":{\"os\":\"linux\",\"arch\":\"x64\",\"nodeVersion\":\"v24.21.0\"}},\"standing\":{\"consecutiveFailures\":0,\"lastFailedAt\":null,\"pausedUntil\":null,\"pausedFor\":null,\"breaker\":{\"failures\":3,\"cooldownMs\":900000},\"working\":0,\"running\":[],\"recentFailures\":[]},\"queue\":{\"ready\":0,\"fleetOnline\":547,\"eligible\":0,\"blocked\":[]}}"
+  },
+  "finished_at": 1790965869.4245865
+}

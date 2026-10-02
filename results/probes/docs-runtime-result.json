@@ -1,0 +1,67 @@
+{
+  "id": "docs-runtime-result",
+  "started_at": 1790966007.1494172,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/c2ba5413-a0fe-4e9a-9915-0e521c5bea2c/result",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=5"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:27 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "C1zC7yXJR2S35L_PCx5-qw"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "426"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJqb2JJZCI6ImMyYmE1NDEzLWEwZmUtNGU5YS05OTE1LTBlNTIxYzViZWEyYyIsInByb2plY3RJZCI6ImMyYmE1NDEzLWEwZmUtNGU5YS05OTE1LTBlNTIxYzViZWEyYyIsInN0YXRlIjoiYmxvY2tlZCIsImNvbXBsZXRlIjpmYWxzZSwibGF1bmNoIjp7InJlcXVlc3RlZCI6ZmFsc2UsImtpbmQiOm51bGwsImlkIjpudWxsLCJzdGF0dXMiOm51bGwsImNoYWluSWQiOm51bGx9LCJzb3VyY2UiOltdLCJmaWxlcyI6W10sImRlbGl2ZXJ5Ijp7InJlcXVlc3RlZCI6dHJ1ZSwibW9kZSI6InJlcG9zaXRvcnkiLCJyZXBvVXJsIjoiaHR0cHM6Ly9naXRodWIuY29tL2lkZW50aXR5LW1kLWxhdW5jaGVzL2xhdW5jaC0zNTMtd3JpdGUtc3RyYW5nZXItcy1ndWlkZS1saXZlIiwiY29tbWl0IjpudWxsLCJkZWxpdmVyZWRBdCI6bnVsbCwiZmFpbHVyZSI6bnVsbH19",
+    "body_sha256": "f0391c22fffa7d237185dd9d6a232e92616ddc4c5ec2388144539987f2cf0038",
+    "body": "{\"jobId\":\"c2ba5413-a0fe-4e9a-9915-0e521c5bea2c\",\"projectId\":\"c2ba5413-a0fe-4e9a-9915-0e521c5bea2c\",\"state\":\"blocked\",\"complete\":false,\"launch\":{\"requested\":false,\"kind\":null,\"id\":null,\"status\":null,\"chainId\":null},\"source\":[],\"files\":[],\"delivery\":{\"requested\":true,\"mode\":\"repository\",\"repoUrl\":\"https://github.com/identity-md-launches/launch-353-write-stranger-s-guide-live\",\"commit\":null,\"deliveredAt\":null,\"failure\":null}}"
+  },
+  "finished_at": 1790966007.3291216
+}

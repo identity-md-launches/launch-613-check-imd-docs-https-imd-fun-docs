@@ -1,0 +1,59 @@
+{
+  "id": "workflow-refused-unexpectedField",
+  "started_at": 1790966038.1732929,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"workflow.open\",\"input\":{\"request\":\"Build a fixed standard launch token named Example Coin (EXM), with no owner controls, and a website displaying the deployed token on Sepolia.\",\"draft\":{\"objective\":\"Build Example Coin (EXM) and a website.\",\"shape\":\"chain\",\"onchain\":\"evm_project\",\"ipfs\":true,\"steps\":[{\"skill\":\"build-contract-project\"},{\"skill\":\"adversarial-review\"},{\"skill\":\"build-website\"}],\"unexpectedField\":\"11111111-1111-4111-8111-111111111111\"},\"permissions\":{\"github\":true,\"ipfs\":true,\"onchain\":{\"kind\":\"evm_project\",\"chainId\":11155111}}}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:58 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "DpiliZ0gT12evhGHwoOzXw"
+      ],
+      [
+        "Content-Length",
+        "83"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6ImRyYWZ0OiBVbnJlY29nbml6ZWQga2V5OiBcInVuZXhwZWN0ZWRGaWVsZFwiIn0=",
+    "body_sha256": "0636bfd4a90d4f67d0b489b76365179f793f3c2cfe40aaaa866a747a3ab3b190",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"draft: Unrecognized key: \\\"unexpectedField\\\"\"}"
+  },
+  "finished_at": 1790966038.3424985
+}

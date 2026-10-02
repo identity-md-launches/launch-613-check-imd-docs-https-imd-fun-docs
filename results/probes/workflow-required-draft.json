@@ -1,0 +1,59 @@
+{
+  "id": "workflow-required-draft",
+  "started_at": 1790966026.4060826,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"workflow.open\",\"input\":{\"request\":\"Build a fixed standard launch token named Example Coin (EXM), with no owner controls, and a website displaying the deployed token on Sepolia.\",\"permissions\":{\"github\":true,\"ipfs\":true,\"onchain\":{\"kind\":\"evm_project\",\"chainId\":11155111}}}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:46 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "dQg8noSwRmuOOXgtFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "96"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6ImRyYWZ0OiBJbnZhbGlkIGlucHV0OiBleHBlY3RlZCBvYmplY3QsIHJlY2VpdmVkIHVuZGVmaW5lZCJ9",
+    "body_sha256": "247172a6d823c46471d084a8ac9592bfa10afe73fa9f58eae54241766181618a",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"draft: Invalid input: expected object, received undefined\"}"
+  },
+  "finished_at": 1790966026.5598016
+}

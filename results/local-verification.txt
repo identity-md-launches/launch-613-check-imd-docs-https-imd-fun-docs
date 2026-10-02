@@ -1,0 +1,2 @@
+FAIL: 12, INCONCLUSIVE: 1, OBSERVED: 7, PASS: 214
+Offline verification passed: 234 saved records, 234 counted attempts + 10 reserved discovery calls <= 300.

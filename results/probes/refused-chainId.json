@@ -1,0 +1,63 @@
+{
+  "id": "refused-chainId",
+  "started_at": 1790965565.8810716,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"chainId\":11155111}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:06 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "3k7XYcIGTJuaU9BkCx5-qw"
+      ],
+      [
+        "Content-Length",
+        "676"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJ3ZWJzaXRlIiwicGxhbiI6W10sImZhY3RzIjpbeyJpZCI6InNpdGVfcGFnZXMiLCJsYWJlbCI6IldoYXQgdGhlIHNpdGUgc2hvd3MiLCJzdGF0ZSI6InN0YXRlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InNpdGVfY29udGVudCIsImxhYmVsIjoiVGhlIHdvcmRzIG9uIGl0Iiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCB3cml0ZSB0aGUgdGV4dC4ifSx7ImlkIjoic2l0ZV9zdHlsZSIsImxhYmVsIjoiVGhlIGxvb2siLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoiaW52YWxpZF9pbnB1dCIsImRldGFpbCI6ImNoYWluSWQgbmFtZXMgd2hlcmUgYSBsYXVuY2ggZGVwbG95czsgc2V0IG9uY2hhaW4sIG9yIGxlYXZlIGNoYWluSWQgb3V0In1dLCJzdWdnZXN0aW9ucyI6W3siY29kZSI6Im1pc3NpbmdfZmFjdCIsImZhY3QiOiJzaXRlX3N0eWxlIiwiZGV0YWlsIjoiTm90IHNhaWQ6IHRoZSBsb29rLiBUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dfQ==",
+    "body_sha256": "3bbbaf9d4b49f96da3a5e716a34ad96fe5719d5b039224f762c71ea03ab7fe6e",
+    "body": "{\"action\":\"job.open\",\"kind\":\"website\",\"plan\":[],\"facts\":[{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"stated\",\"required\":false},{\"id\":\"site_content\",\"label\":\"The words on it\",\"state\":\"stated\",\"required\":false,\"assumed\":\"The builders will write the text.\"},{\"id\":\"site_style\",\"label\":\"The look\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose a clean, simple look.\"}],\"judged\":true,\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"chainId names where a launch deploys; set onchain, or leave chainId out\"}],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"site_style\",\"detail\":\"Not said: the look. The builders will choose a clean, simple look.\"}]}"
+  },
+  "finished_at": 1790965566.20459
+}

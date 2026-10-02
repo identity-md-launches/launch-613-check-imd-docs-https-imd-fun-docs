@@ -1,0 +1,63 @@
+{
+  "id": "paths-8-directory",
+  "started_at": 1790966149.374887,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\"src/p0\",\"src/p1\",\"src/p2\",\"src/p3\",\"src/p4\",\"src/p5\",\"src/p6\",\"src/p7\"]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:35:49 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "Iex5hsdjTmm3G6sbPvyhXg"
+      ],
+      [
+        "Content-Length",
+        "562"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOlt7InRpdGxlIjoiSW1wbGVtZW50IGEgc2NvcGVkIGNvbXBvbmVudCBhZ2FpbnN0IGFncmVlZCBpbnRlcmZhY2VzIHdoaWxlIG90aGVyIGNvbnRyaWJ1dG9ycyBidWlsZCBpbmRlcGVuZGVudCBjb21wb25lbnRzIiwic2hvcnQiOiJpbXBsZW1lbnQtY29tcG9uZW50Iiwic2tpbGwiOiJpbXBsZW1lbnQtY29tcG9uZW50Iiwic3RhZ2UiOjB9XSwiZmFjdHMiOlt7ImlkIjoidG9rZW5fbmFtZSIsImxhYmVsIjoiVG9rZW4gbmFtZSIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJ0b2tlbl9zeW1ib2wiLCJsYWJlbCI6IlRva2VuIHN5bWJvbCIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2V9XSwianVkZ2VkIjp0cnVlLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoia2luZCIsImRldGFpbCI6IlRoaXMgcmVhZHMgYXMgYSB3ZWJzaXRlIHdpdGggbm8gY29udHJhY3RzIG9mIGl0cyBvd24uIiwic3dpdGNoVG8iOiJ3ZWJzaXRlIn1dfQ==",
+    "body_sha256": "a25b0338f90969a4f7bd75db02cf34a822e582128d524416967ad58766c18c7e",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[{\"title\":\"Implement a scoped component against agreed interfaces while other contributors build independent components\",\"short\":\"implement-component\",\"skill\":\"implement-component\",\"stage\":0}],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790966149.7300658
+}

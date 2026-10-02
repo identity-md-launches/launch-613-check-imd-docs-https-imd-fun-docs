@@ -1,0 +1,75 @@
+{
+  "id": "explorer-search",
+  "started_at": 1790965457.5187662,
+  "request": {
+    "method": "GET",
+    "url": "https://explorer.imd.fun/api/search?q=docs",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "content-security-policy",
+        "frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+      ],
+      [
+        "Content-Type",
+        "application/json"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:24:17 GMT"
+      ],
+      [
+        "referrer-policy",
+        "strict-origin-when-cross-origin"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "vary",
+        "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+      ],
+      [
+        "x-content-type-options",
+        "nosniff"
+      ],
+      [
+        "x-railway-request-id",
+        "H8hW2z2lQlCDhzc5Cx5-qw"
+      ],
+      [
+        "Transfer-Encoding",
+        "chunked"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJncm91cHMiOlt7ImtleSI6ImpvYnMiLCJsYWJlbCI6IkpvYnMiLCJzY29wZSI6ImpvYnMiLCJiZXN0IjoxOS40Mzk5OTk5OTk5OTk5OTgsImhpdHMiOlt7InRpdGxlIjoiQ2hlY2sgdGhlIElNRCBkb2NzIChodHRwczovL2ltZC5mdW4vZG9jcykgYWdhaW5zdCB0aGUgbGl2ZSBBUEkgdXNpbmcgb25seSBmcmVlLCBwdWJsaWMgY2FsbHM6IEdFVCByb3V0ZXMgYW5kIFBPU1Qg4oCmIiwibWV0YSI6ImV4ZWN1dGluZyIsImF0IjoiMjAyNi0xMC0wMlQxODoxOTo0OC42MzRaIiwiaHJlZiI6Ii9qb2JzLzkzNzRhMjc2LTYzZTktNGZlZC04M2I3LTEyZTg3MjFiMTUyNCIsImljb24iOiJjb250cmFjdHMiLCJ0b25lIjoid29ya2luZyJ9LHsidGl0bGUiOiJRQSBBTkQgQlVHIEhVTlQ6IHRoZSBJTUQgcHVibGljIHdlYnNpdGUgaW1kLmZ1biBhbmQgaXRzIGRvY3MgR09BTCBGaW5kIHJlYWwgYnVncywgYnJva2VuIGZsb3dzIGFuZCBpbmNvbnNpc3RlbmNpZXMgb24g4oCmIiwibWV0YSI6ImNvbXBsZXRlZCIsImF0IjoiMjAyNi0wOS0yNVQwNzo0Mjo1Ni44NzdaIiwiaHJlZiI6Ii9qb2JzLzFhZmMyYzNmLWJjMjctNGVkYS1hMmI2LTM1ZWI1MGUxNGE2MSIsImljb24iOiJjb250cmFjdHMiLCJ0b25lIjoiYWNjZXB0ZWQifSx7InRpdGxlIjoiQWR2ZXJzYXJpYWwgcmV2aWV3IG9mIHRoZSBzd2FybSdzIHBhaWQtcmVxdWVzdCBmbG93IGFzIGRvY3VtZW50ZWQgb24gaW1kLmZ1bi9kb2NzICdQYWlkIHJlcXVlc3RzJzogcXVvdGUgLT4gNDAyIOKApiIsIm1ldGEiOiJjb21wbGV0ZWQiLCJhdCI6IjIwMjYtMDktMjZUMTk6NDE6NTguMTQ2WiIsImhyZWYiOiIvam9icy81MDQwZjYwNi01ZWY0LTQ1NmUtODVlOS1hNjg4YWYzNjhlYTUiLCJpY29uIjoicmVzZWFyY2giLCJ0b25lIjoiYWNjZXB0ZWQifSx7InRpdGxlIjoiQnVpbGQgaW1kLW9yYWNsZS1wYWNrOiAzMCByZWFkeSBvcmFjbGUucmVxdWVzdCBib2RpZXMgZm9yIHRoZSBJTUQgc3dhcm0sIGZvbGxvd2luZyB0aGUgT3JhY2xlIGJvZHkgc2VjdGlvbiBvZiDigKYiLCJtZXRhIjoiZXhlY3V0aW5nIiwiYXQiOiIyMDI2LTEwLTAyVDE4OjE5OjA4LjM1OFoiLCJocmVmIjoiL2pvYnMvNzM4YzM2YWQtZmUwMC00MDY1LTkyYjktMmQzMTNiYmE2ODEwIiwiaWNvbiI6ImNvbnRyYWN0cyIsInRvbmUiOiJ3b3JraW5nIn0seyJ0aXRsZSI6IkJ1aWxkIGltZC1zY2hlZHVsZS1wYWNrOiBhIHJlcG9zaXRvcnkgb2YgMTIgcmVhZHktdG8tdXNlIHNjaGVkdWxlLmNyZWF0ZSBib2RpZXMgZm9yIHRoZSBJTUQgc3dhcm0sIGZvbGxvd2luZyB0aGUg4oCmIiwibWV0YSI6ImV4ZWN1dGluZyIsImF0IjoiMjAyNi0xMC0wMlQxODoxOToyOC45NDhaIiwiaHJlZiI6Ii9qb2JzLzM3YTY0MTc0LTA1NWItNGY4YS1hM2M2LTQwNmQ3ZWUzOWUxNiIsImljb24iOiJjb250cmFjdHMiLCJ0b25lIjoid29ya2luZyJ9LHsidGl0bGUiOiJBbGwgam9icyBtYXRjaGluZyDigJxkb2Nz4oCdIiwiaHJlZiI6Ii8/cT1kb2NzIiwibW9yZSI6dHJ1ZX1dfV19",
+    "body_sha256": "13fd140933e90bb2f8b534535a89a7fb82dbe3bc2b4971074c35ad239db6a78b",
+    "body": "{\"groups\":[{\"key\":\"jobs\",\"label\":\"Jobs\",\"scope\":\"jobs\",\"best\":19.439999999999998,\"hits\":[{\"title\":\"Check the IMD docs (https://imd.fun/docs) against the live API using only free, public calls: GET routes and POST …\",\"meta\":\"executing\",\"at\":\"2026-10-02T18:19:48.634Z\",\"href\":\"/jobs/9374a276-63e9-4fed-83b7-12e8721b1524\",\"icon\":\"contracts\",\"tone\":\"working\"},{\"title\":\"QA AND BUG HUNT: the IMD public website imd.fun and its docs GOAL Find real bugs, broken flows and inconsistencies on …\",\"meta\":\"completed\",\"at\":\"2026-09-25T07:42:56.877Z\",\"href\":\"/jobs/1afc2c3f-bc27-4eda-a2b6-35eb50e14a61\",\"icon\":\"contracts\",\"tone\":\"accepted\"},{\"title\":\"Adversarial review of the swarm's paid-request flow as documented on imd.fun/docs 'Paid requests': quote -> 402 …\",\"meta\":\"completed\",\"at\":\"2026-09-26T19:41:58.146Z\",\"href\":\"/jobs/5040f606-5ef4-456e-85e9-a688af368ea5\",\"icon\":\"research\",\"tone\":\"accepted\"},{\"title\":\"Build imd-oracle-pack: 30 ready oracle.request bodies for the IMD swarm, following the Oracle body section of …\",\"meta\":\"executing\",\"at\":\"2026-10-02T18:19:08.358Z\",\"href\":\"/jobs/738c36ad-fe00-4065-92b9-2d313bba6810\",\"icon\":\"contracts\",\"tone\":\"working\"},{\"title\":\"Build imd-schedule-pack: a repository of 12 ready-to-use schedule.create bodies for the IMD swarm, following the …\",\"meta\":\"executing\",\"at\":\"2026-10-02T18:19:28.948Z\",\"href\":\"/jobs/37a64174-055b-4f8a-a3c6-406d7ee39e16\",\"icon\":\"contracts\",\"tone\":\"working\"},{\"title\":\"All jobs matching “docs”\",\"href\":\"/?q=docs\",\"more\":true}]}]}"
+  },
+  "finished_at": 1790965457.751327
+}

@@ -1,0 +1,63 @@
+{
+  "id": "references-count-8",
+  "started_at": 1790965716.3651116,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"references\":[\"defi-native\",\"defi-native\",\"defi-native\",\"defi-native\",\"defi-native\",\"defi-native\",\"defi-native\",\"defi-native\"]}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:36 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "F7L-IaN-T-akBjNUc9o55Q"
+      ],
+      [
+        "Content-Length",
+        "657"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJ3ZWJzaXRlIiwicGxhbiI6W3sidGl0bGUiOiJCdWlsZCBhbmQgY2hlY2sgdGhlIHdlYnNpdGUiLCJzaG9ydCI6InNpdGUiLCJza2lsbCI6ImJ1aWxkLXdlYnNpdGUiLCJzdGFnZSI6MH1dLCJmYWN0cyI6W3siaWQiOiJzaXRlX3BhZ2VzIiwibGFiZWwiOiJXaGF0IHRoZSBzaXRlIHNob3dzIiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJzaXRlX2NvbnRlbnQiLCJsYWJlbCI6IlRoZSB3b3JkcyBvbiBpdCIsInN0YXRlIjoic3RhdGVkIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiVGhlIGJ1aWxkZXJzIHdpbGwgd3JpdGUgdGhlIHRleHQuIn0seyJpZCI6InNpdGVfc3R5bGUiLCJsYWJlbCI6IlRoZSBsb29rIiwic3RhdGUiOiJtaXNzaW5nIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiVGhlIGJ1aWxkZXJzIHdpbGwgY2hvb3NlIGEgY2xlYW4sIHNpbXBsZSBsb29rLiJ9XSwianVkZ2VkIjp0cnVlLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoibWlzc2luZ19mYWN0IiwiZmFjdCI6InNpdGVfc3R5bGUiLCJkZXRhaWwiOiJOb3Qgc2FpZDogdGhlIGxvb2suIFRoZSBidWlsZGVycyB3aWxsIGNob29zZSBhIGNsZWFuLCBzaW1wbGUgbG9vay4ifV19",
+    "body_sha256": "9c1c62e56afa29238f24da911d1c99160c26ebccdc772ec80db84344888479c9",
+    "body": "{\"action\":\"job.open\",\"kind\":\"website\",\"plan\":[{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":0}],\"facts\":[{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"stated\",\"required\":false},{\"id\":\"site_content\",\"label\":\"The words on it\",\"state\":\"stated\",\"required\":false,\"assumed\":\"The builders will write the text.\"},{\"id\":\"site_style\",\"label\":\"The look\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose a clean, simple look.\"}],\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"site_style\",\"detail\":\"Not said: the look. The builders will choose a clean, simple look.\"}]}"
+  },
+  "finished_at": 1790965716.689805
+}

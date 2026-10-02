@@ -1,0 +1,63 @@
+{
+  "id": "schedules",
+  "started_at": 1790965417.9343815,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/schedules?limit=2",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:38 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "_qdEp00VTReouL5eBhdwDg"
+      ],
+      [
+        "Content-Length",
+        "2074"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6Miwic2NoZWR1bGVzIjpbeyJpZCI6IjlkNGI0MTY4LWIwMzEtNGNjNi04ODBiLTNmOWNjNDBjOTA2MyIsImxhYmVsIjpudWxsLCJhY3Rpb24iOiJqb2Iub3BlbiIsImFjdGlvblZlcnNpb24iOjEsImNvbnRpbnVlIjp0cnVlLCJzdGF0dXMiOiJhY3RpdmUiLCJzdGF0dXNSZWFzb24iOm51bGwsImNhZGVuY2UiOnsiZXZlcnkiOiJQVDEySCJ9LCJpbnB1dCI6eyJza2lsbCI6InJlc2VhcmNoLXJlcG9ydCIsImdpdGh1YiI6dHJ1ZSwib3V0cHV0cyI6W3sibmFtZSI6InJlcG9ydCIsInBhdGgiOiJhcnRpZmFjdHMvcmVwb3J0Lm1kIiwibWVkaWFUeXBlIjoidGV4dC9tYXJrZG93biJ9XSwiY29udHJhY3RzIjpbXSwib2JqZWN0aXZlIjoiQSBzaG9ydCBkaWdlc3Qgb2YgdGhlIElNRCBzd2FybSBmcm9tIHRoZSBwdWJsaWMgQVBJOiBzZWF0cyBvbmxpbmUgYW5kIGVucm9sbGVkIChhcGkuaW1kLmZ1bi9oZWFsdGgpLCB0YXNrcyBhY2NlcHRlZCBpbiB0aGUgbGFzdCAyNCBob3VycywgcGFpZCBvcmRlcnMgYW5kIHdoZW4gdGhlIGxhc3Qgb25lIHdhcyBwYWlkLCBhbmQgdGhlIGZpdmUgc2VhdHMgd2l0aCB0aGUgbW9zdCBhY2NlcHRlZCB3b3JrIChhcGkuaW1kLmZ1bi9jb250cmlidXRvcnMsIGJ5IE5GVCBudW1iZXIpLiBDb21wYXJlIGV2ZXJ5IGZpZ3VyZSB3aXRoIHRoZSBwcmV2aW91cyBydW4gYW5kIHNheSB3aGF0IGNoYW5nZWQuIE9uZSBwYWdlIG9mIE1hcmtkb3duLiJ9LCJydW5zIjp7InRvdGFsIjoyLCJyZW1haW5pbmciOjF9LCJydW5zUmVtYWluaW5nIjoxLCJydW5zQm91Z2h0IjoyLCJvd25lciI6IjB4Y2Q1YTA0NmU3NjAyOWZjY2MzNjBlYTg0MmExYzQyYmM0YjMwMmMyZiIsInBhaWQiOnRydWUsInBhdXNlZFJlYXNvbiI6bnVsbCwibmV4dFJ1bkF0IjoiMjAyNi0xMC0wMlQxODo1NzoxNC4zNzVaIiwibGFzdFJ1bkF0IjoiMjAyNi0xMC0wMlQwNjo1NzoxOC4wNThaIiwiZXhwaXJlc0F0IjpudWxsLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAxVDE4OjU3OjE0LjM3NVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDA2OjU3OjE4LjA1OFoiLCJ1cmwiOiIvc2NoZWR1bGVzLzlkNGI0MTY4LWIwMzEtNGNjNi04ODBiLTNmOWNjNDBjOTA2MyJ9LHsiaWQiOiI0YWY0NTc1Yy04MzU1LTQwYzEtOGIyZi1kNWFiMzVkNDJjMWEiLCJsYWJlbCI6bnVsbCwiYWN0aW9uIjoiam9iLm9wZW4iLCJhY3Rpb25WZXJzaW9uIjoxLCJjb250aW51ZSI6dHJ1ZSwic3RhdHVzIjoiYWN0aXZlIiwic3RhdHVzUmVhc29uIjpudWxsLCJjYWRlbmNlIjp7ImV2ZXJ5IjoiUFQxMkgifSwiaW5wdXQiOnsic2tpbGwiOiJyZXNlYXJjaC1yZXBvcnQiLCJnaXRodWIiOnRydWUsIm91dHB1dHMiOlt7Im5hbWUiOiJyZXBvcnQiLCJwYXRoIjoiYXJ0aWZhY3RzL3JlcG9ydC5tZCIsIm1lZGlhVHlwZSI6InRleHQvbWFya2Rvd24ifV0sImNvbnRyYWN0cyI6W10sIm9iamVjdGl2ZSI6IldoYXQgaXMgdGhlIGxhdGVzdCBhbnN3ZXIgb2YgdGhlIENoYWlubGluayBFVEgvVVNEIHByaWNlIGZlZWQgYXQgMHg1ZjRlQzNEZjljYmQ0MzcxNEZFMjc0MGY1RTM2MTYxNTVjNWI4NDE5IG9uIEV0aGVyZXVtIG1haW5uZXQsIGluIFVTRCAoOCBkZWNpbWFscyksIGFzIHJlYWQgYXQgdGhlIGxhdGVzdCBibG9jayB3aGVuIHRoZSBxdWVzdGlvbiBpcyBhbnN3ZXJlZCwgcm91bmRlZCBkb3duIHRvIHdob2xlIGRvbGxhcnM/In0sInJ1bnMiOnsidG90YWwiOjIsInJlbWFpbmluZyI6MX0sInJ1bnNSZW1haW5pbmciOjEsInJ1bnNCb3VnaHQiOjIsIm93bmVyIjoiMHhjZDVhMDQ2ZTc2MDI5ZmNjYzM2MGVhODQyYTFjNDJiYzRiMzAyYzJmIiwicGFpZCI6dHJ1ZSwicGF1c2VkUmVhc29uIjpudWxsLCJuZXh0UnVuQXQiOiIyMDI2LTEwLTAyVDE4OjU2OjEzLjQ3MloiLCJsYXN0UnVuQXQiOiIyMDI2LTEwLTAyVDA2OjU2OjE4LjA1OFoiLCJleHBpcmVzQXQiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjYtMTAtMDFUMTg6NTY6MTMuNDcyWiIsInVwZGF0ZWRBdCI6IjIwMjYtMTAtMDJUMDY6NTY6MTguMDU4WiIsInVybCI6Ii9zY2hlZHVsZXMvNGFmNDU3NWMtODM1NS00MGMxLThiMmYtZDVhYjM1ZDQyYzFhIn1dfQ==",
+    "body_sha256": "18e0ce5ac194adb160221001b959d3e31ea644ef31fa88961e54374104f1885c",
+    "body": "{\"count\":2,\"schedules\":[{\"id\":\"9d4b4168-b031-4cc6-880b-3f9cc40c9063\",\"label\":null,\"action\":\"job.open\",\"actionVersion\":1,\"continue\":true,\"status\":\"active\",\"statusReason\":null,\"cadence\":{\"every\":\"PT12H\"},\"input\":{\"skill\":\"research-report\",\"github\":true,\"outputs\":[{\"name\":\"report\",\"path\":\"artifacts/report.md\",\"mediaType\":\"text/markdown\"}],\"contracts\":[],\"objective\":\"A short digest of the IMD swarm from the public API: seats online and enrolled (api.imd.fun/health), tasks accepted in the last 24 hours, paid orders and when the last one was paid, and the five seats with the most accepted work (api.imd.fun/contributors, by NFT number). Compare every figure with the previous run and say what changed. One page of Markdown.\"},\"runs\":{\"total\":2,\"remaining\":1},\"runsRemaining\":1,\"runsBought\":2,\"owner\":\"0xcd5a046e76029fccc360ea842a1c42bc4b302c2f\",\"paid\":true,\"pausedReason\":null,\"nextRunAt\":\"2026-10-02T18:57:14.375Z\",\"lastRunAt\":\"2026-10-02T06:57:18.058Z\",\"expiresAt\":null,\"createdAt\":\"2026-10-01T18:57:14.375Z\",\"updatedAt\":\"2026-10-02T06:57:18.058Z\",\"url\":\"/schedules/9d4b4168-b031-4cc6-880b-3f9cc40c9063\"},{\"id\":\"4af4575c-8355-40c1-8b2f-d5ab35d42c1a\",\"label\":null,\"action\":\"job.open\",\"actionVersion\":1,\"continue\":true,\"status\":\"active\",\"statusReason\":null,\"cadence\":{\"every\":\"PT12H\"},\"input\":{\"skill\":\"research-report\",\"github\":true,\"outputs\":[{\"name\":\"report\",\"path\":\"artifacts/report.md\",\"mediaType\":\"text/markdown\"}],\"contracts\":[],\"objective\":\"What is the latest answer of the Chainlink ETH/USD price feed at 0x5f4eC3Df9cbd43714FE2740f5E3616155c5b8419 on Ethereum mainnet, in USD (8 decimals), as read at the latest block when the question is answered, rounded down to whole dollars?\"},\"runs\":{\"total\":2,\"remaining\":1},\"runsRemaining\":1,\"runsBought\":2,\"owner\":\"0xcd5a046e76029fccc360ea842a1c42bc4b302c2f\",\"paid\":true,\"pausedReason\":null,\"nextRunAt\":\"2026-10-02T18:56:13.472Z\",\"lastRunAt\":\"2026-10-02T06:56:18.058Z\",\"expiresAt\":null,\"createdAt\":\"2026-10-01T18:56:13.472Z\",\"updatedAt\":\"2026-10-02T06:56:18.058Z\",\"url\":\"/schedules/4af4575c-8355-40c1-8b2f-d5ab35d42c1a\"}]}"
+  },
+  "finished_at": 1790965418.1407335
+}

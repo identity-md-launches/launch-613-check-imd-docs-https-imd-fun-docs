@@ -1,0 +1,63 @@
+{
+  "id": "schedule-expiresAt-0",
+  "started_at": 1790965821.1942275,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"every\":\"PT30M\"},\"runs\":1,\"expiresAt\":\"2030-01-01T00:00:00Z\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:21 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "kM7snyl5Tgu4kyFhaP71AA"
+      ],
+      [
+        "Content-Length",
+        "354"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W3siY29kZSI6ImludmFsaWRfaW5wdXQiLCJkZXRhaWwiOiJpbnB1dDogVW5yZWNvZ25pemVkIGtleTogXCJleHBpcmVzQXRcIiJ9XSwic3VnZ2VzdGlvbnMiOltdLCJ1bml0QW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwicnVucyI6MSwiYW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwidGVybXMiOiJQcmljZWQgcGVyIHJ1bi4gT25seSBhIHJ1biB0aGF0IG9wZW5zIGEgcXVlc3Rpb24gb3IgYSBqb2Igc3BlbmRzIG9uZTsgc2tpcHBlZCBhbmQgZmFpbGVkIHJ1bnMgY29zdCBub3RoaW5nLiBVbnVzZWQgcnVucyBhcmUgbm90IHJlZnVuZGVkLiJ9",
+    "body_sha256": "81809e090a2063764f990d2dd0cabab8c3460e5a49df929f5f415b5909197aad",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"input: Unrecognized key: \\\"expiresAt\\\"\"}],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"runs\":1,\"amount\":\"500000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965821.3480191
+}

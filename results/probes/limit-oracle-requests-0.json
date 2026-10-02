@@ -1,0 +1,71 @@
+{
+  "id": "limit-oracle-requests-0",
+  "started_at": 1790965915.1910982,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/oracle/requests?limit=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:55 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "19N0ATzrQYqGtxfGjVra_w"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "681"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MSwiYXR0ZXN0ZXIiOiIweDU1OThhYTkxNDYyMTViYzEzZWIyNmYyYzY5MmFkMTQ2MWZkMzI5ODIiLCJyZXF1ZXN0cyI6W3siaWQiOiI2YzNkODA4ZS1jMDM4LTQ2NGMtOWYxYi0zODE3MThlYTI5MzciLCJzdGF0dXMiOiJhdHRlc3RlZCIsInF1ZXN0aW9uIjoiRG9lcyBXRVRIOSAoMHhDMDJhYUEzOWIyMjNGRThEMEEwZTVDNEYyN2VBRDkwODNDNzU2Q2MyKSBvbiBFdGhlcmV1bSBtYWlubmV0IHJldHVybiBleGFjdGx5IDE4IGZvciBkZWNpbWFscygpIGF0IHRoZSB3aW5kb3cncyBsYXN0IGJsb2NrPyIsImNoYWluSWQiOjEsIndpbmRvdyI6eyJ0b0Jsb2NrIjoyNjEwNjI4MSwiZnJvbUJsb2NrIjoyNjEwNTk4MiwidG9CbG9ja0hhc2giOiIweGNkYjc1YmY2NWZjM2U4MzRiZTdlOTFkZDc5NDU0OTJmY2JkMjUzMzE3YTRjNjJmZGEwZGVhM2FhOGZmMmFiNTYifSwiYW5zd2VyVHlwZSI6ImJvb2wiLCJqb2JJZCI6IjgyYmJhN2ZmLWU0NGUtNGE4MC1iOTE1LThiZWFmNDU0YmFlMiIsInNpZ25lciI6IjB4NTU5OGFhOTE0NjIxNWJjMTNlYjI2ZjJjNjkyYWQxNDYxZmQzMjk4MiIsImF0dGVzdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjAzLjIyMFoiLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAyVDE3OjU5OjM3LjAxOVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjAzLjIyMFoifV19",
+    "body_sha256": "0925a0acda0516353b31dce4f8ac68279b441dfaf68155a18d9d49d34b64acb9",
+    "body": "{\"count\":1,\"attester\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"requests\":[{\"id\":\"6c3d808e-c038-464c-9f1b-381718ea2937\",\"status\":\"attested\",\"question\":\"Does WETH9 (0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) on Ethereum mainnet return exactly 18 for decimals() at the window's last block?\",\"chainId\":1,\"window\":{\"toBlock\":26106281,\"fromBlock\":26105982,\"toBlockHash\":\"0xcdb75bf65fc3e834be7e91dd7945492fcbd253317a4c62fda0dea3aa8ff2ab56\"},\"answerType\":\"bool\",\"jobId\":\"82bba7ff-e44e-4a80-b915-8beaf454bae2\",\"signer\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"attestedAt\":\"2026-10-02T18:01:03.220Z\",\"createdAt\":\"2026-10-02T17:59:37.019Z\",\"updatedAt\":\"2026-10-02T18:01:03.220Z\"}]}"
+  },
+  "finished_at": 1790965915.4011927
+}

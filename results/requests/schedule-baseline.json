@@ -1,0 +1,1 @@
+{"action":"schedule.create","input":{"action":"job.open","input":{"objective":"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.","skill":"build-website","github":false},"cadence":{"every":"PT30M"},"runs":1}}

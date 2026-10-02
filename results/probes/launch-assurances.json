@@ -1,0 +1,55 @@
+{
+  "id": "launch-assurances",
+  "started_at": 1790965861.9462752,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/launches/87513a53-cb12-4e4e-9599-293a69a373ac/assurances",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:02 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "AKhcNI0XS36Uh5h5FFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "77"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJsYXVuY2hJZCI6Ijg3NTEzYTUzLWNiMTItNGU0ZS05NTk5LTI5M2E2OWEzNzNhYyIsImNvdW50IjowLCJhc3N1cmFuY2VzIjpbXX0=",
+    "body_sha256": "c8947a50820bacfe65f45cc007eaf7983e79f7c6a75abdc8c6c3a5c8d10c9477",
+    "body": "{\"launchId\":\"87513a53-cb12-4e4e-9599-293a69a373ac\",\"count\":0,\"assurances\":[]}"
+  },
+  "finished_at": 1790965862.157203
+}

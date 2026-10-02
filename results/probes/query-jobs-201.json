@@ -1,0 +1,63 @@
+{
+  "id": "query-jobs-201",
+  "started_at": 1790965935.9325473,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs?q=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:16 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "CTgE7KI3QVOJhYZU8u2xcg"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "21"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MCwiam9icyI6W119",
+    "body_sha256": "133f3490c5d3df44bef4b7f9ea9170ce45cc04f257afe370a552e266244564e7",
+    "body": "{\"count\":0,\"jobs\":[]}"
+  },
+  "finished_at": 1790965936.440954
+}

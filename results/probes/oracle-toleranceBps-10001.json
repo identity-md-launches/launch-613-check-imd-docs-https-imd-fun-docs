@@ -1,0 +1,59 @@
+{
+  "id": "oracle-toleranceBps-10001",
+  "started_at": 1790965790.5641162,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"oracle.request\",\"input\":{\"question\":\"How many Ethereum mainnet blocks were produced in the last 24 hours?\",\"panelSize\":5,\"answerType\":\"uint256\",\"evidence\":\"chain\",\"chainId\":1,\"toleranceBps\":10001}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:29:50 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "PfqBsB31RiKKjUZXAax-fw"
+      ],
+      [
+        "Content-Length",
+        "91"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InRvbGVyYW5jZUJwczogVG9vIGJpZzogZXhwZWN0ZWQgbnVtYmVyIHRvIGJlIDw9MTAwMDAifQ==",
+    "body_sha256": "e656a4edc3bd67d32bd2c0a4f35899ef9541904671abdaa5a941d66ebdbaf4c4",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"toleranceBps: Too big: expected number to be <=10000\"}"
+  },
+  "finished_at": 1790965790.6499193
+}

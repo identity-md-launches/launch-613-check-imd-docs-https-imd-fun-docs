@@ -1,0 +1,67 @@
+{
+  "id": "hourly",
+  "started_at": 1790965406.1350253,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/steps/hourly",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:26 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "TZZTtY4FSlOX_ONqwoOzXw"
+      ],
+      [
+        "x-read-cache",
+        "stale"
+      ],
+      [
+        "Content-Length",
+        "132"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJ1bnRpbCI6IjIwMjYtMTAtMDJUMTg6MjI6NTUuMjA0WiIsImhvdXJzIjoyNCwiYWNjZXB0ZWQiOls1MCwxMiwzOCw3NCwyMiw0NiwyNDEyMyw1MTUyLDUxNTUsMjQ5NjksOCw3LDksNyw4LDgsOSw5LDgsMjUsMTEsOSw0OSwyOF19",
+    "body_sha256": "753ad1256a9da56138d01897b4bf5435b74a28370ae9588384912644ee2b8094",
+    "body": "{\"until\":\"2026-10-02T18:22:55.204Z\",\"hours\":24,\"accepted\":[50,12,38,74,22,46,24123,5152,5155,24969,8,7,9,7,8,8,9,9,8,25,11,9,49,28]}"
+  },
+  "finished_at": 1790965406.3338861
+}

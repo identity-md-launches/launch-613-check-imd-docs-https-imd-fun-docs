@@ -1,0 +1,55 @@
+{
+  "id": "job-no-panel",
+  "started_at": 1790965892.0228088,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/aca5f077-3da7-44bb-a66d-1680dcdb0525/panel",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 404,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:32 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "9Avwvt2cSiOb1d_UPvyhXg"
+      ],
+      [
+        "Content-Length",
+        "53"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6Im5vX3BhbmVsIiwiZGV0YWlsIjoidGhhdCBqb2IgaGFzIG5vIHBhbmVsIn0=",
+    "body_sha256": "28c18f6cc2da0de3359829450cd48bdbc20586feb40e286c3264639dba06d8d1",
+    "body": "{\"error\":\"no_panel\",\"detail\":\"that job has no panel\"}"
+  },
+  "finished_at": 1790965892.1537035
+}

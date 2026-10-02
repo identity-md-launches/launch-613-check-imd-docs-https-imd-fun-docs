@@ -1,0 +1,63 @@
+{
+  "id": "path-git",
+  "started_at": 1790965654.0663998,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\".git/config\"]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:27:34 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "Y3kJRMqISc6NB-n8O8poTA"
+      ],
+      [
+        "Content-Length",
+        "636"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOltdLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoicHJvdGVjdGVkX3BhdGgiLCJkZXRhaWwiOiJcIi5naXQvY29uZmlnXCIgaXMgcHJvdGVjdGVkIGFuZCBjYW4gbmV2ZXIgYmUgbW9kaWZpZWQgYnkgYSB0YXNrIiwibm9kZSI6ImltcGxlbWVudF9jb21wb25lbnQifSx7ImNvZGUiOiJwcm90ZWN0ZWRfcGF0aCIsImRldGFpbCI6IlwiLmdpdC9jb25maWcvKipcIiBpcyBwcm90ZWN0ZWQgYW5kIGNhbiBuZXZlciBiZSBtb2RpZmllZCBieSBhIHRhc2siLCJub2RlIjoiaW1wbGVtZW50X2NvbXBvbmVudCJ9XSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJraW5kIiwiZGV0YWlsIjoiVGhpcyByZWFkcyBhcyBhIHdlYnNpdGUgd2l0aCBubyBjb250cmFjdHMgb2YgaXRzIG93bi4iLCJzd2l0Y2hUbyI6IndlYnNpdGUifV19",
+    "body_sha256": "8253584b4f2787ca0d2c54b98cb8626e8d607bbd57961e208ed709c50d83a14f",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"protected_path\",\"detail\":\"\\\".git/config\\\" is protected and can never be modified by a task\",\"node\":\"implement_component\"},{\"code\":\"protected_path\",\"detail\":\"\\\".git/config/**\\\" is protected and can never be modified by a task\",\"node\":\"implement_component\"}],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790965654.4139986
+}

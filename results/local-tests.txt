@@ -1,0 +1,19 @@
+test_cors_and_shape (test_audit.Assertions.test_cors_and_shape) ... ok
+test_http_200_can_be_refusal (test_audit.Assertions.test_http_200_can_be_refusal) ... ok
+test_limit_and_transport_are_not_passes (test_audit.Assertions.test_limit_and_transport_are_not_passes) ... ok
+test_missing_item_fields_are_failures (test_audit.Assertions.test_missing_item_fields_are_failures) ... ok
+test_no_blocker_still_requires_success_status (test_audit.Assertions.test_no_blocker_still_requires_success_status) ... ok
+test_required_fact_needs_matching_blocker (test_audit.Assertions.test_required_fact_needs_matching_blocker) ... ok
+test_budget_blocks_before_network (test_audit.Safety.test_budget_blocks_before_network) ... ok
+test_credentials_forbidden (test_audit.Safety.test_credentials_forbidden) ... ok
+test_only_permitted_calls (test_audit.Safety.test_only_permitted_calls) ... ok
+test_pacing_after_response_and_exact_request (test_audit.Safety.test_pacing_after_response_and_exact_request) ... 0 200
+1 200
+ok
+test_raw_body_padding_preserved (test_audit.Safety.test_raw_body_padding_preserved) ... ok
+test_redirects_not_followed (test_audit.Safety.test_redirects_not_followed) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.085s
+
+OK

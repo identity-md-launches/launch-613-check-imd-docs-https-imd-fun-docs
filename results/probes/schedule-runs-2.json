@@ -1,0 +1,63 @@
+{
+  "id": "schedule-runs-2",
+  "started_at": 1790965799.9488583,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"every\":\"PT30M\"},\"runs\":1000000}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:00 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "rA703bYnSyKD-hmqaP71AA"
+      ],
+      [
+        "Content-Length",
+        "292"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbXSwidW5pdEFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMCIsInJ1bnMiOjEwMDAwMDAsImFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsInRlcm1zIjoiUHJpY2VkIHBlciBydW4uIE9ubHkgYSBydW4gdGhhdCBvcGVucyBhIHF1ZXN0aW9uIG9yIGEgam9iIHNwZW5kcyBvbmU7IHNraXBwZWQgYW5kIGZhaWxlZCBydW5zIGNvc3Qgbm90aGluZy4gVW51c2VkIHJ1bnMgYXJlIG5vdCByZWZ1bmRlZC4ifQ==",
+    "body_sha256": "a1276e966319ca375a8db4ac4f6722474d38fc5990ad34c6248484a2e46bbbc4",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"runs\":1000000,\"amount\":\"500000000000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965800.3208396
+}

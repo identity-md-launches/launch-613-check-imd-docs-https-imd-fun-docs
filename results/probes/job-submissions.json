@@ -1,0 +1,63 @@
+{
+  "id": "job-submissions",
+  "started_at": 1790965841.2867427,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/aca5f077-3da7-44bb-a66d-1680dcdb0525/submissions",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:41 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "HFXYsUVPQ9ClybzawoOzXw"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "186"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJqb2JJZCI6ImFjYTVmMDc3LTNkYTctNDRiYi1hNjZkLTE2ODBkY2RiMDUyNSIsInJlcG9VcmwiOiJodHRwczovL3dvcmtzcGFjZS5pZGVudGl0eW1kLmludmFsaWQvZW1wdHkiLCJiYXNlQ29tbWl0IjoiMDI0M2Q3ZGE0YTQzMzdhZThiMTZiY2RmMTViYjRlYWQ3MzZmZDY4ZiIsImNvdW50IjowLCJzdWJtaXNzaW9ucyI6W119",
+    "body_sha256": "7e82081338a7021c16ace9bc045cfa196b1ee4a53a0856b6488209db1ea6d374",
+    "body": "{\"jobId\":\"aca5f077-3da7-44bb-a66d-1680dcdb0525\",\"repoUrl\":\"https://workspace.identitymd.invalid/empty\",\"baseCommit\":\"0243d7da4a4337ae8b16bcdf15bb4ead736fd68f\",\"count\":0,\"submissions\":[]}"
+  },
+  "finished_at": 1790965841.5037978
+}

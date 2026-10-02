@@ -1,0 +1,71 @@
+{
+  "id": "oracle-list",
+  "started_at": 1790965412.932303,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/oracle/requests?limit=2",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:33 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "rvZ94V41RwKPPP4FH4GxDA"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "1524"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MiwiYXR0ZXN0ZXIiOiIweDU1OThhYTkxNDYyMTViYzEzZWIyNmYyYzY5MmFkMTQ2MWZkMzI5ODIiLCJyZXF1ZXN0cyI6W3siaWQiOiI2YzNkODA4ZS1jMDM4LTQ2NGMtOWYxYi0zODE3MThlYTI5MzciLCJzdGF0dXMiOiJhdHRlc3RlZCIsInF1ZXN0aW9uIjoiRG9lcyBXRVRIOSAoMHhDMDJhYUEzOWIyMjNGRThEMEEwZTVDNEYyN2VBRDkwODNDNzU2Q2MyKSBvbiBFdGhlcmV1bSBtYWlubmV0IHJldHVybiBleGFjdGx5IDE4IGZvciBkZWNpbWFscygpIGF0IHRoZSB3aW5kb3cncyBsYXN0IGJsb2NrPyIsImNoYWluSWQiOjEsIndpbmRvdyI6eyJ0b0Jsb2NrIjoyNjEwNjI4MSwiZnJvbUJsb2NrIjoyNjEwNTk4MiwidG9CbG9ja0hhc2giOiIweGNkYjc1YmY2NWZjM2U4MzRiZTdlOTFkZDc5NDU0OTJmY2JkMjUzMzE3YTRjNjJmZGEwZGVhM2FhOGZmMmFiNTYifSwiYW5zd2VyVHlwZSI6ImJvb2wiLCJqb2JJZCI6IjgyYmJhN2ZmLWU0NGUtNGE4MC1iOTE1LThiZWFmNDU0YmFlMiIsInNpZ25lciI6IjB4NTU5OGFhOTE0NjIxNWJjMTNlYjI2ZjJjNjkyYWQxNDYxZmQzMjk4MiIsImF0dGVzdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjAzLjIyMFoiLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAyVDE3OjU5OjM3LjAxOVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjAzLjIyMFoifSx7ImlkIjoiMmM3ZDNiMjktODkxNS00NTcwLTg3NzktOTdmMzY2ZmIzODZiIiwic3RhdHVzIjoiYXR0ZXN0ZWQiLCJxdWVzdGlvbiI6IkFjcm9zcyB0aGUgcGlubmVkIGJsb2NrIHdpbmRvdyBvbiBFdGhlcmV1bSBtYWlubmV0LCBob3cgbWFueSBESVNUSU5DVCBhZ2VudCBpZHMgcmVjZWl2ZWQgYWNjZXB0YW5jZSBmZWVkYmFjayBhdCB0aGUgRVJDLTgwMDQgcmVwdXRhdGlvbiByZWdpc3RyeSAweDgwMDRiYWExN2M1NWE4ODE4OWFlMTM2YjE4MmU1ZmRhMTlkZTliNjMgZnJvbSB0aGUgSWRlbnRpdHlNRCBXb3JrUmVnaXN0cnkgY2xpZW50IGFkZHJlc3MgMHhiNmQwYTE4N2IwNTBmYTViYjBiODcwMzNhMjAzZjM3YmVjZjRhNzc1PyBDb3VudCBlYWNoIGFnZW50IGlkIG9uY2UgaG93ZXZlciBtYW55IHRpbWVzIGl0IGFwcGVhcnMsIGFuZCBhbnN3ZXIgdGhlIGNvdW50IGFzIGEgd2hvbGUgbnVtYmVyLiIsImNoYWluSWQiOjEsIndpbmRvdyI6eyJ0b0Jsb2NrIjoyNjEwNjE5MiwiZnJvbUJsb2NrIjoyNTg5MTE2MywidG9CbG9ja0hhc2giOiIweGNiY2I5ZjA4NGIxNzZhZDI1NmYzZDhjYjkwM2I3ZTRmMTJkOWFhZDc4NWE5NjQ1MTU5NjIxNDI4ZjA0MGFmNDkifSwiYW5zd2VyVHlwZSI6InVpbnQyNTYiLCJqb2JJZCI6IjZlNzM1NWViLWNmY2UtNDU2YS1hOTc3LTlmMzI3OGU1OGQzZSIsInNpZ25lciI6IjB4NTU5OGFhOTE0NjIxNWJjMTNlYjI2ZjJjNjkyYWQxNDYxZmQzMjk4MiIsImF0dGVzdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjMzLjc3OFoiLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAyVDE3OjQyOjQzLjYxMVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjMzLjc3OFoifV19",
+    "body_sha256": "7cca70af851c471cc518d0dfb4ea9c0802da4e618bde2997f0e713b98339190e",
+    "body": "{\"count\":2,\"attester\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"requests\":[{\"id\":\"6c3d808e-c038-464c-9f1b-381718ea2937\",\"status\":\"attested\",\"question\":\"Does WETH9 (0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) on Ethereum mainnet return exactly 18 for decimals() at the window's last block?\",\"chainId\":1,\"window\":{\"toBlock\":26106281,\"fromBlock\":26105982,\"toBlockHash\":\"0xcdb75bf65fc3e834be7e91dd7945492fcbd253317a4c62fda0dea3aa8ff2ab56\"},\"answerType\":\"bool\",\"jobId\":\"82bba7ff-e44e-4a80-b915-8beaf454bae2\",\"signer\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"attestedAt\":\"2026-10-02T18:01:03.220Z\",\"createdAt\":\"2026-10-02T17:59:37.019Z\",\"updatedAt\":\"2026-10-02T18:01:03.220Z\"},{\"id\":\"2c7d3b29-8915-4570-8779-97f366fb386b\",\"status\":\"attested\",\"question\":\"Across the pinned block window on Ethereum mainnet, how many DISTINCT agent ids received acceptance feedback at the ERC-8004 reputation registry 0x8004baa17c55a88189ae136b182e5fda19de9b63 from the IdentityMD WorkRegistry client address 0xb6d0a187b050fa5bb0b87033a203f37becf4a775? Count each agent id once however many times it appears, and answer the count as a whole number.\",\"chainId\":1,\"window\":{\"toBlock\":26106192,\"fromBlock\":25891163,\"toBlockHash\":\"0xcbcb9f084b176ad256f3d8cb903b7e4f12d9aad785a9645159621428f040af49\"},\"answerType\":\"uint256\",\"jobId\":\"6e7355eb-cfce-456a-a977-9f3278e58d3e\",\"signer\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"attestedAt\":\"2026-10-02T18:01:33.778Z\",\"createdAt\":\"2026-10-02T17:42:43.611Z\",\"updatedAt\":\"2026-10-02T18:01:33.778Z\"}]}"
+  },
+  "finished_at": 1790965413.5338647
+}

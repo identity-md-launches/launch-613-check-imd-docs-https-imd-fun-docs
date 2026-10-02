@@ -1,0 +1,63 @@
+{
+  "id": "launch-custom-without-economics",
+  "started_at": 1790965746.5590749,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"launch.open\",\"input\":{\"onchain\":\"custom_token\",\"objective\":\"Launch token named Test Coin, symbol TEST, with a total supply of 42 tokens and 6 decimals.\",\"template\":\"impl_tests_review\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:29:07 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "gMKHfuN3T0iJo27_Cx5-qw"
+      ],
+      [
+        "Content-Length",
+        "1073"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJsYXVuY2gub3BlbiIsImtpbmQiOiJ0b2tlbiIsInBsYW4iOltdLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6dHJ1ZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6dHJ1ZX0seyJpZCI6InRva2VuX3N1cHBseSIsImxhYmVsIjoiVG90YWwgc3VwcGx5Iiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6dHJ1ZX0seyJpZCI6InRva2VuX21pbnRpbmciLCJsYWJlbCI6Ik1pbnRpbmcgYWZ0ZXIgbGF1bmNoIiwic3RhdGUiOiJtaXNzaW5nIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiQXNzdW1lZDogYSBmaXhlZCBzdXBwbHkgdGhhdCBub2JvZHkgY2FuIG1pbnQgbW9yZSBvZi4ifSx7ImlkIjoidG9rZW5fcnVsZXMiLCJsYWJlbCI6IlRyYW5zZmVyIHJ1bGVzIiwic3RhdGUiOiJtaXNzaW5nIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiQXNzdW1lZDogcGxhaW4gdHJhbnNmZXJzIHdpdGggbm8gZmVlIG9yIGxpbWl0LiJ9XSwianVkZ2VkIjp0cnVlLCJibG9ja2VycyI6W3siY29kZSI6ImludmFsaWRfaW5wdXQiLCJkZXRhaWwiOiJhIGN1c3RvbSB0b2tlbiBsYXVuY2ggbmVlZHMgZWNvbm9taWNzOiBwb29sQnBzLCBpbml0aWFsTWFya2V0Q2FwV2VpIGFuZCwgdW5sZXNzIHRoZSBwb29sIHRha2VzIGFsbCBvZiB0aGUgcmVxdWVzdGVyJ3Mgc2hhcmUsIHJlbWFpbmRlclRvIn1dLCJzdWdnZXN0aW9ucyI6W3siY29kZSI6Im1pc3NpbmdfZmFjdCIsImZhY3QiOiJ0b2tlbl9taW50aW5nIiwiZGV0YWlsIjoiTm90IHNhaWQ6IG1pbnRpbmcgYWZ0ZXIgbGF1bmNoLiBBc3N1bWVkOiBhIGZpeGVkIHN1cHBseSB0aGF0IG5vYm9keSBjYW4gbWludCBtb3JlIG9mLiJ9LHsiY29kZSI6Im1pc3NpbmdfZmFjdCIsImZhY3QiOiJ0b2tlbl9ydWxlcyIsImRldGFpbCI6Ik5vdCBzYWlkOiB0cmFuc2ZlciBydWxlcy4gQXNzdW1lZDogcGxhaW4gdHJhbnNmZXJzIHdpdGggbm8gZmVlIG9yIGxpbWl0LiJ9XX0=",
+    "body_sha256": "096952df1a6da2a57a816b77409052be2f2db624618951c245641a8b1ca035e5",
+    "body": "{\"action\":\"launch.open\",\"kind\":\"token\",\"plan\":[],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"stated\",\"required\":true},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"stated\",\"required\":true},{\"id\":\"token_supply\",\"label\":\"Total supply\",\"state\":\"stated\",\"required\":true},{\"id\":\"token_minting\",\"label\":\"Minting after launch\",\"state\":\"missing\",\"required\":false,\"assumed\":\"Assumed: a fixed supply that nobody can mint more of.\"},{\"id\":\"token_rules\",\"label\":\"Transfer rules\",\"state\":\"missing\",\"required\":false,\"assumed\":\"Assumed: plain transfers with no fee or limit.\"}],\"judged\":true,\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"a custom token launch needs economics: poolBps, initialMarketCapWei and, unless the pool takes all of the requester's share, remainderTo\"}],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"token_minting\",\"detail\":\"Not said: minting after launch. Assumed: a fixed supply that nobody can mint more of.\"},{\"code\":\"missing_fact\",\"fact\":\"token_rules\",\"detail\":\"Not said: transfer rules. Assumed: plain transfers with no fee or limit.\"}]}"
+  },
+  "finished_at": 1790965747.0533953
+}

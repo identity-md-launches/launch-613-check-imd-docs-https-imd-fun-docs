@@ -1,0 +1,63 @@
+{
+  "id": "oracle-panelSize-5",
+  "started_at": 1790965762.2311914,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"oracle.request\",\"input\":{\"question\":\"How many Ethereum mainnet blocks were produced in the last 24 hours?\",\"panelSize\":5,\"answerType\":\"uint256\",\"evidence\":\"chain\",\"chainId\":1}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:29:23 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "cABikFaTTaS-lIbTjVra_w"
+      ],
+      [
+        "Content-Length",
+        "914"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJvcmFjbGUucmVxdWVzdCIsInJlcXVlc3QiOnsidiI6MSwicXVlc3Rpb24iOiJIb3cgbWFueSBFdGhlcmV1bSBtYWlubmV0IGJsb2NrcyB3ZXJlIHByb2R1Y2VkIGluIHRoZSBsYXN0IDI0IGhvdXJzPyIsImNoYWluSWQiOjEsIndpbmRvdyI6eyJob3VycyI6MjR9LCJhbnN3ZXJUeXBlIjoidWludDI1NiIsImV2aWRlbmNlIjoiY2hhaW4iLCJwYW5lbFNpemUiOjUsInF1b3J1bSI6NCwidmFsaWRGb3JTZWNvbmRzIjo4NjQwMCwidG9sZXJhbmNlQnBzIjoxMDB9LCJwcm9wb3NlZCI6eyJhbnN3ZXJUeXBlIjp7InZhbHVlIjoidWludDI1NiIsImNvbmZpZGVuY2UiOjF9LCJldmlkZW5jZSI6eyJ2YWx1ZSI6ImNoYWluIiwiY29uZmlkZW5jZSI6MC45N30sImNoYWluSWQiOnsidmFsdWUiOjEsImNvbmZpZGVuY2UiOjF9LCJ0b2xlcmFuY2VCcHMiOnsidmFsdWUiOjEwMCwiY29uZmlkZW5jZSI6MC41OH0sImhlYWQiOnsidmFsdWUiOjEsImNvbmZpZGVuY2UiOjF9fSwianVkZ2VkIjp0cnVlLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoid29yZGluZyIsImRldGFpbCI6Ikl0IG1heSBiZSByZWFkIG1vcmUgdGhhbiBvbmUgd2F5LiBOYW1pbmcgdGhlIHBlcmlvZCwgdGhlIHVuaXQgb3IgdGhlIHRlcm0geW91IG1lYW4gbWFrZXMgYSBzcGxpdCBsZXNzIGxpa2VseS4ifV0sIm9ubGluZSI6NTQ3LCJsaW1pdHMiOnsibWluUGFuZWxTaXplIjo1LCJtYXhQYW5lbFNpemUiOjEwMH0sImNoYWlucyI6W3siaWQiOjEsIm5hbWUiOiJFdGhlcmV1bSBtYWlubmV0In0seyJpZCI6NTYsIm5hbWUiOiJCTkIgQ2hhaW4ifSx7ImlkIjo0NjYzLCJuYW1lIjoiUm9iaW5ob29kIENoYWluIn0seyJpZCI6ODQ1MywibmFtZSI6IkJhc2UifSx7ImlkIjo0MjE2MSwibmFtZSI6IkFyYml0cnVtIE9uZSJ9XX0=",
+    "body_sha256": "d262b10bdea1586538b63c101ca6c626939d78d35c799604d6d3e6651e686b61",
+    "body": "{\"action\":\"oracle.request\",\"request\":{\"v\":1,\"question\":\"How many Ethereum mainnet blocks were produced in the last 24 hours?\",\"chainId\":1,\"window\":{\"hours\":24},\"answerType\":\"uint256\",\"evidence\":\"chain\",\"panelSize\":5,\"quorum\":4,\"validForSeconds\":86400,\"toleranceBps\":100},\"proposed\":{\"answerType\":{\"value\":\"uint256\",\"confidence\":1},\"evidence\":{\"value\":\"chain\",\"confidence\":0.97},\"chainId\":{\"value\":1,\"confidence\":1},\"toleranceBps\":{\"value\":100,\"confidence\":0.58},\"head\":{\"value\":1,\"confidence\":1}},\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"wording\",\"detail\":\"It may be read more than one way. Naming the period, the unit or the term you mean makes a split less likely.\"}],\"online\":547,\"limits\":{\"minPanelSize\":5,\"maxPanelSize\":100},\"chains\":[{\"id\":1,\"name\":\"Ethereum mainnet\"},{\"id\":56,\"name\":\"BNB Chain\"},{\"id\":4663,\"name\":\"Robinhood Chain\"},{\"id\":8453,\"name\":\"Base\"},{\"id\":42161,\"name\":\"Arbitrum One\"}]}"
+  },
+  "finished_at": 1790965763.0639427
+}

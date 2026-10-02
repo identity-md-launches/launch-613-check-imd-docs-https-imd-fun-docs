@@ -1,0 +1,63 @@
+{
+  "id": "publication-counts",
+  "started_at": 1790965438.925634,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/publications/counts",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:59 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "MKByO-sJSuCeptkyozsQ6Q"
+      ],
+      [
+        "x-read-cache",
+        "stale"
+      ],
+      [
+        "Content-Length",
+        "110"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudHMiOnsiYWxsIjo0OTAsImNvZGUiOjYyLCJtZWRpYSI6MzgsInNpdGVzIjoxNTUsImF1ZGl0cyI6OCwidG9rZW5zIjoxNjIsInJlc2VhcmNoIjoxMzMsImNvbnRyYWN0cyI6MjA4fX0=",
+    "body_sha256": "259fd2ac89afcf95eb3ebb346d1c57fb7123f44f5e862d2598faa409d56acd8f",
+    "body": "{\"counts\":{\"all\":490,\"code\":62,\"media\":38,\"sites\":155,\"audits\":8,\"tokens\":162,\"research\":133,\"contracts\":208}}"
+  },
+  "finished_at": 1790965439.0906694
+}

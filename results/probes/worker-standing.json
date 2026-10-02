@@ -1,0 +1,67 @@
+{
+  "id": "worker-standing",
+  "started_at": 1790965864.2574794,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/workers/9fbeb473fba88fbdce3d33b03ec015711467f32ebff45f83c6166710f0021d7b/standing?queue=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:04 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "tstcjparQiuQd3T4ezItjw"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "2028"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJkZXZpY2VLZXkiOiI5ZmJlYjQ3M2ZiYTg4ZmJkY2UzZDMzYjAzZWMwMTU3MTE0NjdmMzJlYmZmNDVmODNjNjE2NjcxMGYwMDIxZDdiIiwiYXQiOiIyMDI2LTEwLTAyVDE4OjMxOjA0LjMyM1oiLCJzZXJ2ZXIiOnsidmVyc2lvbiI6IjAuMS4wKzE1MmQ1OGMyIiwicHJlc2VuY2VXaW5kb3dNcyI6MTIwMDAwfSwiZW5yb2xsbWVudCI6eyJzdGF0dXMiOiJhY3RpdmUiLCJyZWFzb24iOm51bGwsInRva2VuSWQiOiI3NzciLCJhZ2VudElkIjoiNTEyMDEiLCJyZWdpc3RlcmVkIjp0cnVlLCJyZWdpc3RlclVybCI6bnVsbCwicGFpcmVkQXQiOiIyMDI2LTA5LTIzVDEzOjQxOjI3LjM1OFoiLCJsYXN0U2VlbkF0IjoiMjAyNi0xMC0wMlQxNjoxNDowOS45NzVaIn0sInByZXNlbmNlIjp7ImNvbm5lY3RlZCI6dHJ1ZSwiYWNjZXB0aW5nV29yayI6dHJ1ZSwiY29ubmVjdGVkQXQiOiIyMDI2LTEwLTAyVDE2OjE0OjA5Ljk3NVoiLCJsYXN0SGVhcnRiZWF0QXQiOiIyMDI2LTEwLTAyVDE4OjMwOjQwLjQzMloiLCJoZWFydGJlYXRBZ2VNcyI6MjM4OTEsInN0YWxlIjpmYWxzZSwiZGFlbW9uVmVyc2lvbiI6IjAuMS4wKzJhNTQ4MjUyIiwicnVudGltZXMiOlt7ImlkIjoiY2xhdWRlIiwidmVyc2lvbiI6IjIuMS4yODAgKENsYXVkZSBDb2RlKSIsInByZW1pdW1Nb2RlbCI6eyJtb2RlbCI6ImNsYXVkZS1mYWJsZS01LTEiLCJlZmZvcnQiOiJoaWdoIn19XSwia2luZHMiOlsiY29kZSIsImZ1enoiLCJyZXNlYXJjaCJdLCJwcm9maWxlcyI6WyJub25lIiwiZm91bmRyeSJdLCJ0b29scyI6WyJhdWRpbyIsImJyb3dzZXIiLCJpbWFnZSIsInZpZGVvIl0sInNraWxscyI6WyJhZGFwdC1jb250cmFjdC1wcm9qZWN0IiwiYWR2ZXJzYXJpYWwtcmV2aWV3IiwiYXVkaXQtaW1wb3J0ZWQtY29kZSIsImF1ZGl0LWp1ZGdlIiwiYXVkaXQtc3BlY2lhbGlzdCIsImJldHRlci1pbnRlcmZhY2UiLCJidWlsZC1jb250cmFjdC1wcm9qZWN0IiwiYnVpbGQtcG9uZGVyLWluZGV4ZXIiLCJidWlsZC13ZWJzaXRlIiwiY3JlYXRlLWF1ZGlvIiwiY3JlYXRlLWltYWdlIiwiY3JlYXRlLXZpZGVvIiwiY3VzdG9tLXRva2VuLWxhdW5jaCIsImRlZmktbmF0aXZlIiwiZGVwbG95LXNjcmlwdCIsImV0aC1hZGRyZXNzZXMiLCJldGgtY29uY2VwdHMiLCJldGgtZnJvbnRlbmQtdXgiLCJldGgtbDJzIiwiZXRoLXNlY3VyaXR5IiwiZXRoLXN0YW5kYXJkcyIsImV0aC10ZXN0aW5nIiwiZXZtLXByb2plY3QtbGF1bmNoIiwiZml4LWZpbmRpbmdzIiwiZnJvbnRlbmQtZm9yLWNvbnRyYWN0IiwiZ2FzLWFuZC1zaXplLXJlcG9ydCIsImltcGxlbWVudC1hbmQtdGVzdCIsImltcGxlbWVudC1jb21wb25lbnQiLCJpbXBsZW1lbnQtY29udHJhY3QiLCJpbXBsZW1lbnQtb25lLWNvbnRyYWN0IiwiaW1wb3J0LXNpdGUiLCJpbnRlZ3JhdGUtcHJvamVjdCIsIm9yYWNsZS1hc3Nlc3MiLCJwYXNob3YtZml6eiIsInBhc2hvdi1za2lsbCIsInBhc2hvdi14cmF5IiwicHVibGljLXJwY3MiLCJyZWZpbmUtcHJvamVjdCIsInJlc2VhcmNoLXJlcG9ydCIsInNjYWZmb2xkLXByb2plY3QiLCJzaXRlLWNvbnRlbnQtY2hlY2siLCJzb2xpZGl0eS1zZWN1cml0eS1yZXZpZXciLCJ0b2ItZW50cnktcG9pbnQtYW5hbHl6ZXIiLCJ0b2ItcHJvcGVydHktYmFzZWQtdGVzdGluZyIsInVuaXN3YXAtdjQtaG9va3MiLCJ1bmlzd2FwLXY0LXNlY3VyaXR5Iiwid29ya2Zsb3ctcGxhbm5lciIsIndyaXRlLWZvdW5kcnktdGVzdHMiLCJ3cml0ZS1yZWFkbWUtYW5kLWRvY3MiXSwibWF4Q29uY3VycmVuY3kiOjIsInBsYXRmb3JtIjp7Im9zIjoibGludXgiLCJhcmNoIjoieDY0Iiwibm9kZVZlcnNpb24iOiJ2MjQuMjEuMCJ9fSwic3RhbmRpbmciOnsiY29uc2VjdXRpdmVGYWlsdXJlcyI6MCwibGFzdEZhaWxlZEF0IjpudWxsLCJwYXVzZWRVbnRpbCI6bnVsbCwicGF1c2VkRm9yIjpudWxsLCJicmVha2VyIjp7ImZhaWx1cmVzIjozLCJjb29sZG93bk1zIjo5MDAwMDB9LCJ3b3JraW5nIjowLCJydW5uaW5nIjpbXSwicmVjZW50RmFpbHVyZXMiOltdfSwicXVldWUiOm51bGx9",
+    "body_sha256": "adf6a4e0fe626698051be8ccd1e1d97dba101d230343b97cf805016dfff2323e",
+    "body": "{\"deviceKey\":\"9fbeb473fba88fbdce3d33b03ec015711467f32ebff45f83c6166710f0021d7b\",\"at\":\"2026-10-02T18:31:04.323Z\",\"server\":{\"version\":\"0.1.0+152d58c2\",\"presenceWindowMs\":120000},\"enrollment\":{\"status\":\"active\",\"reason\":null,\"tokenId\":\"777\",\"agentId\":\"51201\",\"registered\":true,\"registerUrl\":null,\"pairedAt\":\"2026-09-23T13:41:27.358Z\",\"lastSeenAt\":\"2026-10-02T16:14:09.975Z\"},\"presence\":{\"connected\":true,\"acceptingWork\":true,\"connectedAt\":\"2026-10-02T16:14:09.975Z\",\"lastHeartbeatAt\":\"2026-10-02T18:30:40.432Z\",\"heartbeatAgeMs\":23891,\"stale\":false,\"daemonVersion\":\"0.1.0+2a548252\",\"runtimes\":[{\"id\":\"claude\",\"version\":\"2.1.280 (Claude Code)\",\"premiumModel\":{\"model\":\"claude-fable-5-1\",\"effort\":\"high\"}}],\"kinds\":[\"code\",\"fuzz\",\"research\"],\"profiles\":[\"none\",\"foundry\"],\"tools\":[\"audio\",\"browser\",\"image\",\"video\"],\"skills\":[\"adapt-contract-project\",\"adversarial-review\",\"audit-imported-code\",\"audit-judge\",\"audit-specialist\",\"better-interface\",\"build-contract-project\",\"build-ponder-indexer\",\"build-website\",\"create-audio\",\"create-image\",\"create-video\",\"custom-token-launch\",\"defi-native\",\"deploy-script\",\"eth-addresses\",\"eth-concepts\",\"eth-frontend-ux\",\"eth-l2s\",\"eth-security\",\"eth-standards\",\"eth-testing\",\"evm-project-launch\",\"fix-findings\",\"frontend-for-contract\",\"gas-and-size-report\",\"implement-and-test\",\"implement-component\",\"implement-contract\",\"implement-one-contract\",\"import-site\",\"integrate-project\",\"oracle-assess\",\"pashov-fizz\",\"pashov-skill\",\"pashov-xray\",\"public-rpcs\",\"refine-project\",\"research-report\",\"scaffold-project\",\"site-content-check\",\"solidity-security-review\",\"tob-entry-point-analyzer\",\"tob-property-based-testing\",\"uniswap-v4-hooks\",\"uniswap-v4-security\",\"workflow-planner\",\"write-foundry-tests\",\"write-readme-and-docs\"],\"maxConcurrency\":2,\"platform\":{\"os\":\"linux\",\"arch\":\"x64\",\"nodeVersion\":\"v24.21.0\"}},\"standing\":{\"consecutiveFailures\":0,\"lastFailedAt\":null,\"pausedUntil\":null,\"pausedFor\":null,\"breaker\":{\"failures\":3,\"cooldownMs\":900000},\"working\":0,\"running\":[],\"recentFailures\":[]},\"queue\":null}"
+  },
+  "finished_at": 1790965864.3618786
+}

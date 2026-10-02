@@ -1,0 +1,1 @@
+{"action":"launch.open","input":{"onchain":"custom_token","objective":"Launch token named Test Coin, symbol TEST, with a total supply of 42 tokens and 6 decimals.","template":"impl_tests_review"}}

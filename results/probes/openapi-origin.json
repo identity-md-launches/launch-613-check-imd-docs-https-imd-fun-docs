@@ -1,0 +1,59 @@
+{
+  "id": "openapi-origin",
+  "started_at": 1790965466.6314187,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/openapi.json",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 403,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:24:26 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "OG8xcSk4QEuAeQ7C8u2xcg"
+      ],
+      [
+        "Content-Length",
+        "30"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6Im9yaWdpbl9ub3RfYWxsb3dlZCJ9",
+    "body_sha256": "10b47ba057a2b4f52eef0acf91a986468982279043649e9628e3959a1da2beb0",
+    "body": "{\"error\":\"origin_not_allowed\"}"
+  },
+  "finished_at": 1790965466.7853935
+}

@@ -1,0 +1,67 @@
+{
+  "id": "feedback",
+  "started_at": 1790965450.5622716,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/feedback/batches?limit=1",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:24:10 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "CB-fLK4ESGK4MQNFyCLmYg"
+      ],
+      [
+        "x-read-cache",
+        "hit"
+      ],
+      [
+        "Content-Length",
+        "1114"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjaGFpbklkIjoxLCJjb2xsZWN0aW9uIjoiMHgwMDAwZWM5MzEyN2JhYTkyOWU1OGU5N2RkMDA5NWEyYmZiMzhlYzFkIiwiYmF0Y2hlcyI6W3siaWQiOiJjNmI4Y2ZmZS03MzI2LTRlMDctOTg3My1kN2QzMWQ3ZDNlNDMiLCJqb2JJZCI6IjA1ZDdmNDI4LWQ3ODYtNDRlZC05MDZjLTUyYTNkZDkxMTZiZSIsInN0YXR1cyI6InF1ZXVlZCIsImVudHJpZXMiOlt7InRhZzEiOiJ2ZXJpZmljYXRpb246c3RydWN0dXJhbCIsInRhZzIiOiJhY2NlcHRhbmNlLXYyIiwidmFsdWUiOjEsImFnZW50SWQiOiI1MDk1NyIsIm5vZGVLZXkiOiJidWlsZF93ZWJzaXRlIiwiZmVlZGJhY2tIYXNoIjoiZWJmYjhkOTY5MmQ3N2NmY2M2NjJiODliZDJjMTBmZDUwYmE1YjcxMDIzZDI2NzE0ZjMxNTg0MjdmYTFkNDc3ZiIsInN1Ym1pc3Npb25IYXNoIjoiZmJhYTE0M2ZjYzE1MTg2NzgxN2U3ZDI5ZDI0NzZmZTU5NGJhYzIzYjkyZDBlNTcwZjRlNDg1NTk1ZTEyMzE5YiIsInRva2VuSWQiOiIxMTIwIn1dLCJjaGFpbklkIjoxLCJ3b3JrUmVnaXN0cnkiOiIweGI2ZDBhMTg3YjA1MGZhNWJiMGI4NzAzM2EyMDNmMzdiZWNmNGE3NzUiLCJpZGVudGl0eSI6eyJhZGFwdGVyIjoiMHhkZTE1MmFmYjdkYjUzNzNmMzQ4NzZlMTQ5OWZiZDg5M2E4MmRkMzM2IiwiY2hhaW5JZCI6MSwicmVnaXN0cnkiOiIweDgwMDRhMTY5ZmI0YTMzMjUxMzZlYjI5ZmEwY2ViNmQyZTUzOWE0MzIiLCJjb2xsZWN0aW9uIjoiMHgwMDAwZWM5MzEyN2JhYTkyOWU1OGU5N2RkMDA5NWEyYmZiMzhlYzFkIn0sImRvY3VtZW50SGFzaCI6ImRkYmI1YzI1YTQxNTU4YjgyY2QyYWIwYWU4NmFiNTQ1ZDA0YTdkZDgwYjUxYjQzNzU3ZTk5ZDBlODdjZjlkOGUiLCJwcmV2aW91c0hhc2giOiIwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiYXR0ZW1wdHMiOjAsInR4SGFzaCI6bnVsbCwiYmF0Y2hlciI6bnVsbCwiYmxvY2tOdW1iZXIiOm51bGwsImdhc1VzZWQiOm51bGwsImZhaWx1cmUiOm51bGwsInNlbnRBdCI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxNzozMDo1Ny45ODZaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxNzozMDo1Ny45ODZaIn1dfQ==",
+    "body_sha256": "79d7a3830f048366d9dc8218586ced6906c074803d9e67139e4ff27a8c1c6cc9",
+    "body": "{\"chainId\":1,\"collection\":\"0x0000ec93127baa929e58e97dd0095a2bfb38ec1d\",\"batches\":[{\"id\":\"c6b8cffe-7326-4e07-9873-d7d31d7d3e43\",\"jobId\":\"05d7f428-d786-44ed-906c-52a3dd9116be\",\"status\":\"queued\",\"entries\":[{\"tag1\":\"verification:structural\",\"tag2\":\"acceptance-v2\",\"value\":1,\"agentId\":\"50957\",\"nodeKey\":\"build_website\",\"feedbackHash\":\"ebfb8d9692d77cfcc662b89bd2c10fd50ba5b71023d26714f3158427fa1d477f\",\"submissionHash\":\"fbaa143fcc151867817e7d29d2476fe594bac23b92d0e570f4e485595e12319b\",\"tokenId\":\"1120\"}],\"chainId\":1,\"workRegistry\":\"0xb6d0a187b050fa5bb0b87033a203f37becf4a775\",\"identity\":{\"adapter\":\"0xde152afb7db5373f34876e1499fbd893a82dd336\",\"chainId\":1,\"registry\":\"0x8004a169fb4a3325136eb29fa0ceb6d2e539a432\",\"collection\":\"0x0000ec93127baa929e58e97dd0095a2bfb38ec1d\"},\"documentHash\":\"ddbb5c25a41558b82cd2ab0ae86ab545d04a7dd80b51b43757e99d0e87cf9d8e\",\"previousHash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"attempts\":0,\"txHash\":null,\"batcher\":null,\"blockNumber\":null,\"gasUsed\":null,\"failure\":null,\"sentAt\":null,\"createdAt\":\"2026-10-02T17:30:57.986Z\",\"updatedAt\":\"2026-10-02T17:30:57.986Z\"}]}"
+  },
+  "finished_at": 1790965450.7748175
+}

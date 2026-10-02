@@ -1,0 +1,59 @@
+{
+  "id": "input-required-bytes",
+  "started_at": 1790965737.2636065,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"inputs\":[{\"name\":\"report\",\"path\":\"artifacts/report.md\",\"hash\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"mediaType\":\"text/markdown\",\"submissionHash\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\"}]}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:57 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ncTohVoFRkSdK9d3GbGh5g"
+      ],
+      [
+        "Content-Length",
+        "105"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6ImlucHV0cy4wLmJ5dGVzOiBJbnZhbGlkIGlucHV0OiBleHBlY3RlZCBudW1iZXIsIHJlY2VpdmVkIHVuZGVmaW5lZCJ9",
+    "body_sha256": "f05b1ad767874a644dfbafcfc1b6215f9151b897495d486777514d1554e250bf",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"inputs.0.bytes: Invalid input: expected number, received undefined\"}"
+  },
+  "finished_at": 1790965737.4171467
+}

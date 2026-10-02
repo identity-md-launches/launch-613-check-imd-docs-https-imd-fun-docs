@@ -1,0 +1,63 @@
+{
+  "id": "limit-schedules-0",
+  "started_at": 1790965922.155255,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/schedules?limit=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:02 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "GUk0jKfyTFuKD7MOFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "1109"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MSwic2NoZWR1bGVzIjpbeyJpZCI6IjlkNGI0MTY4LWIwMzEtNGNjNi04ODBiLTNmOWNjNDBjOTA2MyIsImxhYmVsIjpudWxsLCJhY3Rpb24iOiJqb2Iub3BlbiIsImFjdGlvblZlcnNpb24iOjEsImNvbnRpbnVlIjp0cnVlLCJzdGF0dXMiOiJhY3RpdmUiLCJzdGF0dXNSZWFzb24iOm51bGwsImNhZGVuY2UiOnsiZXZlcnkiOiJQVDEySCJ9LCJpbnB1dCI6eyJza2lsbCI6InJlc2VhcmNoLXJlcG9ydCIsImdpdGh1YiI6dHJ1ZSwib3V0cHV0cyI6W3sibmFtZSI6InJlcG9ydCIsInBhdGgiOiJhcnRpZmFjdHMvcmVwb3J0Lm1kIiwibWVkaWFUeXBlIjoidGV4dC9tYXJrZG93biJ9XSwiY29udHJhY3RzIjpbXSwib2JqZWN0aXZlIjoiQSBzaG9ydCBkaWdlc3Qgb2YgdGhlIElNRCBzd2FybSBmcm9tIHRoZSBwdWJsaWMgQVBJOiBzZWF0cyBvbmxpbmUgYW5kIGVucm9sbGVkIChhcGkuaW1kLmZ1bi9oZWFsdGgpLCB0YXNrcyBhY2NlcHRlZCBpbiB0aGUgbGFzdCAyNCBob3VycywgcGFpZCBvcmRlcnMgYW5kIHdoZW4gdGhlIGxhc3Qgb25lIHdhcyBwYWlkLCBhbmQgdGhlIGZpdmUgc2VhdHMgd2l0aCB0aGUgbW9zdCBhY2NlcHRlZCB3b3JrIChhcGkuaW1kLmZ1bi9jb250cmlidXRvcnMsIGJ5IE5GVCBudW1iZXIpLiBDb21wYXJlIGV2ZXJ5IGZpZ3VyZSB3aXRoIHRoZSBwcmV2aW91cyBydW4gYW5kIHNheSB3aGF0IGNoYW5nZWQuIE9uZSBwYWdlIG9mIE1hcmtkb3duLiJ9LCJydW5zIjp7InRvdGFsIjoyLCJyZW1haW5pbmciOjF9LCJydW5zUmVtYWluaW5nIjoxLCJydW5zQm91Z2h0IjoyLCJvd25lciI6IjB4Y2Q1YTA0NmU3NjAyOWZjY2MzNjBlYTg0MmExYzQyYmM0YjMwMmMyZiIsInBhaWQiOnRydWUsInBhdXNlZFJlYXNvbiI6bnVsbCwibmV4dFJ1bkF0IjoiMjAyNi0xMC0wMlQxODo1NzoxNC4zNzVaIiwibGFzdFJ1bkF0IjoiMjAyNi0xMC0wMlQwNjo1NzoxOC4wNThaIiwiZXhwaXJlc0F0IjpudWxsLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAxVDE4OjU3OjE0LjM3NVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDA2OjU3OjE4LjA1OFoiLCJ1cmwiOiIvc2NoZWR1bGVzLzlkNGI0MTY4LWIwMzEtNGNjNi04ODBiLTNmOWNjNDBjOTA2MyJ9XX0=",
+    "body_sha256": "eafe55384b7f5fe3bc002d5e37a6ec9cfe403736ad38f0139287f7968caec367",
+    "body": "{\"count\":1,\"schedules\":[{\"id\":\"9d4b4168-b031-4cc6-880b-3f9cc40c9063\",\"label\":null,\"action\":\"job.open\",\"actionVersion\":1,\"continue\":true,\"status\":\"active\",\"statusReason\":null,\"cadence\":{\"every\":\"PT12H\"},\"input\":{\"skill\":\"research-report\",\"github\":true,\"outputs\":[{\"name\":\"report\",\"path\":\"artifacts/report.md\",\"mediaType\":\"text/markdown\"}],\"contracts\":[],\"objective\":\"A short digest of the IMD swarm from the public API: seats online and enrolled (api.imd.fun/health), tasks accepted in the last 24 hours, paid orders and when the last one was paid, and the five seats with the most accepted work (api.imd.fun/contributors, by NFT number). Compare every figure with the previous run and say what changed. One page of Markdown.\"},\"runs\":{\"total\":2,\"remaining\":1},\"runsRemaining\":1,\"runsBought\":2,\"owner\":\"0xcd5a046e76029fccc360ea842a1c42bc4b302c2f\",\"paid\":true,\"pausedReason\":null,\"nextRunAt\":\"2026-10-02T18:57:14.375Z\",\"lastRunAt\":\"2026-10-02T06:57:18.058Z\",\"expiresAt\":null,\"createdAt\":\"2026-10-01T18:57:14.375Z\",\"updatedAt\":\"2026-10-02T06:57:18.058Z\",\"url\":\"/schedules/9d4b4168-b031-4cc6-880b-3f9cc40c9063\"}]}"
+  },
+  "finished_at": 1790965922.3251507
+}

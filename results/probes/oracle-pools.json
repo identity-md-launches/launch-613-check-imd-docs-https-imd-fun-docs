@@ -1,0 +1,63 @@
+{
+  "id": "oracle-pools",
+  "started_at": 1790965854.88847,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/oracle/requests/6c3d808e-c038-464c-9f1b-381718ea2937/pools",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Cache-Control",
+        "public, max-age=300"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:55 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "2PIBY9i3Tg2pmWgQHn5Ytg"
+      ],
+      [
+        "Content-Length",
+        "75"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJyZXF1ZXN0SWQiOiI2YzNkODA4ZS1jMDM4LTQ2NGMtOWYxYi0zODE3MThlYTI5MzciLCJjaGFpbklkIjoxLCJwb29scyI6e319",
+    "body_sha256": "67073b565402f3519e09f640ce699227c0acededa0fb870d754d4ecbb8cbce27",
+    "body": "{\"requestId\":\"6c3d808e-c038-464c-9f1b-381718ea2937\",\"chainId\":1,\"pools\":{}}"
+  },
+  "finished_at": 1790965855.111867
+}

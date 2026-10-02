@@ -1,0 +1,55 @@
+{
+  "id": "job-non-audit",
+  "started_at": 1790965889.71304,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/aca5f077-3da7-44bb-a66d-1680dcdb0525/report.md",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 404,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:29 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "wZI7wngDRXKG4_qsGbGh5g"
+      ],
+      [
+        "Content-Length",
+        "62"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6InVua25vd25fYXVkaXQiLCJkZXRhaWwiOiJubyBhdWRpdCBqb2Igd2l0aCB0aGlzIGlkIn0=",
+    "body_sha256": "aec914e966ba23200143096ef0f2272bbe896cdc54b63fced48c4ee96c31bd28",
+    "body": "{\"error\":\"unknown_audit\",\"detail\":\"no audit job with this id\"}"
+  },
+  "finished_at": 1790965889.9225273
+}

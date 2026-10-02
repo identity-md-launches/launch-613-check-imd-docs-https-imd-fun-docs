@@ -1,0 +1,55 @@
+{
+  "id": "record-unknown",
+  "started_at": 1790965885.1435025,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/work-records/0000000000000000000000000000000000000000000000000000000000000000.json",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 404,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:25 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "brc_-Lt1Qh-mxeMf8u2xcg"
+      ],
+      [
+        "Content-Length",
+        "26"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6InVua25vd25fcmVjb3JkIn0=",
+    "body_sha256": "31da10a85949e4a8cf80f53109a479002e4a29aaafba340eb28442e08c59fb19",
+    "body": "{\"error\":\"unknown_record\"}"
+  },
+  "finished_at": 1790965885.3515594
+}

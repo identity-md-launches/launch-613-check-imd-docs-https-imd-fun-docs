@@ -1,0 +1,63 @@
+{
+  "id": "missing-paths-deploy-script",
+  "started_at": 1790965706.5454113,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"deploy-script\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:27 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ICAg8zpcTmanxOTag4a9AQ"
+      ],
+      [
+        "Content-Length",
+        "535"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOlt7InRpdGxlIjoiV3JpdGUgYSBGb3VuZHJ5IGRlcGxveW1lbnQgc2NyaXB0IHdob3NlIHBhcmFtZXRlcnMgY29tZSBmcm9tIGNvbmZpZ3VyYXRpb24sIGFuZCBwcm92ZSBpdCBydW5zIiwic2hvcnQiOiJkZXBsb3ktc2NyaXB0Iiwic2tpbGwiOiJkZXBsb3ktc2NyaXB0Iiwic3RhZ2UiOjB9XSwiZmFjdHMiOlt7ImlkIjoidG9rZW5fbmFtZSIsImxhYmVsIjoiVG9rZW4gbmFtZSIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJ0b2tlbl9zeW1ib2wiLCJsYWJlbCI6IlRva2VuIHN5bWJvbCIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2V9XSwianVkZ2VkIjp0cnVlLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoia2luZCIsImRldGFpbCI6IlRoaXMgcmVhZHMgYXMgYSB3ZWJzaXRlIHdpdGggbm8gY29udHJhY3RzIG9mIGl0cyBvd24uIiwic3dpdGNoVG8iOiJ3ZWJzaXRlIn1dfQ==",
+    "body_sha256": "4268d8c061c7c251d7f8afa9554700cc61f6cf5c08d24bd751861ead18919ec2",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[{\"title\":\"Write a Foundry deployment script whose parameters come from configuration, and prove it runs\",\"short\":\"deploy-script\",\"skill\":\"deploy-script\",\"stage\":0}],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790965707.2730277
+}

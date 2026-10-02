@@ -1,0 +1,63 @@
+{
+  "id": "schedule-cadence-2",
+  "started_at": 1790965816.4519732,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"cron\":\"* * * * *\",\"tz\":\"UTC\"},\"runs\":1}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:16 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "1FX25lnIT6mMnfBLU79b0g"
+      ],
+      [
+        "Content-Length",
+        "382"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W3siY29kZSI6ImludmFsaWRfY2FkZW5jZSIsImRldGFpbCI6ImNyb24gZmlyZXMgMW0gYXBhcnQ7IHRoaXMgYWN0aW9uIG5lZWRzIGF0IGxlYXN0IDMwbSBiZXR3ZWVuIHJ1bnMifV0sInN1Z2dlc3Rpb25zIjpbXSwidW5pdEFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMCIsInJ1bnMiOjEsImFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMCIsInRlcm1zIjoiUHJpY2VkIHBlciBydW4uIE9ubHkgYSBydW4gdGhhdCBvcGVucyBhIHF1ZXN0aW9uIG9yIGEgam9iIHNwZW5kcyBvbmU7IHNraXBwZWQgYW5kIGZhaWxlZCBydW5zIGNvc3Qgbm90aGluZy4gVW51c2VkIHJ1bnMgYXJlIG5vdCByZWZ1bmRlZC4ifQ==",
+    "body_sha256": "042050287f477e55d5ce9d0042786157a1aca27551c83ae7d3c9a394839fdbd0",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[{\"code\":\"invalid_cadence\",\"detail\":\"cron fires 1m apart; this action needs at least 30m between runs\"}],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"runs\":1,\"amount\":\"500000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965816.7929776
+}

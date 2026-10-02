@@ -1,0 +1,59 @@
+{
+  "id": "oracle-required-question",
+  "started_at": 1790966045.0347214,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"oracle.request\",\"input\":{\"panelSize\":5}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:34:05 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "DSTKiRAnSHCGGa_ZAax-fw"
+      ],
+      [
+        "Content-Length",
+        "99"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InF1ZXN0aW9uOiBJbnZhbGlkIGlucHV0OiBleHBlY3RlZCBzdHJpbmcsIHJlY2VpdmVkIHVuZGVmaW5lZCJ9",
+    "body_sha256": "6b7af8cabf238ed6a1a111eaaabc0c6cf31360a98afef36c41a0789ab1c5eddd",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"question: Invalid input: expected string, received undefined\"}"
+  },
+  "finished_at": 1790966045.1869352
+}

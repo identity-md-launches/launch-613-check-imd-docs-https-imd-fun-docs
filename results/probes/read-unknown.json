@@ -1,0 +1,55 @@
+{
+  "id": "read-unknown",
+  "started_at": 1790965880.577766,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/reads/skill/imd-audit-nonexistent",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 404,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:20 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "85P3gJ_9QWSSIVBZjVra_w"
+      ],
+      [
+        "Content-Length",
+        "80"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6InVua25vd25fcmVhZCIsImRldGFpbCI6Im5vdGhpbmcgcmVzb2x2ZXMgc2tpbGw6aW1kLWF1ZGl0LW5vbmV4aXN0ZW50In0=",
+    "body_sha256": "31f78f941a7648cb48518b7eb1a9490beb7b7799f64138892a87c63efa72881f",
+    "body": "{\"error\":\"unknown_read\",\"detail\":\"nothing resolves skill:imd-audit-nonexistent\"}"
+  },
+  "finished_at": 1790965880.7787902
+}

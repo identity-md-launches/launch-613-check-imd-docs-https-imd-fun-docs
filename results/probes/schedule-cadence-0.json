@@ -1,0 +1,63 @@
+{
+  "id": "schedule-cadence-0",
+  "started_at": 1790965811.6461554,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"every\":\"PT29M\"},\"runs\":1}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:12 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ruhA5aPbS2CzfwMRjVra_w"
+      ],
+      [
+        "Content-Length",
+        "360"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W3siY29kZSI6ImludmFsaWRfY2FkZW5jZSIsImRldGFpbCI6ImV2ZXJ5IG11c3QgYmUgYXQgbGVhc3QgMzBtIGZvciB0aGlzIGFjdGlvbiJ9XSwic3VnZ2VzdGlvbnMiOltdLCJ1bml0QW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwicnVucyI6MSwiYW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwidGVybXMiOiJQcmljZWQgcGVyIHJ1bi4gT25seSBhIHJ1biB0aGF0IG9wZW5zIGEgcXVlc3Rpb24gb3IgYSBqb2Igc3BlbmRzIG9uZTsgc2tpcHBlZCBhbmQgZmFpbGVkIHJ1bnMgY29zdCBub3RoaW5nLiBVbnVzZWQgcnVucyBhcmUgbm90IHJlZnVuZGVkLiJ9",
+    "body_sha256": "4e8497345137b64b68ef1d4401b3134c1d48bfd5c75742493ba73011e52346b7",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[{\"code\":\"invalid_cadence\",\"detail\":\"every must be at least 30m for this action\"}],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"runs\":1,\"amount\":\"500000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965812.013917
+}

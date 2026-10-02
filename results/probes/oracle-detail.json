@@ -1,0 +1,71 @@
+{
+  "id": "oracle-detail",
+  "started_at": 1790965850.304714,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/oracle/requests/6c3d808e-c038-464c-9f1b-381718ea2937?members=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:50 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "jD3GoGg6RTOJHtpOBhdwDg"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "2560"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJpZCI6IjZjM2Q4MDhlLWMwMzgtNDY0Yy05ZjFiLTM4MTcxOGVhMjkzNyIsInN0YXR1cyI6ImF0dGVzdGVkIiwicXVlc3Rpb24iOiJEb2VzIFdFVEg5ICgweEMwMmFhQTM5YjIyM0ZFOEQwQTBlNUM0RjI3ZUFEOTA4M0M3NTZDYzIpIG9uIEV0aGVyZXVtIG1haW5uZXQgcmV0dXJuIGV4YWN0bHkgMTggZm9yIGRlY2ltYWxzKCkgYXQgdGhlIHdpbmRvdydzIGxhc3QgYmxvY2s/IiwicXVlc3Rpb25IYXNoIjoiMHg2ODFmZWQ2ZTRiMjRmMzBiZWUxZDQ5MmRlZWU1MWQ1YTgzYTY4ZThiZjI1MzM0OWJkOWY2NTYxMjFkYzNjMjQ4IiwiY2hhaW5JZCI6MSwid2luZG93Ijp7InRvQmxvY2siOjI2MTA2MjgxLCJmcm9tQmxvY2siOjI2MTA1OTgyLCJ0b0Jsb2NrSGFzaCI6IjB4Y2RiNzViZjY1ZmMzZTgzNGJlN2U5MWRkNzk0NTQ5MmZjYmQyNTMzMTdhNGM2MmZkYTBkZWEzYWE4ZmYyYWI1NiJ9LCJhbnN3ZXJUeXBlIjoiYm9vbCIsImV2aWRlbmNlIjoiY2hhaW4iLCJwYW5lbFNpemUiOjEwLCJxdW9ydW0iOjcsInZhbGlkRm9yU2Vjb25kcyI6MzYwMCwiam9iSWQiOiI4MmJiYTdmZi1lNDRlLTRhODAtYjkxNS04YmVhZjQ1NGJhZTIiLCJtZW1iZXJzIjpbXSwiYWdyZWVtZW50Ijp7ImFncmVlZCI6NywiYW5zd2VyIjp0cnVlLCJmaWd1cmUiOiIxOCIsInF1b3J1bSI6NywicmVjaXBlIjp7Im9wIjoiPT0iLCJ0byI6IjB4YzAyYWFhMzliMjIzZmU4ZDBhMGU1YzRmMjdlYWQ5MDgzYzc1NmNjMiIsImFyZ3MiOltdLCJraW5kIjoiY2FsbC1jb21wYXJlIiwiZnVuY3Rpb24iOiJmdW5jdGlvbiBkZWNpbWFscygpIHZpZXcgcmV0dXJucyAodWludDI1NikiLCJ0aHJlc2hvbGQiOiIxOCJ9LCJjbHVzdGVyIjpbIjAxNzhlMjJlODlmNTUxODJlZjRiZTY3Y2YxMGVhODNiNzRkMWQ4MjQ3M2IxYjBhODViMzVlN2UyZDg4MjBlMWYiLCIyNTRhZDU3OWI0MDk5MzRlMDY0NGFjYTZkMjBlYjY5Yjg5Y2Y4OWI5MGQxMDE3ODdiYTNlOGM0MzliZjY1M2E1IiwiMzBjZDc3NWUxNTJmNTdhZDZmODJmMDc4OGQ4Yzk3ZGExYmU3ZDg4NjM1ZTA5Yzc1Nzg5ZmI1ZTRlNDkxMTYzNCIsIjZhZGU2YjI4NDA3ZTNkZTU2M2Y3NzgyZWNmYTJhNDA4YWM0MjlkNWQ1NTdjMGQyODQ2NGY2YjllNWRjOTRhYzIiLCI3YTFjMWQ0MTM2NTdhZDBlMGI1OWZmMmM0MTUxM2VkYmQ4NWMyZTgxMTA5OTU2YjI1ZmUzMjRlNzM1NzJiNDkyIiwiODFiMjZjNjk5NThlN2ZmOWU5ODhiOGQxOGI3OTJlZmM3NGUxOWJhOGQxYmI5MzIxMGUyNTFlYTY4MjczNGQ2YyIsIjk0YTY2ZWFkOWU3OTZkYmFlODIxM2Y3Njc3NDljYTdlOGJlMDVhOTkzMmEzZjdmYjcxN2Y3MmVhOTIxOGI0NDEiXSwiZGVmaW5pdGlvbnMiOnsiZGVjaW1hbHMgcmV0dXJuIHZhbHVlIjoiSW50ZXJwcmV0IHRoZSBkZWNpbWFscygpIHVpbnQ4IHJldHVybiBhcyBpdHMgdW5zaWduZWQgaW50ZWdlciB2YWx1ZSBhbmQgY29tcGFyZSBpdCB3aXRoIDE4LiJ9LCJyZWNpcGVNZW1iZXJzIjo3fSwiY29tcHV0ZWQiOnsiYW5zd2VyIjp0cnVlLCJmaWd1cmUiOiIxOCJ9LCJhdHRlc3RhdGlvbiI6eyJhZ3JlZWQiOjcsImFuc3dlciI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsImZpZ3VyZSI6IjE4IiwicXVvcnVtIjo3LCJjaGFpbklkIjoxLCJ0b0Jsb2NrIjoyNjEwNjI4MSwiaXNzdWVkQXQiOjE3OTA5NjQwNjMsImJsb2NrSGFzaCI6IjB4Y2RiNzViZjY1ZmMzZTgzNGJlN2U5MWRkNzk0NTQ5MmZjYmQyNTMzMTdhNGM2MmZkYTBkZWEzYWE4ZmYyYWI1NiIsImV4cGlyZXNBdCI6MTc5MDk2NzY2MywiZnJvbUJsb2NrIjoyNjEwNTk4MiwicGFuZWxTaXplIjoxMCwicmVxdWVzdElkIjoiMHg2YzNkODA4ZWMwMzg0NjRjOWYxYjM4MTcxOGVhMjkzNzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiYW5zd2VyVHlwZSI6ImJvb2wiLCJwYW5lbEpvYklkIjoiMHg4MmJiYTdmZmU0NGU0YTgwYjkxNThiZWFmNDU0YmFlMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicXVlc3Rpb25IYXNoIjoiMHg2ODFmZWQ2ZTRiMjRmMzBiZWUxZDQ5MmRlZWU1MWQ1YTgzYTY4ZThiZjI1MzM0OWJkOWY2NTYxMjFkYzNjMjQ4In0sInNpZ25hdHVyZSI6IjB4ZjQxZWZhZGY1OWM2M2VhMjZhZTQxZjVlMjIxN2FhNjFiODQwNzU1ZDMzNWM3OGRlODA0N2VhMmI0YTIyZmZjNDJiMmRiY2E4YWFjNDhjNjNiOWYxZTllMmJmZDdkODUwNTliMWUzYzYxNzE2NDBjMWZlOGQyZDQzNjUzYTI1ZTYxYiIsInNpZ25lciI6IjB4NTU5OGFhOTE0NjIxNWJjMTNlYjI2ZjJjNjkyYWQxNDYxZmQzMjk4MiIsImZhaWx1cmUiOm51bGwsImF0dGVtcHRzIjowLCJhdHRlc3RlZEF0IjoiMjAyNi0xMC0wMlQxODowMTowMy4yMjBaIiwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxNzo1OTozNy4wMTlaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxODowMTowMy4yMjBaIiwidXJsIjoiL29yYWNsZS9yZXF1ZXN0cy82YzNkODA4ZS1jMDM4LTQ2NGMtOWYxYi0zODE3MThlYTI5MzciLCJqb2JVcmwiOiIvam9icy84MmJiYTdmZi1lNDRlLTRhODAtYjkxNS04YmVhZjQ1NGJhZTIifQ==",
+    "body_sha256": "9c440bae29f0a138c133e3d1eb24f394a984da8b7fc57bc922be9c8026f273ec",
+    "body": "{\"id\":\"6c3d808e-c038-464c-9f1b-381718ea2937\",\"status\":\"attested\",\"question\":\"Does WETH9 (0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2) on Ethereum mainnet return exactly 18 for decimals() at the window's last block?\",\"questionHash\":\"0x681fed6e4b24f30bee1d492deee51d5a83a68e8bf253349bd9f656121dc3c248\",\"chainId\":1,\"window\":{\"toBlock\":26106281,\"fromBlock\":26105982,\"toBlockHash\":\"0xcdb75bf65fc3e834be7e91dd7945492fcbd253317a4c62fda0dea3aa8ff2ab56\"},\"answerType\":\"bool\",\"evidence\":\"chain\",\"panelSize\":10,\"quorum\":7,\"validForSeconds\":3600,\"jobId\":\"82bba7ff-e44e-4a80-b915-8beaf454bae2\",\"members\":[],\"agreement\":{\"agreed\":7,\"answer\":true,\"figure\":\"18\",\"quorum\":7,\"recipe\":{\"op\":\"==\",\"to\":\"0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2\",\"args\":[],\"kind\":\"call-compare\",\"function\":\"function decimals() view returns (uint256)\",\"threshold\":\"18\"},\"cluster\":[\"0178e22e89f55182ef4be67cf10ea83b74d1d82473b1b0a85b35e7e2d8820e1f\",\"254ad579b409934e0644aca6d20eb69b89cf89b90d101787ba3e8c439bf653a5\",\"30cd775e152f57ad6f82f0788d8c97da1be7d88635e09c75789fb5e4e4911634\",\"6ade6b28407e3de563f7782ecfa2a408ac429d5d557c0d28464f6b9e5dc94ac2\",\"7a1c1d413657ad0e0b59ff2c41513edbd85c2e81109956b25fe324e73572b492\",\"81b26c69958e7ff9e988b8d18b792efc74e19ba8d1bb93210e251ea682734d6c\",\"94a66ead9e796dbae8213f767749ca7e8be05a9932a3f7fb717f72ea9218b441\"],\"definitions\":{\"decimals return value\":\"Interpret the decimals() uint8 return as its unsigned integer value and compare it with 18.\"},\"recipeMembers\":7},\"computed\":{\"answer\":true,\"figure\":\"18\"},\"attestation\":{\"agreed\":7,\"answer\":\"0x0000000000000000000000000000000000000000000000000000000000000001\",\"figure\":\"18\",\"quorum\":7,\"chainId\":1,\"toBlock\":26106281,\"issuedAt\":1790964063,\"blockHash\":\"0xcdb75bf65fc3e834be7e91dd7945492fcbd253317a4c62fda0dea3aa8ff2ab56\",\"expiresAt\":1790967663,\"fromBlock\":26105982,\"panelSize\":10,\"requestId\":\"0x6c3d808ec038464c9f1b381718ea293700000000000000000000000000000000\",\"answerType\":\"bool\",\"panelJobId\":\"0x82bba7ffe44e4a80b9158beaf454bae200000000000000000000000000000000\",\"questionHash\":\"0x681fed6e4b24f30bee1d492deee51d5a83a68e8bf253349bd9f656121dc3c248\"},\"signature\":\"0xf41efadf59c63ea26ae41f5e2217aa61b840755d335c78de8047ea2b4a22ffc42b2dbca8aac48c63b9f1e9e2bfd7d85059b1e3c6171640c1fe8d2d43653a25e61b\",\"signer\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"failure\":null,\"attempts\":0,\"attestedAt\":\"2026-10-02T18:01:03.220Z\",\"createdAt\":\"2026-10-02T17:59:37.019Z\",\"updatedAt\":\"2026-10-02T18:01:03.220Z\",\"url\":\"/oracle/requests/6c3d808e-c038-464c-9f1b-381718ea2937\",\"jobUrl\":\"/jobs/82bba7ff-e44e-4a80-b915-8beaf454bae2\"}"
+  },
+  "finished_at": 1790965850.5223355
+}

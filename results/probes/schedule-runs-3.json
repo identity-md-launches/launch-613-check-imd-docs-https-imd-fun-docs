@@ -1,0 +1,63 @@
+{
+  "id": "schedule-runs-3",
+  "started_at": 1790965802.4212122,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"every\":\"PT30M\"},\"runs\":1000001}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:02 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "w--hQPwTSGuIsobOqmzx2A"
+      ],
+      [
+        "Content-Length",
+        "323"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W3siY29kZSI6ImludmFsaWRfaW5wdXQiLCJkZXRhaWwiOiJydW5zOiBUb28gYmlnOiBleHBlY3RlZCBudW1iZXIgdG8gYmUgPD0xMDAwMDAwIn1dLCJzdWdnZXN0aW9ucyI6W10sInVuaXRBbW91bnQiOiI1MDAwMDAwMDAwMDAwMDAwMDAiLCJ0ZXJtcyI6IlByaWNlZCBwZXIgcnVuLiBPbmx5IGEgcnVuIHRoYXQgb3BlbnMgYSBxdWVzdGlvbiBvciBhIGpvYiBzcGVuZHMgb25lOyBza2lwcGVkIGFuZCBmYWlsZWQgcnVucyBjb3N0IG5vdGhpbmcuIFVudXNlZCBydW5zIGFyZSBub3QgcmVmdW5kZWQuIn0=",
+    "body_sha256": "8681cd23b2b0ba6715114dddd0c2df33989532ab697aaec3ab6b8ac6763954ba",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"runs: Too big: expected number to be <=1000000\"}],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965802.6216002
+}

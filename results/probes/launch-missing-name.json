@@ -1,0 +1,63 @@
+{
+  "id": "launch-missing-name",
+  "started_at": 1790965741.7022092,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"launch.open\",\"input\":{\"onchain\":\"evm_project\",\"objective\":\"Build a simple donation contract with tests and deploy it on Sepolia.\",\"template\":\"impl_tests_review\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:29:02 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "qL7pZyg8SHiFUnmJqmzx2A"
+      ],
+      [
+        "Content-Length",
+        "2543"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJsYXVuY2gub3BlbiIsImtpbmQiOiJjb250cmFjdHMiLCJwbGFuIjpbXSwiZmFjdHMiOlt7ImlkIjoid2hhdCIsImxhYmVsIjoiV2hhdCBlYWNoIGNvbnRyYWN0IGRvZXMiLCJzdGF0ZSI6InVua25vd24iLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJhY2Nlc3MiLCJsYWJlbCI6IldobyBjYW4gY2FsbCB3aGF0Iiwic3RhdGUiOiJtaXNzaW5nIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiQXNzdW1lZDogYW4gb3duZXIgd2hvIGNhbiBjaGFuZ2Ugc2V0dGluZ3MsIGFuZCBhbnlvbmUgZm9yIGV2ZXJ5dGhpbmcgZWxzZS4ifSx7ImlkIjoibnVtYmVycyIsImxhYmVsIjoiVGhlIG51bWJlcnMgdGhhdCBtYXR0ZXIiLCJzdGF0ZSI6InVua25vd24iLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgdGhlbSBhbmQgd3JpdGUgdGhlbSBpbiB0aGUgUkVBRE1FLiJ9LHsiaWQiOiJ1cGdyYWRlcyIsImxhYmVsIjoiVXBncmFkZXMgYW5kIHBhdXNpbmciLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJBc3N1bWVkOiBub3QgdXBncmFkZWFibGUgYW5kIG5vdCBwYXVzYWJsZS4ifSx7ImlkIjoiZGVwZW5kZW5jaWVzIiwibGFiZWwiOiJPdXRzaWRlIGNvbnRyYWN0cyIsInN0YXRlIjoibWlzc2luZyIsInJlcXVpcmVkIjpmYWxzZSwiYXNzdW1lZCI6IkFzc3VtZWQ6IG5vbmUgYmV5b25kIHN0YW5kYXJkIGxpYnJhcmllcy4ifSx7ImlkIjoidG9rZW5fbmFtZSIsImxhYmVsIjoiVG9rZW4gbmFtZSIsInN0YXRlIjoibWlzc2luZyIsInJlcXVpcmVkIjp0cnVlfSx7ImlkIjoidG9rZW5fc3ltYm9sIiwibGFiZWwiOiJUb2tlbiBzeW1ib2wiLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6dHJ1ZX0seyJpZCI6InRva2VuX3N1cHBseSIsImxhYmVsIjoiU3VwcGx5OiAxLDAwMCwwMDAsMDAwIHdpdGggMTggZGVjaW1hbHMsIG1pbnRlZCBvbmNlIiwic3RhdGUiOiJmaXhlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3J1bGVzIiwibGFiZWwiOiJUcmFuc2ZlcnM6IHBsYWluLCB3aXRoIG5vIGZlZXMsIGxpbWl0cywgcGF1c2luZyBvciBtaW50aW5nIiwic3RhdGUiOiJmaXhlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3NwbGl0IiwibGFiZWwiOiJTcGxpdDogMTAlIHRvIHRoZSBzd2FybSwgdGhlIG90aGVyIDkwJSBpcyB5b3VyczogODAlIGludG8gdGhlIHBvb2wgdW5sZXNzIHlvdSBjaG9vc2Ugb3RoZXJ3aXNlLCB0aGUgcmVzdCB0byB5b3VyIHdhbGxldCIsInN0YXRlIjoiZml4ZWQiLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJ0b2tlbl9wb29sIiwibGFiZWwiOiJQb29sOiBwYWlyZWQgd2l0aCBFVEgsIG9wZW5pbmcgYXQgYSAyMCBFVEggbWFya2V0IGNhcCIsInN0YXRlIjoiZml4ZWQiLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJ0b2tlbl90cmFkaW5nX2ZlZSIsImxhYmVsIjoiVHJhZGluZyBmZWU6IDEuMjUlIG9mIGV2ZXJ5IHRyYWRlOiAxJSB0byB5b3UsIDAuMjUlIHRvIElNRCwgY2xhaW1hYmxlIGFueSB0aW1lIiwic3RhdGUiOiJmaXhlZCIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoiYmFkX3BhdGhfY291bnQiLCJkZXRhaWwiOiJleHBlY3RlZCBiZXR3ZWVuIDEgYW5kIDE2IGFsbG93ZWQgcGF0aHMiLCJub2RlIjoiaW1wbCJ9LHsiY29kZSI6ImJhZF9wYXRoX2NvdW50IiwiZGV0YWlsIjoiZXhwZWN0ZWQgYmV0d2VlbiAxIGFuZCAxNiBhbGxvd2VkIHBhdGhzIiwibm9kZSI6InRlc3RzIn0seyJjb2RlIjoibWlzc2luZ19mYWN0IiwiZmFjdCI6InRva2VuX25hbWUiLCJkZXRhaWwiOiJUb2tlbiBuYW1lOiBuZWVkZWQgdG8gbWludCB0aGUgdG9rZW4uIn0seyJjb2RlIjoibWlzc2luZ19mYWN0IiwiZmFjdCI6InRva2VuX3N5bWJvbCIsImRldGFpbCI6IlRva2VuIHN5bWJvbDogbmVlZGVkIHRvIG1pbnQgdGhlIHRva2VuLiJ9XSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJ2YWd1ZSIsImRldGFpbCI6IlBhcnRzIG9mIHRoaXMgYXJlIG9wZW4gdG8gaW50ZXJwcmV0YXRpb24uIFRoZSBidWlsZGVycyB3aWxsIGRlY2lkZSB0aGVtOyBzYXkgd2hhdCBtYXR0ZXJzIHRvIHlvdS4ifSx7ImNvZGUiOiJtaXNzaW5nX2ZhY3QiLCJmYWN0IjoiYWNjZXNzIiwiZGV0YWlsIjoiTm90IHNhaWQ6IHdobyBjYW4gY2FsbCB3aGF0LiBBc3N1bWVkOiBhbiBvd25lciB3aG8gY2FuIGNoYW5nZSBzZXR0aW5ncywgYW5kIGFueW9uZSBmb3IgZXZlcnl0aGluZyBlbHNlLiJ9LHsiY29kZSI6Im1pc3NpbmdfZmFjdCIsImZhY3QiOiJ1cGdyYWRlcyIsImRldGFpbCI6Ik5vdCBzYWlkOiB1cGdyYWRlcyBhbmQgcGF1c2luZy4gQXNzdW1lZDogbm90IHVwZ3JhZGVhYmxlIGFuZCBub3QgcGF1c2FibGUuIn0seyJjb2RlIjoibWlzc2luZ19mYWN0IiwiZmFjdCI6ImRlcGVuZGVuY2llcyIsImRldGFpbCI6Ik5vdCBzYWlkOiBvdXRzaWRlIGNvbnRyYWN0cy4gQXNzdW1lZDogbm9uZSBiZXlvbmQgc3RhbmRhcmQgbGlicmFyaWVzLiJ9XX0=",
+    "body_sha256": "62086110ea3c823c608f32b4d405cf3e7259ba96beb244e4c0eab1cd08b5d9bc",
+    "body": "{\"action\":\"launch.open\",\"kind\":\"contracts\",\"plan\":[],\"facts\":[{\"id\":\"what\",\"label\":\"What each contract does\",\"state\":\"unknown\",\"required\":false},{\"id\":\"access\",\"label\":\"Who can call what\",\"state\":\"missing\",\"required\":false,\"assumed\":\"Assumed: an owner who can change settings, and anyone for everything else.\"},{\"id\":\"numbers\",\"label\":\"The numbers that matter\",\"state\":\"unknown\",\"required\":false,\"assumed\":\"The builders will choose them and write them in the README.\"},{\"id\":\"upgrades\",\"label\":\"Upgrades and pausing\",\"state\":\"missing\",\"required\":false,\"assumed\":\"Assumed: not upgradeable and not pausable.\"},{\"id\":\"dependencies\",\"label\":\"Outside contracts\",\"state\":\"missing\",\"required\":false,\"assumed\":\"Assumed: none beyond standard libraries.\"},{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"missing\",\"required\":true},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"missing\",\"required\":true},{\"id\":\"token_supply\",\"label\":\"Supply: 1,000,000,000 with 18 decimals, minted once\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_rules\",\"label\":\"Transfers: plain, with no fees, limits, pausing or minting\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_split\",\"label\":\"Split: 10% to the swarm, the other 90% is yours: 80% into the pool unless you choose otherwise, the rest to your wallet\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_pool\",\"label\":\"Pool: paired with ETH, opening at a 20 ETH market cap\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_trading_fee\",\"label\":\"Trading fee: 1.25% of every trade: 1% to you, 0.25% to IMD, claimable any time\",\"state\":\"fixed\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"bad_path_count\",\"detail\":\"expected between 1 and 16 allowed paths\",\"node\":\"impl\"},{\"code\":\"bad_path_count\",\"detail\":\"expected between 1 and 16 allowed paths\",\"node\":\"tests\"},{\"code\":\"missing_fact\",\"fact\":\"token_name\",\"detail\":\"Token name: needed to mint the token.\"},{\"code\":\"missing_fact\",\"fact\":\"token_symbol\",\"detail\":\"Token symbol: needed to mint the token.\"}],\"suggestions\":[{\"code\":\"vague\",\"detail\":\"Parts of this are open to interpretation. The builders will decide them; say what matters to you.\"},{\"code\":\"missing_fact\",\"fact\":\"access\",\"detail\":\"Not said: who can call what. Assumed: an owner who can change settings, and anyone for everything else.\"},{\"code\":\"missing_fact\",\"fact\":\"upgrades\",\"detail\":\"Not said: upgrades and pausing. Assumed: not upgradeable and not pausable.\"},{\"code\":\"missing_fact\",\"fact\":\"dependencies\",\"detail\":\"Not said: outside contracts. Assumed: none beyond standard libraries.\"}]}"
+  },
+  "finished_at": 1790965742.0446382
+}

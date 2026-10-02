@@ -1,0 +1,67 @@
+{
+  "id": "docs-runtime-submissions",
+  "started_at": 1790966004.844761,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/c2ba5413-a0fe-4e9a-9915-0e521c5bea2c/submissions",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:25 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "B0rJ2meGR4Kr_1IeezItjw"
+      ],
+      [
+        "x-read-cache",
+        "stale"
+      ],
+      [
+        "Content-Length",
+        "3069"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJqb2JJZCI6ImMyYmE1NDEzLWEwZmUtNGU5YS05OTE1LTBlNTIxYzViZWEyYyIsInJlcG9VcmwiOiJodHRwczovL2dpdGh1Yi5jb20vaWRlbnRpdHktbWQtbGF1bmNoZXMvbGF1bmNoLTExMy10aW1lbG9ja3Rva2VuLXRpbWVsb2NrYmFuayIsImJhc2VDb21taXQiOiJlY2RiNGMzMGM3ZGJjNzQ1YjU5N2E0OTZmYzdiOTFmNjA5N2QzMjgyIiwiY291bnQiOjMsInN1Ym1pc3Npb25zIjpbeyJoYXNoIjoiNjYzNzAyNWQ5YzA4ZjBiMmJhNDgxYzc5MzA3MmEzZjYxNDViZTBkNmI3ZWZiMGRjNmQ0ZjQ1ZDQwN2VjODc1ZCIsIm5vZGVLZXkiOiJ3cml0ZV9yZWFkbWVfYW5kX2RvY3MiLCJyb2xlIjoiaW1wbGVtZW50IiwiYXR0ZW1wdCI6MywiZGV2aWNlS2V5IjoiMGQzYTkxYTYwODllZGM2ODhmZGUwMjY2OTMxZWY0N2UwYWI2MjUxZDk4NjZiOTYzNzA4YjE0YzA0ODlkNTNlYyIsInNlYXQiOnsidG9rZW5JZCI6IjE4MDAiLCJhZ2VudElkIjoiNTE0NTgifSwib3V0Y29tZSI6ImZhaWxlZCIsImFjY2VwdGVkIjpmYWxzZSwiZmFpbHVyZVJlYXNvbiI6InBhdGhfdmlvbGF0aW9uIiwiZmFpbHVyZUNsYXNzIjoibWFjaGluZSIsInNhZmV0eVJlZnVzYWwiOmZhbHNlLCJ1c2FnZSI6eyJtb2RlbCI6bnVsbCwidHVybnMiOjAsInJ1bnRpbWUiOiJjb2RleCIsImlucHV0VG9rZW5zIjowLCJ3YWxsQ2xvY2tNcyI6MTg2Miwib3V0cHV0VG9rZW5zIjowLCJjYWNoZWRJbnB1dFRva2VucyI6MH0sImJhc2VDb21taXQiOiJlY2RiNGMzMGM3ZGJjNzQ1YjU5N2E0OTZmYzdiOTFmNjA5N2QzMjgyIiwic3RhcnRDb21taXQiOiJlY2RiNGMzMGM3ZGJjNzQ1YjU5N2E0OTZmYzdiOTFmNjA5N2QzMjgyIiwicmVzdWx0VHJlZUhhc2giOm51bGwsImJ1bmRsZUhhc2giOm51bGwsImJ1bmRsZUJ5dGVzIjowLCJhcnRpZmFjdHMiOltdLCJjaGFuZ2VkUGF0aHMiOltdLCJhbGxvd2VkUGF0aHMiOlsiUkVBRE1FLm1kIiwiZG9jcy8qKiJdLCJkZXBlbmRlbmN5QnVuZGxlSGFzaGVzIjpbXSwidmVyaWZpY2F0aW9uRXJyb3JzIjowLCJzdW1tYXJ5Ijoib3V0cHV0IG91dHNpZGUgYWxsb3dlZCBwYXRoczogYXJ0aWZhY3RzL1NFUE9MSUEtR1VJREUubWQiLCJjcmVhdGVkQXQiOiIyMDI2LTA5LTI3VDA2OjEzOjU2LjQzMloiLCJ2ZXJkaWN0IjpudWxsLCJmaW5kaW5ncyI6W10sImNvdmVyYWdlIjpudWxsfSx7Imhhc2giOiJiY2I3Y2MxMzI5NmMyMGNhODAxNTlmMGFiYjg3YTZhNWQwMjdiNzk3ZWRiOTQ4MGU5YTY4YWZjNWI0NDY4NzAwIiwibm9kZUtleSI6IndyaXRlX3JlYWRtZV9hbmRfZG9jcyIsInJvbGUiOiJpbXBsZW1lbnQiLCJhdHRlbXB0IjoyLCJkZXZpY2VLZXkiOiIwMzc2N2MxODhiODg4YmVkYTk4OTNhMjg0N2QyYzkxNzQ2OTc1NDgzMDk3ZWM4MjRlM2JjNzEzN2YzYjQ0Y2Q2Iiwic2VhdCI6eyJ0b2tlbklkIjoiMTQ0NyIsImFnZW50SWQiOiI1MTEwNSJ9LCJvdXRjb21lIjoiZmFpbGVkIiwiYWNjZXB0ZWQiOmZhbHNlLCJmYWlsdXJlUmVhc29uIjoicGF0aF92aW9sYXRpb24iLCJmYWlsdXJlQ2xhc3MiOiJtYWNoaW5lIiwic2FmZXR5UmVmdXNhbCI6ZmFsc2UsInVzYWdlIjp7Im1vZGVsIjpudWxsLCJ0dXJucyI6MCwicnVudGltZSI6ImNvZGV4IiwiaW5wdXRUb2tlbnMiOjAsIndhbGxDbG9ja01zIjoxMDc3LCJvdXRwdXRUb2tlbnMiOjAsImNhY2hlZElucHV0VG9rZW5zIjowfSwiYmFzZUNvbW1pdCI6ImVjZGI0YzMwYzdkYmM3NDViNTk3YTQ5NmZjN2I5MWY2MDk3ZDMyODIiLCJzdGFydENvbW1pdCI6ImVjZGI0YzMwYzdkYmM3NDViNTk3YTQ5NmZjN2I5MWY2MDk3ZDMyODIiLCJyZXN1bHRUcmVlSGFzaCI6bnVsbCwiYnVuZGxlSGFzaCI6bnVsbCwiYnVuZGxlQnl0ZXMiOjAsImFydGlmYWN0cyI6W10sImNoYW5nZWRQYXRocyI6W10sImFsbG93ZWRQYXRocyI6WyJSRUFETUUubWQiLCJkb2NzLyoqIl0sImRlcGVuZGVuY3lCdW5kbGVIYXNoZXMiOltdLCJ2ZXJpZmljYXRpb25FcnJvcnMiOjAsInN1bW1hcnkiOiJvdXRwdXQgb3V0c2lkZSBhbGxvd2VkIHBhdGhzOiBhcnRpZmFjdHMvU0VQT0xJQS1HVUlERS5tZCIsImNyZWF0ZWRBdCI6IjIwMjYtMDktMjdUMDY6MTM6NTEuMDAzWiIsInZlcmRpY3QiOm51bGwsImZpbmRpbmdzIjpbXSwiY292ZXJhZ2UiOm51bGx9LHsiaGFzaCI6IjU0NjI5YzEwODYwZTI4Y2M5MWQ2YzczNGI3NGQ3ZTFlZTkzN2VjZDg3MjJmMmMxOWVlYWIwZjNiMmMzOGUxY2YiLCJub2RlS2V5Ijoid3JpdGVfcmVhZG1lX2FuZF9kb2NzIiwicm9sZSI6ImltcGxlbWVudCIsImF0dGVtcHQiOjEsImRldmljZUtleSI6IjAyMzhhNTliYmE3MjIyMzcyMDA5YWIyMDVjMGM1MWE1YTM3MzgwYjdlMTJmMDdjOGE2MmI1ZjJhMGRjMzBhZTQiLCJzZWF0Ijp7InRva2VuSWQiOiIxMyIsImFnZW50SWQiOiI1MTUwNCJ9LCJvdXRjb21lIjoiZmFpbGVkIiwiYWNjZXB0ZWQiOmZhbHNlLCJmYWlsdXJlUmVhc29uIjoicGF0aF92aW9sYXRpb24iLCJmYWlsdXJlQ2xhc3MiOiJtYWNoaW5lIiwic2FmZXR5UmVmdXNhbCI6ZmFsc2UsInVzYWdlIjp7Im1vZGVsIjpudWxsLCJ0dXJucyI6MCwicnVudGltZSI6ImNsYXVkZSIsImlucHV0VG9rZW5zIjowLCJ3YWxsQ2xvY2tNcyI6MTA3MSwib3V0cHV0VG9rZW5zIjowLCJjYWNoZWRJbnB1dFRva2VucyI6MH0sImJhc2VDb21taXQiOiJlY2RiNGMzMGM3ZGJjNzQ1YjU5N2E0OTZmYzdiOTFmNjA5N2QzMjgyIiwic3RhcnRDb21taXQiOiJlY2RiNGMzMGM3ZGJjNzQ1YjU5N2E0OTZmYzdiOTFmNjA5N2QzMjgyIiwicmVzdWx0VHJlZUhhc2giOm51bGwsImJ1bmRsZUhhc2giOm51bGwsImJ1bmRsZUJ5dGVzIjowLCJhcnRpZmFjdHMiOltdLCJjaGFuZ2VkUGF0aHMiOltdLCJhbGxvd2VkUGF0aHMiOlsiUkVBRE1FLm1kIiwiZG9jcy8qKiJdLCJkZXBlbmRlbmN5QnVuZGxlSGFzaGVzIjpbXSwidmVyaWZpY2F0aW9uRXJyb3JzIjowLCJzdW1tYXJ5Ijoib3V0cHV0IG91dHNpZGUgYWxsb3dlZCBwYXRoczogYXJ0aWZhY3RzL1NFUE9MSUEtR1VJREUubWQiLCJjcmVhdGVkQXQiOiIyMDI2LTA5LTI3VDA2OjEzOjQ1Ljk0N1oiLCJ2ZXJkaWN0IjpudWxsLCJmaW5kaW5ncyI6W10sImNvdmVyYWdlIjpudWxsfV19",
+    "body_sha256": "91a73192f5ded5bdaf626207b8b5a0e9ce9b08051ea414801ada1d06cf25b2e2",
+    "body": "{\"jobId\":\"c2ba5413-a0fe-4e9a-9915-0e521c5bea2c\",\"repoUrl\":\"https://github.com/identity-md-launches/launch-113-timelocktoken-timelockbank\",\"baseCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"count\":3,\"submissions\":[{\"hash\":\"6637025d9c08f0b2ba481c793072a3f6145be0d6b7efb0dc6d4f45d407ec875d\",\"nodeKey\":\"write_readme_and_docs\",\"role\":\"implement\",\"attempt\":3,\"deviceKey\":\"0d3a91a6089edc688fde0266931ef47e0ab6251d9866b963708b14c0489d53ec\",\"seat\":{\"tokenId\":\"1800\",\"agentId\":\"51458\"},\"outcome\":\"failed\",\"accepted\":false,\"failureReason\":\"path_violation\",\"failureClass\":\"machine\",\"safetyRefusal\":false,\"usage\":{\"model\":null,\"turns\":0,\"runtime\":\"codex\",\"inputTokens\":0,\"wallClockMs\":1862,\"outputTokens\":0,\"cachedInputTokens\":0},\"baseCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"startCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"resultTreeHash\":null,\"bundleHash\":null,\"bundleBytes\":0,\"artifacts\":[],\"changedPaths\":[],\"allowedPaths\":[\"README.md\",\"docs/**\"],\"dependencyBundleHashes\":[],\"verificationErrors\":0,\"summary\":\"output outside allowed paths: artifacts/SEPOLIA-GUIDE.md\",\"createdAt\":\"2026-09-27T06:13:56.432Z\",\"verdict\":null,\"findings\":[],\"coverage\":null},{\"hash\":\"bcb7cc13296c20ca80159f0abb87a6a5d027b797edb9480e9a68afc5b4468700\",\"nodeKey\":\"write_readme_and_docs\",\"role\":\"implement\",\"attempt\":2,\"deviceKey\":\"03767c188b888beda9893a2847d2c91746975483097ec824e3bc7137f3b44cd6\",\"seat\":{\"tokenId\":\"1447\",\"agentId\":\"51105\"},\"outcome\":\"failed\",\"accepted\":false,\"failureReason\":\"path_violation\",\"failureClass\":\"machine\",\"safetyRefusal\":false,\"usage\":{\"model\":null,\"turns\":0,\"runtime\":\"codex\",\"inputTokens\":0,\"wallClockMs\":1077,\"outputTokens\":0,\"cachedInputTokens\":0},\"baseCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"startCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"resultTreeHash\":null,\"bundleHash\":null,\"bundleBytes\":0,\"artifacts\":[],\"changedPaths\":[],\"allowedPaths\":[\"README.md\",\"docs/**\"],\"dependencyBundleHashes\":[],\"verificationErrors\":0,\"summary\":\"output outside allowed paths: artifacts/SEPOLIA-GUIDE.md\",\"createdAt\":\"2026-09-27T06:13:51.003Z\",\"verdict\":null,\"findings\":[],\"coverage\":null},{\"hash\":\"54629c10860e28cc91d6c734b74d7e1ee937ecd8722f2c19eeab0f3b2c38e1cf\",\"nodeKey\":\"write_readme_and_docs\",\"role\":\"implement\",\"attempt\":1,\"deviceKey\":\"0238a59bba7222372009ab205c0c51a5a37380b7e12f07c8a62b5f2a0dc30ae4\",\"seat\":{\"tokenId\":\"13\",\"agentId\":\"51504\"},\"outcome\":\"failed\",\"accepted\":false,\"failureReason\":\"path_violation\",\"failureClass\":\"machine\",\"safetyRefusal\":false,\"usage\":{\"model\":null,\"turns\":0,\"runtime\":\"claude\",\"inputTokens\":0,\"wallClockMs\":1071,\"outputTokens\":0,\"cachedInputTokens\":0},\"baseCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"startCommit\":\"ecdb4c30c7dbc745b597a496fc7b91f6097d3282\",\"resultTreeHash\":null,\"bundleHash\":null,\"bundleBytes\":0,\"artifacts\":[],\"changedPaths\":[],\"allowedPaths\":[\"README.md\",\"docs/**\"],\"dependencyBundleHashes\":[],\"verificationErrors\":0,\"summary\":\"output outside allowed paths: artifacts/SEPOLIA-GUIDE.md\",\"createdAt\":\"2026-09-27T06:13:45.947Z\",\"verdict\":null,\"findings\":[],\"coverage\":null}]}"
+  },
+  "finished_at": 1790966005.0490866
+}

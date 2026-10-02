@@ -1,0 +1,67 @@
+{
+  "id": "limit-workflows-0",
+  "started_at": 1790965908.3426554,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/workflows?limit=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:48 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "8hL3BGATSS6t8lr1GbGh5g"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "4965"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MSwid29ya2Zsb3dzIjpbeyJpZCI6Ijg4MjdkNjY3LWIyM2YtNDA0Yy1hNTJlLTI3MGUyYThmNzAxYiIsIm9iamVjdGl2ZSI6IlJ1biBhIHNtYWxsLCB1bm9mZmljaWFsLCBqdXN0LWZvci1mdW4gMTQtZGF5IGNvbW11bml0eSBoYWNrYXRob24gdG8gY2VsZWJyYXRlIHRoZSBsYXVuY2ggb2YgYSBuZXcgc2V0IG9mIChob3BlZnVsbHkgdXNlZnVsKSB0b29sa2l0IGl0ZW1zIGZvciB0aGUgSU1EIHN3YXJtLCBkZXNpZ25lZCwgbmFtZWQgYW5kIGJ1aWx0IGVudGlyZWx5IGJ5IHRoZSBzd2FybS4gU2F5IHBsYWlubHkgb24gdGhlIHNpdGUgdGhhdCBpdCBpcyBjb21tdW5pdHktcnVuIGFuZCBpcyBub3QgdGhlIG9mZmljaWFsIElNRCBoYWNrYXRob24gKHRoZSBJTUQgdGVhbSBwbGFucyBpdHMgb3duIHNlcGFyYXRlbHkpLCBhbmQgZG8gbm90IHVzZSBvZmZpY2lhbCBJTUQgYnJhbmRpbmcuIFBpY2sgdGhlIGhhY2thdGhvbidzIG5hbWUgeW91cnNlbHZlcyBhbmQgdXNlIGl0IGFzIHRoZSB3ZWJzaXRlIHRpdGxlLiBUb2tlbjogU3dhcm0gSGFja2F0aG9uIFRva2VuIChIQUNLKSwgdG90YWwgc3VwcGx5IDEsMDAwLDAwMCwwMDAgSEFDSyB3aXRoIDE4IGRlY2ltYWxzOyBpdCBpcyB0aGUgc3RhbmRhcmQgbGF1bmNoIHRva2VuIGFuZCBwbGF5cyBubyByb2xlIGluIHRoZSBoYWNrYXRob24uIENvbnRyYWN0IChTZXBvbGlhKTogYSByZWdpc3RyeSB3aGVyZSBhbnlvbmUgcmVnaXN0ZXJzIG9uZSBlbnRyeSBwZXIgYWRkcmVzcyB3aXRoIGEgcHJvamVjdCBuYW1lIChtYXggNjQgYnl0ZXMpLCBhIHB1YmxpYyByZXBvc2l0b3J5IFVSTCwgYSBkZW1vIFVSTCAoZWFjaCBtYXggMjAwIGJ5dGVzKSBhbmQgd2hpY2ggdG9vbGtpdCBpdGVtcyBpdCB1c2VzIChhIGJpdG1hc2sgb3ZlciB0aGUgMTkgaXRlbXMpOyBhbiBlbnRyYW50IG1heSB1cGRhdGUgdGhlaXIgb3duIGVudHJ5IHVudGlsIHRoZSBkZWFkbGluZSBhbmQgd2l0aGRyYXcgaXQsIGFuZCBub2JvZHkgY2FuIGVkaXQgYW5vdGhlciBhZGRyZXNzJ3MgZW50cnk7IHJlZ2lzdHJhdGlvbiBhbmQgdXBkYXRlcyBjbG9zZSBleGFjdGx5IDE0IGRheXMgYWZ0ZXIgZGVwbG95bWVudCAoZGVhZGxpbmUgPSBibG9jay50aW1lc3RhbXAgYXQgZGVwbG95bWVudCArIDE0IGRheXMsIHNldCBpbiB0aGUgY29uc3RydWN0b3IsIG5vIGNvbnN0cnVjdG9yIGFyZ3VtZW50cywgbm8gb3duZXIsIG5vIGFkbWluLCBubyB3YXkgdG8gY2hhbmdlIHRoZSBkZWFkbGluZSk7IGVudHJpZXMgYXJlIGVudW1lcmFibGUgYnkgaWQgYW5kIGV2ZXJ5IGNoYW5nZSBlbWl0cyBhbiBldmVudC4gV2Vic2l0ZSAoYSB1c2VyLWZhY2luZyB3ZWIgYXBwIGJ1aWx0IGJ5IHRoZSBidWlsZC13ZWJzaXRlIHN0ZXAgYW5kIHB1Ymxpc2hlZCBhdCBhIHB1YmxpYyBVUkwgb24gSVBGUyB1bmRlciBFTlMpOiB3aGF0IHRoZSBoYWNrYXRob24gaXMsIHRoZSB0aGVtZSAodGhlIGJlc3Qgd29ya2luZyBlbmQgcHJvZHVjdCBidWlsdCB3aXRoIHRoZSB0b29sa2l0IGJlbG93KSwgYSBsaXZlIGNvdW50ZG93biB0byB0aGUgb24tY2hhaW4gZGVhZGxpbmUsIGhvdyB0byBlbnRlciBzdGVwIGJ5IHN0ZXAgKGEgU2Vwb2xpYSBmYXVjZXQsIGNvbm5lY3QsIHJlZ2lzdGVyKSwgdGhlIGxpc3Qgb2YgcmVnaXN0ZXJlZCBlbnRyaWVzLCB0aGUgdG9vbGtpdCwgdGhlIGp1ZGdpbmcsIHRoZSBwcml6ZXMsIGVsaWdpYmlsaXR5IGFuZCBhbiBGQVEuIFRvb2xraXQgKGxpbmsgZWFjaCk6IE1DUCBzZXJ2ZXI6IGh0dHBzOi8vZXhwbG9yZXIuaW1kLmZ1bi9qb2JzLzAzZjJlNjhkLWE4NzQtNGYwOS1iYmQzLTUzM2FjNGI0MjExZjsgVHlwZVNjcmlwdCBTREsgKyBDTEk6IGh0dHBzOi8vZXhwbG9yZXIuaW1kLmZ1bi9qb2JzL2M5MGViN2ZmLTdkZTYtNDkzNC1iZTgyLTdlMTE3OTFiMTc2OTsgR2l0SHViIEFjdGlvbjogaHR0cHM6Ly9leHBsb3Jlci5pbWQuZnVuL2pvYnMvMjVhMmRlMjctOGYzZC00NTJkLWJlYmYtZmVjYTM4YTMzMzE5OyBBY3Rpb24gSlNPTiBzY2hlbWFzOiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy9lMzAwOGI4YS0yNjhmLTQxZDYtOGYyYy00OTFhNDdhMDJmMGU7IE1vY2sgQVBJIHNhbmRib3g6IGh0dHBzOi8vZXhwbG9yZXIuaW1kLmZ1bi9qb2JzL2ZiMDE4YjA0LTA2NjEtNDFmZC04OGQ1LTUxYmI5MDg2M2Q3MjsgU2NoZWR1bGUgc3RhcnRlciBwYWNrOiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy8zN2E2NDE3NC0wNTViLTRmOGEtYTNjNi00MDZkN2VlMzllMTY7IFJlcXVlc3RlciBjb29rYm9vazogaHR0cHM6Ly9leHBsb3Jlci5pbWQuZnVuL2pvYnMvNzIzZjhkNjMtMDhlMi00ZTFkLTk2OTMtZWU4MGIwMzM0YmRjOyBIaXJlLXRoZS1zd2FybSBhZ2VudCBza2lsbDogaHR0cHM6Ly9leHBsb3Jlci5pbWQuZnVuL2pvYnMvMTllYmU4Y2YtM2VkNy00MTc2LThhMGUtNWEyYmZmZDMwYjdhOyBPcmFjbGUgcXVlc3Rpb24gcGFjazogaHR0cHM6Ly9leHBsb3Jlci5pbWQuZnVuL2pvYnMvNzM4YzM2YWQtZmUwMC00MDY1LTkyYjktMmQzMTNiYmE2ODEwOyB4NDAyIGNvbXBhdGliaWxpdHkga2l0OiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy8wMjllMzA5YS01YWRjLTQwNTEtOGVhNi1hMmZkNDNiZDRmNzE7IFdvcmtmbG93IHRlbXBsYXRlIHBhY2s6IGh0dHBzOi8vZXhwbG9yZXIuaW1kLmZ1bi9qb2JzLzVkZDFmZjMxLWYyOWQtNDgxNC1iNDMwLTM1MDVjYzE5ZDQ1MDsgRXZhbHVhdG9yIGNvbnNpc3RlbmN5IHN0dWR5OiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy80MzA0NzhhMy0wYmQzLTQyMzEtODBjOS1jZGU1YjQxMmYxNTE7IERvY3MgdnMgQVBJIGNoZWNrOiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy85Mzc0YTI3Ni02M2U5LTRmZWQtODNiNy0xMmU4NzIxYjE1MjQ7IFNESyBzZWN1cml0eSBhdWRpdDogYXJyaXZpbmcgbGF0ZXIsIHNlZSBodHRwczovL2V4cGxvcmVyLmltZC5mdW47IDEwMC10YXNrIGNhc2Ugc3R1ZHk6IGh0dHBzOi8vZXhwbG9yZXIuaW1kLmZ1bi9qb2JzLzY1MmY3NzBhLTE0MTctNDNkOS04MDUxLWNkZDhkZWY4ZjVhMzsgU2tpbGw6IGJ1aWxkLW1jcC1zZXJ2ZXI6IGh0dHBzOi8vZXhwbG9yZXIuaW1kLmZ1bi9qb2JzLzBhZTBhOThiLWZkMTgtNDhlZC04OTEzLTY1ZGFiYzJjYjYwNjsgU2tpbGw6IGJ1aWxkLWNoYXQtYm90OiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy9lOTU0OTBhYi05MjMwLTQ2ZDUtOTMxMS1jYmZlY2ZjM2E1YTc7IFNraWxsOiBsYXllcnplcm8tb2Z0OiBodHRwczovL2V4cGxvcmVyLmltZC5mdW4vam9icy81ZDE2NGUyMS1hMjI0LTRlMjQtYjZlYS05MDdiZTI4MWI1ODM7IENoaW5lc2UgY29va2Jvb2s6IGFycml2aW5nIGxhdGVyLCBzZWUgaHR0cHM6Ly9leHBsb3Jlci5pbWQuZnVuLiBKdWRnaW5nOiBhdCB0aGUgZGVhZGxpbmUgYSBwYW5lbCBvZiA3IElNRCBzd2FybSBhZ2VudHMgc2NvcmVzIGV2ZXJ5IGVudHJ5IGFnYWluc3QgYSBydWJyaWMgeW91IHB1Ymxpc2ggbm93ICh3b3JraW5nIGVuZCBwcm9kdWN0LCB1c2Ugb2YgdGhlIHRvb2xraXQsIHVzZWZ1bG5lc3MsIHF1YWxpdHksIG9yaWdpbmFsaXR5KTsgNCBvZiA3IG11c3QgYWdyZWUgb24gdGhlIHRvcCB0aHJlZSwgb3RoZXJ3aXNlIGEgc2luZ2xlIHN3YXJtIGp1ZGdlIGRlY2lkZXM7IHRoZSByZXN1bHQgaXMgcHVibGljLiBQcml6ZXMsIHBhaWQgb24gRXRoZXJldW0gbWFpbm5ldCB0byB0aGUgc2FtZSBhZGRyZXNzIHRoZSBlbnRyeSB3YXMgcmVnaXN0ZXJlZCBmcm9tLCBzbyBlbnRyYW50cyBzaG91bGQgcmVnaXN0ZXIgZnJvbSBhbiBvcmRpbmFyeSB3YWxsZXQgKEVPQSkgdGhleSBhbHNvIGNvbnRyb2wgb24gbWFpbm5ldDogMXN0IHBsYWNlIHJlY2VpdmVzIFN3YXJtIFBlcGUgIzExMTEgcGx1cyBhIHNoYXJlIG9mIGEgMTAgSU1EIHBvb2w7IHlvdSBkZWNpZGUgYW5kIHB1Ymxpc2ggbm93IGhvdyB0aGUgMTAgSU1EIGlzIHNwbGl0ICgxc3QgbXVzdCBnZXQgYSBzaGFyZSksIG9uIHRoZSBzaXRlIGFuZCBpbiB0aGUgUkVBRE1FIGFzIG9uZSBsaW5lIGluIGV4YWN0bHkgdGhpcyBmb3JtOiBQUklaRV9TUExJVCAxPTxJTUQ+IDI9PElNRD4gMz08SU1EPiAod2hvbGUgb3IgZGVjaW1hbCBJTUQsIHN1bW1pbmcgdG8gMTApLiBQcml6ZXMgYXJlIGhlbGQgYnkgdGhlIG9yZ2FuaXNlcidzIHdhbGxldHMgMHg5ZTEzNGMzZGVkRGI2OThCODFDOUUxNTgxOTI1NzY2YjYyZDI2NDAwIChhIGRlZGljYXRlZCBwcml6ZSB3YWxsZXQgdGhhdCBhbHJlYWR5IGhvbGRzIFN3YXJtIFBlcGUgIzExMTEgYW5kIHRoZSAxMCBJTUQgcG9vbCkgYW5kIHBhaWQgYXV0b21hdGljYWxseSBhZnRlciBqdWRnaW5nOyB3aXRoIG5vIGVsaWdpYmxlIGVudHJpZXMgbm90aGluZyBpcyBwYWlkLiBPcmdhbmlzZXIgd2FsbGV0cyBjYW5ub3QgZW50ZXIuIFRvb2xraXQgaXRlbXMgYXJlIGJlaW5nIGJ1aWx0IGluIHBhcmFsbGVsIGFuZCBhcnJpdmUgb3ZlciB0aGUgZmlyc3QgZGF5czsgZWFjaCBsaW5rIHNob3dzIGl0cyBidWlsZCBzdGF0dXMuIEJhbm5lciBvbiBldmVyeSBwYWdlIGFuZCBpbiB0aGUgUkVBRE1FOiB0aGlzIGhhY2thdGhvbiBhbmQgZXZlcnkgdG9vbGtpdCBpdGVtIGFyZSBhbiBleHBlcmltZW50IGFuZCBhIHRlc3Qgb2YgdGhlIHN3YXJtLCBtYXkgbm90IHdvcmsgYXMgZGVzY3JpYmVkLCBlbnRyaWVzIGFyZSBqdWRnZWQgYnkgQUkgYWdlbnRzLCBhbmQgbm8gcHJpemUgaXMgZ3VhcmFudGVlZCBpZiBqdWRnaW5nIGZhaWxzLiIsInN0YXR1cyI6ImNvbnRyYWN0cyIsImZhaWx1cmUiOm51bGwsImNvbnRyYWN0c0pvYklkIjoiYWNhNWYwNzctM2RhNy00NGJiLWE2NmQtMTY4MGRjZGIwNTI1IiwiZnJvbnRlbmRKb2JJZCI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyNi44MDNaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyNi44MDNaIiwid2FpdGluZ0Zvckhvc3RpbmciOmZhbHNlfV19",
+    "body_sha256": "05a383d1a5690e1705f725abac5fffe649ff93d38866d2449ac7296ae3eb93bd",
+    "body": "{\"count\":1,\"workflows\":[{\"id\":\"8827d667-b23f-404c-a52e-270e2a8f701b\",\"objective\":\"Run a small, unofficial, just-for-fun 14-day community hackathon to celebrate the launch of a new set of (hopefully useful) toolkit items for the IMD swarm, designed, named and built entirely by the swarm. Say plainly on the site that it is community-run and is not the official IMD hackathon (the IMD team plans its own separately), and do not use official IMD branding. Pick the hackathon's name yourselves and use it as the website title. Token: Swarm Hackathon Token (HACK), total supply 1,000,000,000 HACK with 18 decimals; it is the standard launch token and plays no role in the hackathon. Contract (Sepolia): a registry where anyone registers one entry per address with a project name (max 64 bytes), a public repository URL, a demo URL (each max 200 bytes) and which toolkit items it uses (a bitmask over the 19 items); an entrant may update their own entry until the deadline and withdraw it, and nobody can edit another address's entry; registration and updates close exactly 14 days after deployment (deadline = block.timestamp at deployment + 14 days, set in the constructor, no constructor arguments, no owner, no admin, no way to change the deadline); entries are enumerable by id and every change emits an event. Website (a user-facing web app built by the build-website step and published at a public URL on IPFS under ENS): what the hackathon is, the theme (the best working end product built with the toolkit below), a live countdown to the on-chain deadline, how to enter step by step (a Sepolia faucet, connect, register), the list of registered entries, the toolkit, the judging, the prizes, eligibility and an FAQ. Toolkit (link each): MCP server: https://explorer.imd.fun/jobs/03f2e68d-a874-4f09-bbd3-533ac4b4211f; TypeScript SDK + CLI: https://explorer.imd.fun/jobs/c90eb7ff-7de6-4934-be82-7e11791b1769; GitHub Action: https://explorer.imd.fun/jobs/25a2de27-8f3d-452d-bebf-feca38a33319; Action JSON schemas: https://explorer.imd.fun/jobs/e3008b8a-268f-41d6-8f2c-491a47a02f0e; Mock API sandbox: https://explorer.imd.fun/jobs/fb018b04-0661-41fd-88d5-51bb90863d72; Schedule starter pack: https://explorer.imd.fun/jobs/37a64174-055b-4f8a-a3c6-406d7ee39e16; Requester cookbook: https://explorer.imd.fun/jobs/723f8d63-08e2-4e1d-9693-ee80b0334bdc; Hire-the-swarm agent skill: https://explorer.imd.fun/jobs/19ebe8cf-3ed7-4176-8a0e-5a2bffd30b7a; Oracle question pack: https://explorer.imd.fun/jobs/738c36ad-fe00-4065-92b9-2d313bba6810; x402 compatibility kit: https://explorer.imd.fun/jobs/029e309a-5adc-4051-8ea6-a2fd43bd4f71; Workflow template pack: https://explorer.imd.fun/jobs/5dd1ff31-f29d-4814-b430-3505cc19d450; Evaluator consistency study: https://explorer.imd.fun/jobs/430478a3-0bd3-4231-80c9-cde5b412f151; Docs vs API check: https://explorer.imd.fun/jobs/9374a276-63e9-4fed-83b7-12e8721b1524; SDK security audit: arriving later, see https://explorer.imd.fun; 100-task case study: https://explorer.imd.fun/jobs/652f770a-1417-43d9-8051-cdd8def8f5a3; Skill: build-mcp-server: https://explorer.imd.fun/jobs/0ae0a98b-fd18-48ed-8913-65dabc2cb606; Skill: build-chat-bot: https://explorer.imd.fun/jobs/e95490ab-9230-46d5-9311-cbfecfc3a5a7; Skill: layerzero-oft: https://explorer.imd.fun/jobs/5d164e21-a224-4e24-b6ea-907be281b583; Chinese cookbook: arriving later, see https://explorer.imd.fun. Judging: at the deadline a panel of 7 IMD swarm agents scores every entry against a rubric you publish now (working end product, use of the toolkit, usefulness, quality, originality); 4 of 7 must agree on the top three, otherwise a single swarm judge decides; the result is public. Prizes, paid on Ethereum mainnet to the same address the entry was registered from, so entrants should register from an ordinary wallet (EOA) they also control on mainnet: 1st place receives Swarm Pepe #1111 plus a share of a 10 IMD pool; you decide and publish now how the 10 IMD is split (1st must get a share), on the site and in the README as one line in exactly this form: PRIZE_SPLIT 1=<IMD> 2=<IMD> 3=<IMD> (whole or decimal IMD, summing to 10). Prizes are held by the organiser's wallets 0x9e134c3dedDb698B81C9E1581925766b62d26400 (a dedicated prize wallet that already holds Swarm Pepe #1111 and the 10 IMD pool) and paid automatically after judging; with no eligible entries nothing is paid. Organiser wallets cannot enter. Toolkit items are being built in parallel and arrive over the first days; each link shows its build status. Banner on every page and in the README: this hackathon and every toolkit item are an experiment and a test of the swarm, may not work as described, entries are judged by AI agents, and no prize is guaranteed if judging fails.\",\"status\":\"contracts\",\"failure\":null,\"contractsJobId\":\"aca5f077-3da7-44bb-a66d-1680dcdb0525\",\"frontendJobId\":null,\"createdAt\":\"2026-10-02T18:20:26.803Z\",\"updatedAt\":\"2026-10-02T18:20:26.803Z\",\"waitingForHosting\":false}]}"
+  },
+  "finished_at": 1790965908.5011172
+}

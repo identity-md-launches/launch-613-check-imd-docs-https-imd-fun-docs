@@ -1,0 +1,63 @@
+{
+  "id": "step-key-a",
+  "started_at": 1790965656.5143027,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\"src\"],\"key\":\"a\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:27:36 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "-bv7EX1jQom2BwJBjVra_w"
+      ],
+      [
+        "Content-Length",
+        "460"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOltdLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoidW5wbGFubmFibGVfc3RlcHMiLCJkZXRhaWwiOiJFeHBsaWNpdCBrZXlzIGFuZCBkZXBlbmRlbmNpZXMgcmVxdWlyZSBzaGFwZTpkYWcifV0sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoia2luZCIsImRldGFpbCI6IlRoaXMgcmVhZHMgYXMgYSB3ZWJzaXRlIHdpdGggbm8gY29udHJhY3RzIG9mIGl0cyBvd24uIiwic3dpdGNoVG8iOiJ3ZWJzaXRlIn1dfQ==",
+    "body_sha256": "e5a53d96b60f4f1c2e38ffffd016147d811f0469049c0006d0eaa7431af6ce03",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"unplannable_steps\",\"detail\":\"Explicit keys and dependencies require shape:dag\"}],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790965656.8081923
+}

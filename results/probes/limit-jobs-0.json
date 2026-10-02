@@ -1,0 +1,67 @@
+{
+  "id": "limit-jobs-0",
+  "started_at": 1790965901.2906837,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs?limit=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:41 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "JuXS_BCOQDWYHaNpc9o55Q"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "433"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MSwiam9icyI6W3siaWQiOiJhY2E1ZjA3Ny0zZGE3LTQ0YmItYTY2ZC0xNjgwZGNkYjA1MjUiLCJzdGF0ZSI6ImV4ZWN1dGluZyIsInRlbXBsYXRlIjoic2hhcGU6Y2hhaW4iLCJvYmplY3RpdmUiOiJXT1JLRkxPVyBDT05UUkFDVCBTVEFHRSBDT05URVhUOiB0aGUgc3RhZ2UgcHJvZHVjZXMgaW1wbGVtZW50ZWQgYW5kIHRlc3RlZCBjb250cmFjdHMsIEFCSSBkb2N1bWVudGF0aW9uIGFuZCBhbiBpbmRlcGVuZGVudGx5IHJldmlld2VkIGxhdW5jaC5qc29uLiBFYWNo4oCmIiwib3JpZ2luYWxSZXF1ZXN0IjpudWxsLCJibG9ja2VkUmVhc29uIjpudWxsLCJkZWxpdmVyeSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyNi44MDNaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyOC45NTJaIiwicHJvamVjdCI6bnVsbH1dfQ==",
+    "body_sha256": "ca9fea56c68f8e356a326acaa16ab9151dddd89d628f0f8776da56a1ea990117",
+    "body": "{\"count\":1,\"jobs\":[{\"id\":\"aca5f077-3da7-44bb-a66d-1680dcdb0525\",\"state\":\"executing\",\"template\":\"shape:chain\",\"objective\":\"WORKFLOW CONTRACT STAGE CONTEXT: the stage produces implemented and tested contracts, ABI documentation and an independently reviewed launch.json. Each…\",\"originalRequest\":null,\"blockedReason\":null,\"delivery\":null,\"createdAt\":\"2026-10-02T18:20:26.803Z\",\"updatedAt\":\"2026-10-02T18:20:28.952Z\",\"project\":null}]}"
+  },
+  "finished_at": 1790965901.5662239
+}

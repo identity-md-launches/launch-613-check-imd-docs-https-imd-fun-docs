@@ -1,0 +1,1406 @@
+[
+  {
+    "id": "version",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#health"
+  },
+  {
+    "id": "health",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#health"
+  },
+  {
+    "id": "skills",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#health"
+  },
+  {
+    "id": "services",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#health"
+  },
+  {
+    "id": "hourly",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#health"
+  },
+  {
+    "id": "jobs",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "workflows",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#workflows"
+  },
+  {
+    "id": "oracle-list",
+    "status": "FAIL",
+    "reason": "HTTP 200; requests rows missing panelSize: [0, 1]; requests rows missing quorum: [0, 1]",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "oracle-counts",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "schedules",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#schedules"
+  },
+  {
+    "id": "panels",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#research"
+  },
+  {
+    "id": "fuzz",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#research"
+  },
+  {
+    "id": "swarm",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "workers",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "contributors",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "seats",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "owners",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "publications",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "publication-counts",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "sites",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "ens",
+    "status": "PASS",
+    "reason": "HTTP 404; member_sites_closed: this plane names no member sites",
+    "docs": "https://imd.fun/docs/#base"
+  },
+  {
+    "id": "launches",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#launches"
+  },
+  {
+    "id": "policies",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#launches"
+  },
+  {
+    "id": "feedback",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#records"
+  },
+  {
+    "id": "explorer-version",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "explorer-activity",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "explorer-search",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "capabilities",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "capabilities-origin",
+    "status": "PASS",
+    "reason": "HTTP 403; origin_not_allowed",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "openapi",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "openapi-origin",
+    "status": "PASS",
+    "reason": "HTTP 403; origin_not_allowed",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "docs-no-paths",
+    "status": "FAIL",
+    "reason": "HTTP 200; documented invalid input was not refused.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "docs-with-paths",
+    "status": "FAIL",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (write-readme-and-docs) declares its own budget, so the step may not also name paths\"}]; unexpected unplannable_steps",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "check-baseline",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "check-origin",
+    "status": "PASS",
+    "reason": "HTTP 403; origin_not_allowed",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "objective-len-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: objective: Too small: expected string to have >=1 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "objective-len-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "objective-len-8000",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "objective-len-8001",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: objective: Too big: expected string to have <=8000 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "skill-len-64",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unknown_skill\", \"detail\": \"no skill named \\\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\\\"\"}]; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "skill-len-65",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: skill: Too big: expected string to have <=64 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "objective-missing",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: objective: Invalid input: expected string, received undefined",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "refused-projectId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a paid job starts a project of its own; parentJobId and projectId are not accepted\"}]",
+    "docs": "https://imd.fun/docs/#continue"
+  },
+  {
+    "id": "refused-deploymentLaunchId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a paid job does not build against an existing launch\"}]",
+    "docs": "https://imd.fun/docs/#continue"
+  },
+  {
+    "id": "refused-parentJobId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a paid job starts a project of its own; parentJobId and projectId are not accepted\"}]",
+    "docs": "https://imd.fun/docs/#continue"
+  },
+  {
+    "id": "refused-onchain",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a launch is not covered by the job price; ask for launch.open instead\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "refused-chainId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"chainId names where a launch deploys; set onchain, or leave chainId out\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "refused-pairWith",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"pairWith names what a launch's pool pairs with; set onchain, or leave pairWith out\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "exclusive-skill-template",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"name a template, a skill, or steps \u2014 not more than one\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "exclusive-skill-steps",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"name a template, a skill, or steps \u2014 not more than one\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-objective-4000",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-objective-4001",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a research panel's question is at most 4000 characters, and this one is 4001: shorten it, or ask for a written report instead\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelSize-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: panelSize: Too small: expected number to be >=1",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelSize-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelSize-9",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelSize-10",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: panelSize: Too big: expected number to be <=9",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelQuorum-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: panelQuorum: Too small: expected number to be >=1",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelQuorum-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelQuorum-9",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-panelQuorum-10",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: panelQuorum: Too big: expected number to be <=9",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-minCitations--1",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: minCitations: Too small: expected number to be >=0",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-minCitations-0",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-minCitations-20",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "research-minCitations-21",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: minCitations: Too big: expected number to be <=20",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-objective-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.objective: Too small: expected string to have >=1 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-objective-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-objective-3000",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-objective-3001",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.objective: Too big: expected string to have <=3000 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-count-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.acceptanceCriteria: Too small: expected array to have >=1 items",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-count-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-count-8",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-count-9",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.acceptanceCriteria: Too big: expected array to have <=8 items",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-length-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.acceptanceCriteria.0: Too small: expected string to have >=1 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-length-500",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "criteria-length-501",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.acceptanceCriteria.0: Too big: expected string to have <=500 characters",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "paths-count-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "paths-count-16",
+    "status": "FAIL",
+    "reason": "HTTP 200; blockers=[{\"code\": \"bad_path_count\", \"detail\": \"expected between 1 and 16 allowed paths\", \"node\": \"implement_component\"}]; unexpected bad_path_count",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "paths-count-17",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.paths: Too big: expected array to have <=16 items",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "path-relative",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "path-absolute",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.paths.0: must be repository-relative",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "path-parent",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.paths.0: must not traverse upward",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "path-nested-parent",
+    "status": "OBSERVED",
+    "reason": "HTTP 400; invalid_request: steps.0.paths.0: must not traverse upward; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "path-dot",
+    "status": "OBSERVED",
+    "reason": "HTTP 200; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "path-git",
+    "status": "OBSERVED",
+    "reason": "HTTP 200; blockers=[{\"code\": \"protected_path\", \"detail\": \"\\\".git/config\\\" is protected and can never be modified by a task\", \"node\": \"implement_component\"}, {\"code\": \"protected_path\", \"detail\": \"\\\".git/config/**\\\" is protected and can never be modified by a task\", \"node\": \"implement_component\"}]; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-a",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"Explicit keys and dependencies require shape:dag\"}]; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-length32",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"Explicit keys and dependencies require shape:dag\"}]; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-length33",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.key: Invalid string: must match pattern /^[a-z][a-z0-9_]{0,31}$/",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-A",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.key: Invalid string: must match pattern /^[a-z][a-z0-9_]{0,31}$/",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-1a",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.key: Invalid string: must match pattern /^[a-z][a-z0-9_]{0,31}$/",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-length3",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps.0.key: Invalid string: must match pattern /^[a-z][a-z0-9_]{0,31}$/",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-key-underscore",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"Explicit keys and dependencies require shape:dag\"}]; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-count-0",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"a job needs at least one step\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-count-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-count-6",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "step-count-7",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: steps: Too big: expected array to have <=6 items",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "shape-required",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"steps need a shape to run in: chain, fan_out_join or dag\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "dag-missing-key",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"DAG steps need unique valid keys\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "dag-missing-deps",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"DAG dependencies must name unique existing steps\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "dag-cycle",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"DAG must join all branches into one final step\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "dag-no-join",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"DAG must join all branches into one final step\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-implement-contract",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (implement-contract) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-implement-one-contract",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (implement-one-contract) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-implement-and-test",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (implement-and-test) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-implement-component",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (implement-component) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-write-foundry-tests",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (write-foundry-tests) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-refine-project",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (refine-project) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-deploy-script",
+    "status": "FAIL",
+    "reason": "HTTP 200; documented invalid input was not refused.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "missing-paths-gas-and-size-report",
+    "status": "INCONCLUSIVE",
+    "reason": "HTTP 429; provider/rate failure cannot establish the input rule.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "pair-required-repoUrl",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"repoUrl and baseCommit must be supplied together\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "pair-required-baseCommit",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"repoUrl and baseCommit must be supplied together\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "references-count-8",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "references-count-9",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: references: Too big: expected array to have <=8 items",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "contracts-count-4",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "contracts-count-5",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: contracts: Too big: expected array to have <=4 items",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "output-path-114",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "output-path-115",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: outputs.0.path: named outputs go under artifacts/; source files travel in the Git bundle",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "output-path-116",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: outputs.0.path: must be a normalized relative path",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "input-required-hash",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: inputs.0.hash: Invalid input: expected string, received undefined",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "input-required-mediaType",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: inputs.0.mediaType: Invalid input: expected string, received undefined",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "input-required-bytes",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: inputs.0.bytes: Invalid input: expected number, received undefined",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "input-required-submissionHash",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: inputs.0.submissionHash: Invalid input: expected string, received undefined",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "launch-missing-name",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"bad_path_count\", \"detail\": \"expected between 1 and 16 allowed paths\", \"node\": \"impl\"}, {\"code\": \"bad_path_count\", \"detail\": \"expected between 1 and 16 allowed paths\", \"node\": \"tests\"}, {\"code\": \"missing_fact\", \"fact\": \"token_name\", \"detail\": \"Token name: needed to mint the token.\"}, {\"code\": \"missing_fact\", \"fact\": \"token_symbol\", \"detail\": \"Token symbol: needed to mint the token.\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "launch-nonstandard-token",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"bad_path_count\", \"detail\": \"expected between 1 and 16 allowed paths\", \"node\": \"impl\"}, {\"code\": \"bad_path_count\", \"detail\": \"expected between 1 and 16 allowed paths\", \"node\": \"tests\"}, {\"code\": \"launch_token\", \"detail\": \"Every launch deploys the same token: 1,000,000,000 with 18 decimals, minted once, transfers plain, with no fees, limits, pausing or minting, split 10% to the swarm, the other 90% is yours: 80% into the pool unless you choose otherwise, the rest to your wallet. This request asks for a different supply or decimals, which the launch would not deploy. Take it out and check again.\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "launch-custom-without-economics",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a custom token launch needs economics: poolBps, initialMarketCapWei and, unless the pool takes all of the requester's share, remainderTo\"}]",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "oracle-short",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-question-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: question: Too small: expected string to have >=1 characters",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-question-2000",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"ambiguous_question\", \"detail\": \"Careful researchers could read this question more than one way. Name the period, the unit, the rounding or the term you mean, and check again.\"}]; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-question-2001",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: question: Too big: expected string to have <=2000 characters",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-panelSize-4",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: panelSize: Too small: expected number to be >=5",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-panelSize-5",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-panelSize-100",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-panelSize-101",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"the flat price covers a panel of up to 100; asked for 101\"}]",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-head-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: head: Too small: expected number to be >=1",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-head-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-head-32",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-head-33",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: head: Too big: expected number to be <=32",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-toleranceBps--1",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: toleranceBps: Too small: expected number to be >=0",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-toleranceBps-0",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-toleranceBps-10000",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-toleranceBps-10001",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: toleranceBps: Too big: expected number to be <=10000",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "schedule-baseline",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "schedule-runs-0",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"runs: Too small: expected number to be >=1\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-runs-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-runs-2",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-runs-3",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"runs: Too big: expected number to be <=1000000\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-label-0",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"label: Too small: expected string to have >=1 characters\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-label-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-label-2",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"label: Too big: expected string to have <=120 characters\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-cadence-0",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_cadence\", \"detail\": \"every must be at least 30m for this action\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-cadence-1",
+    "status": "PASS",
+    "reason": "HTTP 200; outer input schema accepted; this does not assert admission.",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-cadence-2",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_cadence\", \"detail\": \"cron fires 1m apart; this action needs at least 30m between runs\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-submissionKey-0",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"input: Unrecognized key: \\\"submissionKey\\\"\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "schedule-expiresAt-0",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"input: Unrecognized key: \\\"expiresAt\\\"\"}]",
+    "docs": "https://imd.fun/docs/#schedule-body"
+  },
+  {
+    "id": "jobs-docs-search",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "jobs-path-search",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "job-detail",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "job-result",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "job-submissions",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "job-records",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#records"
+  },
+  {
+    "id": "job-assessments",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#records"
+  },
+  {
+    "id": "workflow-detail",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#workflows"
+  },
+  {
+    "id": "oracle-detail",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "oracle-attestation",
+    "status": "FAIL",
+    "reason": "HTTP 200; unexpected Access-Control-Allow-Origin=None",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "oracle-pools",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "site-detail",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "launch-detail",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#launches"
+  },
+  {
+    "id": "launch-assurances",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#launches"
+  },
+  {
+    "id": "worker-standing",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "seat-detail",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "seat-standing",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "wallet-earnings",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#fleet"
+  },
+  {
+    "id": "paid-by",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "schedule-unknown",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_schedule",
+    "docs": "https://imd.fun/docs/#schedules"
+  },
+  {
+    "id": "site-unknown",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_site",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "read-unknown",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_read: nothing resolves skill:imd-audit-nonexistent",
+    "docs": "https://imd.fun/docs/#health"
+  },
+  {
+    "id": "review-unknown",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_review: no review for that submission",
+    "docs": "https://imd.fun/docs/#records"
+  },
+  {
+    "id": "record-unknown",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_record",
+    "docs": "https://imd.fun/docs/#records"
+  },
+  {
+    "id": "document-unknown",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_document",
+    "docs": "https://imd.fun/docs/#records"
+  },
+  {
+    "id": "job-non-audit",
+    "status": "PASS",
+    "reason": "HTTP 404; unknown_audit: no audit job with this id",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "job-no-panel",
+    "status": "PASS",
+    "reason": "HTTP 404; no_panel: that job has no panel",
+    "docs": "https://imd.fun/docs/#research"
+  },
+  {
+    "id": "job-no-fuzz",
+    "status": "PASS",
+    "reason": "HTTP 404; no_fuzz: that job has no campaign",
+    "docs": "https://imd.fun/docs/#research"
+  },
+  {
+    "id": "schedule-owner-invalid",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_owner: owner must be a 0x wallet address",
+    "docs": "https://imd.fun/docs/#schedules"
+  },
+  {
+    "id": "cursor-invalid-jobs",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: `before` must be a time, such as 2026-09-20T12:00:00Z",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-jobs-0",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-jobs-501",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "cursor-invalid-workflows",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: `before` must be a time, such as 2026-09-20T12:00:00Z",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-workflows-0",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-workflows-501",
+    "status": "PASS",
+    "reason": "HTTP 200; sparse sample: clamp upper bound only, exact clamp not proven",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "cursor-invalid-oracle-requests",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: `before` must be a time, such as 2026-09-20T12:00:00Z",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-oracle-requests-0",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-oracle-requests-501",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "cursor-invalid-schedules",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: `before` must be a time, such as 2026-09-20T12:00:00Z",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-schedules-0",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-schedules-501",
+    "status": "PASS",
+    "reason": "HTTP 200; sparse sample: clamp upper bound only, exact clamp not proven",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "cursor-invalid-feedback-batches",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: `before` must be a time, such as 2026-09-20T12:00:00Z",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-feedback-batches-0",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "limit-feedback-batches-501",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#pagination"
+  },
+  {
+    "id": "query-jobs-200",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "query-jobs-201",
+    "status": "OBSERVED",
+    "reason": "HTTP 200; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "query-oracle-200",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "query-oracle-201",
+    "status": "OBSERVED",
+    "reason": "HTTP 200; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#oracle"
+  },
+  {
+    "id": "query-search-200",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "query-search-201",
+    "status": "OBSERVED",
+    "reason": "HTTP 200; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "page-size-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: {'formErrors': [], 'fieldErrors': {'pageSize': ['Too small: expected number to be >=1']}}; out-of-range query rejected.",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "page-size-1",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "page-size-100",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "page-size-101",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_query: {'formErrors': [], 'fieldErrors': {'pageSize': ['Too big: expected number to be <=100']}}; out-of-range query rejected.",
+    "docs": "https://imd.fun/docs/#publications"
+  },
+  {
+    "id": "explorer-agent",
+    "status": "FAIL",
+    "reason": "HTTP 200; missing jobs; missing lastAcceptedAt",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "explorer-claim",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "explorer-capabilities",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#explorer"
+  },
+  {
+    "id": "docs-runtime",
+    "status": "FAIL",
+    "reason": "HTTP 200; historical runtime record contains the documented step and path_violation.",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "docs-runtime-submissions",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "docs-runtime-result",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#jobs"
+  },
+  {
+    "id": "missing-paths-gas-and-size-report-after-rate-limit",
+    "status": "FAIL",
+    "reason": "HTTP 200; documented invalid input was not refused.",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "provided-paths-deploy-script",
+    "status": "FAIL",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (deploy-script) declares its own budget, so the step may not also name paths\"}]; unexpected unplannable_steps",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "provided-paths-gas-and-size-report",
+    "status": "FAIL",
+    "reason": "HTTP 200; blockers=[{\"code\": \"unplannable_steps\", \"detail\": \"step 1 (gas-and-size-report) declares its own budget, so the step may not also name paths\"}]; unexpected unplannable_steps",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "body-bytes-16384",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "body-bytes-16385",
+    "status": "PASS",
+    "reason": "HTTP 413; request_too_large",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "workflow-check",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"recheck_failed\", \"detail\": \"The checker is not sure the request wants an independent security review of smart contracts, which the plan includes. Say whether it does.\"}]",
+    "docs": "https://imd.fun/docs/#paid"
+  },
+  {
+    "id": "workflow-required-request",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: request: Invalid input: expected string, received undefined",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-required-draft",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: draft: Invalid input: expected object, received undefined",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-refused-parentJobId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a paid workflow starts a project of its own; parentJobId and projectId are not accepted\"}]",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-refused-projectId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a paid workflow starts a project of its own; parentJobId and projectId are not accepted\"}]",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-refused-deploymentLaunchId",
+    "status": "PASS",
+    "reason": "HTTP 200; blockers=[{\"code\": \"invalid_input\", \"detail\": \"a paid workflow does not build against an existing launch\"}]",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-refused-submissionKey",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: draft: Unrecognized key: \"submissionKey\"",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-refused-unexpectedField",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: draft: Unrecognized key: \"unexpectedField\"",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-request-0",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: request: Too small: expected string to have >=1 characters",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "workflow-request-16001",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: request: Too big: expected string to have <=16000 characters",
+    "docs": "https://imd.fun/docs/#workflow-body"
+  },
+  {
+    "id": "oracle-required-question",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: question: Invalid input: expected string, received undefined",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "oracle-required-panelSize",
+    "status": "PASS",
+    "reason": "HTTP 400; invalid_request: panelSize: Invalid input: expected number, received undefined",
+    "docs": "https://imd.fun/docs/#oracle-body"
+  },
+  {
+    "id": "paths-8-directory",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "paths-9-directory",
+    "status": "FAIL",
+    "reason": "HTTP 200; blockers=[{\"code\": \"bad_path_count\", \"detail\": \"expected between 1 and 16 allowed paths\", \"node\": \"implement_component\"}]; unexpected bad_path_count",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "paths-16-file",
+    "status": "PASS",
+    "reason": "HTTP 200",
+    "docs": "https://imd.fun/docs/#job-body"
+  },
+  {
+    "id": "paths-16-glob",
+    "status": "OBSERVED",
+    "reason": "HTTP 200; documentation does not specify the exact outcome.",
+    "docs": "https://imd.fun/docs/#job-body"
+  }
+]

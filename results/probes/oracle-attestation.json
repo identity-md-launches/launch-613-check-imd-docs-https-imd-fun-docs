@@ -1,0 +1,63 @@
+{
+  "id": "oracle-attestation",
+  "started_at": 1790965852.6227293,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/oracle/requests/6c3d808e-c038-464c-9f1b-381718ea2937/attestation",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=60"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:52 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "M6HzS3a0QqOdB4CjyCLmYg"
+      ],
+      [
+        "Content-Length",
+        "1621"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJyZXF1ZXN0SWQiOiI2YzNkODA4ZS1jMDM4LTQ2NGMtOWYxYi0zODE3MThlYTI5MzciLCJkb21haW4iOnsibmFtZSI6IklkZW50aXR5TUQgT3JhY2xlIiwidmVyc2lvbiI6IjIiLCJjaGFpbklkIjoxLCJ2ZXJpZnlpbmdDb250cmFjdCI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCJ9LCJ0eXBlcyI6eyJPcmFjbGVBdHRlc3RhdGlvbiI6W3sibmFtZSI6InJlcXVlc3RJZCIsInR5cGUiOiJieXRlczMyIn0seyJuYW1lIjoiY2hhaW5JZCIsInR5cGUiOiJ1aW50MjU2In0seyJuYW1lIjoicXVlc3Rpb25IYXNoIiwidHlwZSI6ImJ5dGVzMzIifSx7Im5hbWUiOiJhbnN3ZXJUeXBlIiwidHlwZSI6InVpbnQ4In0seyJuYW1lIjoiYW5zd2VyIiwidHlwZSI6ImJ5dGVzIn0seyJuYW1lIjoiZmlndXJlIiwidHlwZSI6InVpbnQyNTYifSx7Im5hbWUiOiJmcm9tQmxvY2siLCJ0eXBlIjoidWludDY0In0seyJuYW1lIjoidG9CbG9jayIsInR5cGUiOiJ1aW50NjQifSx7Im5hbWUiOiJibG9ja0hhc2giLCJ0eXBlIjoiYnl0ZXMzMiJ9LHsibmFtZSI6InBhbmVsSm9iSWQiLCJ0eXBlIjoiYnl0ZXMzMiJ9LHsibmFtZSI6InBhbmVsU2l6ZSIsInR5cGUiOiJ1aW50MTYifSx7Im5hbWUiOiJxdW9ydW0iLCJ0eXBlIjoidWludDE2In0seyJuYW1lIjoiYWdyZWVkIiwidHlwZSI6InVpbnQxNiJ9LHsibmFtZSI6Imlzc3VlZEF0IiwidHlwZSI6InVpbnQ2NCJ9LHsibmFtZSI6ImV4cGlyZXNBdCIsInR5cGUiOiJ1aW50NjQifV19LCJwcmltYXJ5VHlwZSI6Ik9yYWNsZUF0dGVzdGF0aW9uIiwibWVzc2FnZSI6eyJhZ3JlZWQiOjcsImFuc3dlciI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMSIsImZpZ3VyZSI6IjE4IiwicXVvcnVtIjo3LCJjaGFpbklkIjoxLCJ0b0Jsb2NrIjoyNjEwNjI4MSwiaXNzdWVkQXQiOjE3OTA5NjQwNjMsImJsb2NrSGFzaCI6IjB4Y2RiNzViZjY1ZmMzZTgzNGJlN2U5MWRkNzk0NTQ5MmZjYmQyNTMzMTdhNGM2MmZkYTBkZWEzYWE4ZmYyYWI1NiIsImV4cGlyZXNBdCI6MTc5MDk2NzY2MywiZnJvbUJsb2NrIjoyNjEwNTk4MiwicGFuZWxTaXplIjoxMCwicmVxdWVzdElkIjoiMHg2YzNkODA4ZWMwMzg0NjRjOWYxYjM4MTcxOGVhMjkzNzAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwiYW5zd2VyVHlwZSI6ImJvb2wiLCJwYW5lbEpvYklkIjoiMHg4MmJiYTdmZmU0NGU0YTgwYjkxNThiZWFmNDU0YmFlMjAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIiwicXVlc3Rpb25IYXNoIjoiMHg2ODFmZWQ2ZTRiMjRmMzBiZWUxZDQ5MmRlZWU1MWQ1YTgzYTY4ZThiZjI1MzM0OWJkOWY2NTYxMjFkYzNjMjQ4In0sInNpZ25hdHVyZSI6IjB4ZjQxZWZhZGY1OWM2M2VhMjZhZTQxZjVlMjIxN2FhNjFiODQwNzU1ZDMzNWM3OGRlODA0N2VhMmI0YTIyZmZjNDJiMmRiY2E4YWFjNDhjNjNiOWYxZTllMmJmZDdkODUwNTliMWUzYzYxNzE2NDBjMWZlOGQyZDQzNjUzYTI1ZTYxYiIsInNpZ25lciI6IjB4NTU5OGFhOTE0NjIxNWJjMTNlYjI2ZjJjNjkyYWQxNDYxZmQzMjk4MiIsImF0dGVzdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjAxOjAzLjIyMFoifQ==",
+    "body_sha256": "8a66d23555918e8851da500a0411ac307286b101d86fd214e733530024c78b90",
+    "body": "{\"requestId\":\"6c3d808e-c038-464c-9f1b-381718ea2937\",\"domain\":{\"name\":\"IdentityMD Oracle\",\"version\":\"2\",\"chainId\":1,\"verifyingContract\":\"0x0000000000000000000000000000000000000000\"},\"types\":{\"OracleAttestation\":[{\"name\":\"requestId\",\"type\":\"bytes32\"},{\"name\":\"chainId\",\"type\":\"uint256\"},{\"name\":\"questionHash\",\"type\":\"bytes32\"},{\"name\":\"answerType\",\"type\":\"uint8\"},{\"name\":\"answer\",\"type\":\"bytes\"},{\"name\":\"figure\",\"type\":\"uint256\"},{\"name\":\"fromBlock\",\"type\":\"uint64\"},{\"name\":\"toBlock\",\"type\":\"uint64\"},{\"name\":\"blockHash\",\"type\":\"bytes32\"},{\"name\":\"panelJobId\",\"type\":\"bytes32\"},{\"name\":\"panelSize\",\"type\":\"uint16\"},{\"name\":\"quorum\",\"type\":\"uint16\"},{\"name\":\"agreed\",\"type\":\"uint16\"},{\"name\":\"issuedAt\",\"type\":\"uint64\"},{\"name\":\"expiresAt\",\"type\":\"uint64\"}]},\"primaryType\":\"OracleAttestation\",\"message\":{\"agreed\":7,\"answer\":\"0x0000000000000000000000000000000000000000000000000000000000000001\",\"figure\":\"18\",\"quorum\":7,\"chainId\":1,\"toBlock\":26106281,\"issuedAt\":1790964063,\"blockHash\":\"0xcdb75bf65fc3e834be7e91dd7945492fcbd253317a4c62fda0dea3aa8ff2ab56\",\"expiresAt\":1790967663,\"fromBlock\":26105982,\"panelSize\":10,\"requestId\":\"0x6c3d808ec038464c9f1b381718ea293700000000000000000000000000000000\",\"answerType\":\"bool\",\"panelJobId\":\"0x82bba7ffe44e4a80b9158beaf454bae200000000000000000000000000000000\",\"questionHash\":\"0x681fed6e4b24f30bee1d492deee51d5a83a68e8bf253349bd9f656121dc3c248\"},\"signature\":\"0xf41efadf59c63ea26ae41f5e2217aa61b840755d335c78de8047ea2b4a22ffc42b2dbca8aac48c63b9f1e9e2bfd7d85059b1e3c6171640c1fe8d2d43653a25e61b\",\"signer\":\"0x5598aa9146215bc13eb26f2c692ad1461fd32982\",\"attestedAt\":\"2026-10-02T18:01:03.220Z\"}"
+  },
+  "finished_at": 1790965852.7881145
+}

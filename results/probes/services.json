@@ -1,0 +1,67 @@
+{
+  "id": "services",
+  "started_at": 1790965403.5823894,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/services",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=5"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:24 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "vZOPEXN0RYKE-89SGbGh5g"
+      ],
+      [
+        "x-read-cache",
+        "hit"
+      ],
+      [
+        "Content-Length",
+        "437"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6Mywic2VydmljZXMiOlt7ImtpbmQiOiJ2ZXJpZmllciIsImtleSI6IjY4MjQ5ZGYxZjQyMuKApiIsInZlcnNpb24iOiIwLjEuMCs2OGRkZjVlNCIsInVwIjp0cnVlLCJsYXN0U2VlbkF0IjoiMjAyNi0xMC0wMlQxODoyMzoxOS4wNzlaIiwiY2xhaW1zIjo0MTI4MDI2fSx7ImtpbmQiOiJkZXBsb3llciIsImtleSI6IjE3OWFjNmNhZjkzZOKApiIsInZlcnNpb24iOiIwLjEuMCs2OGRkZjVlNCIsInVwIjp0cnVlLCJsYXN0U2VlbkF0IjoiMjAyNi0xMC0wMlQxODoyMzoxMy4xOTlaIiwiY2xhaW1zIjo0NjE2NDF9LHsia2luZCI6InB1Ymxpc2hlciIsImtleSI6IjE0MjI4MmVkMGEwY+KApiIsInZlcnNpb24iOiIwLjEuMCs5YjQwYjEyOCIsInVwIjp0cnVlLCJsYXN0U2VlbkF0IjoiMjAyNi0xMC0wMlQxODoyMzoxMS4zNzRaIiwiY2xhaW1zIjo0ODExOTF9XX0=",
+    "body_sha256": "7159eac9f3aaa4c47e2db93fd1e574f22d500f76c36c06a5cfda430653352fbf",
+    "body": "{\"count\":3,\"services\":[{\"kind\":\"verifier\",\"key\":\"68249df1f422…\",\"version\":\"0.1.0+68ddf5e4\",\"up\":true,\"lastSeenAt\":\"2026-10-02T18:23:19.079Z\",\"claims\":4128026},{\"kind\":\"deployer\",\"key\":\"179ac6caf93d…\",\"version\":\"0.1.0+68ddf5e4\",\"up\":true,\"lastSeenAt\":\"2026-10-02T18:23:13.199Z\",\"claims\":461641},{\"kind\":\"publisher\",\"key\":\"142282ed0a0c…\",\"version\":\"0.1.0+9b40b128\",\"up\":true,\"lastSeenAt\":\"2026-10-02T18:23:11.374Z\",\"claims\":481191}]}"
+  },
+  "finished_at": 1790965404.0347404
+}

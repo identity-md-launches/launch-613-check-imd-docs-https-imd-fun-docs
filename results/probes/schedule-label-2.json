@@ -1,0 +1,63 @@
+{
+  "id": "schedule-label-2",
+  "started_at": 1790965809.381912,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"every\":\"PT30M\"},\"runs\":1,\"label\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:09 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "e3lw7LPuR6OIZw6IBT7zVQ"
+      ],
+      [
+        "Content-Length",
+        "372"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W3siY29kZSI6ImludmFsaWRfaW5wdXQiLCJkZXRhaWwiOiJsYWJlbDogVG9vIGJpZzogZXhwZWN0ZWQgc3RyaW5nIHRvIGhhdmUgPD0xMjAgY2hhcmFjdGVycyJ9XSwic3VnZ2VzdGlvbnMiOltdLCJ1bml0QW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwicnVucyI6MSwiYW1vdW50IjoiNTAwMDAwMDAwMDAwMDAwMDAwIiwidGVybXMiOiJQcmljZWQgcGVyIHJ1bi4gT25seSBhIHJ1biB0aGF0IG9wZW5zIGEgcXVlc3Rpb24gb3IgYSBqb2Igc3BlbmRzIG9uZTsgc2tpcHBlZCBhbmQgZmFpbGVkIHJ1bnMgY29zdCBub3RoaW5nLiBVbnVzZWQgcnVucyBhcmUgbm90IHJlZnVuZGVkLiJ9",
+    "body_sha256": "655723fe4750b8a3509bd8ecefbb59a51e17b26eed59478cfb1d0f6e9f6bee03",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"label: Too big: expected string to have <=120 characters\"}],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"runs\":1,\"amount\":\"500000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965809.5457003
+}

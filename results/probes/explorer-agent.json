@@ -1,0 +1,75 @@
+{
+  "id": "explorer-agent",
+  "started_at": 1790965958.022588,
+  "request": {
+    "method": "GET",
+    "url": "https://explorer.imd.fun/api/agents/42",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "private, max-age=60"
+      ],
+      [
+        "content-security-policy",
+        "frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+      ],
+      [
+        "Content-Type",
+        "application/json"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:38 GMT"
+      ],
+      [
+        "referrer-policy",
+        "strict-origin-when-cross-origin"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "vary",
+        "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+      ],
+      [
+        "x-content-type-options",
+        "nosniff"
+      ],
+      [
+        "x-railway-request-id",
+        "9a8ti3BKRCyWvkRZg4a9AQ"
+      ],
+      [
+        "Transfer-Encoding",
+        "chunked"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJ0b2tlbklkIjoiNDIiLCJvbmxpbmUiOnRydWUsIm93bmVyIjoiMHg2ZTRiY2Y2Y2NjNzkwMWQ2NzIyMzFmYmMyOWFhMzI3YjFmYTI5NjY0Iiwib3duZXJOYW1lIjpudWxsLCJoZWxkIjoxLCJhdHRlbXB0cyI6NDk2LCJhY2NlcHRlZCI6NDY3fQ==",
+    "body_sha256": "410633fe18f0fc16dd557ebb19d26f5b3adc713528f2a5ad12db229759bc207e",
+    "body": "{\"tokenId\":\"42\",\"online\":true,\"owner\":\"0x6e4bcf6ccc7901d672231fbc29aa327b1fa29664\",\"ownerName\":null,\"held\":1,\"attempts\":496,\"accepted\":467}"
+  },
+  "finished_at": 1790965958.241705
+}

@@ -1,0 +1,63 @@
+{
+  "id": "workflow-check",
+  "started_at": 1790966021.3426433,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"workflow.open\",\"input\":{\"request\":\"Build a fixed standard launch token named Example Coin (EXM), with no owner controls, and a website displaying the deployed token on Sepolia.\",\"draft\":{\"objective\":\"Build Example Coin (EXM) and a website.\",\"shape\":\"chain\",\"onchain\":\"evm_project\",\"ipfs\":true,\"steps\":[{\"skill\":\"build-contract-project\"},{\"skill\":\"adversarial-review\"},{\"skill\":\"build-website\"}]},\"permissions\":{\"github\":true,\"ipfs\":true,\"onchain\":{\"kind\":\"evm_project\",\"chainId\":11155111}}}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:42 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "tQz_6JTsTkmFu-aXozsQ6Q"
+      ],
+      [
+        "Content-Length",
+        "2234"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJ3b3JrZmxvdy5vcGVuIiwia2luZCI6ImNvbXBhbnkiLCJwbGFuIjpbXSwiZmFjdHMiOlt7ImlkIjoid2hhdCIsImxhYmVsIjoiV2hhdCBlYWNoIGNvbnRyYWN0IGRvZXMiLCJzdGF0ZSI6InVua25vd24iLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJhY2Nlc3MiLCJsYWJlbCI6IldobyBjYW4gY2FsbCB3aGF0Iiwic3RhdGUiOiJ1bmtub3duIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiQXNzdW1lZDogYW4gb3duZXIgd2hvIGNhbiBjaGFuZ2Ugc2V0dGluZ3MsIGFuZCBhbnlvbmUgZm9yIGV2ZXJ5dGhpbmcgZWxzZS4ifSx7ImlkIjoibnVtYmVycyIsImxhYmVsIjoiVGhlIG51bWJlcnMgdGhhdCBtYXR0ZXIiLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgdGhlbSBhbmQgd3JpdGUgdGhlbSBpbiB0aGUgUkVBRE1FLiJ9LHsiaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6dHJ1ZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6dHJ1ZX0seyJpZCI6InNpdGVfcGFnZXMiLCJsYWJlbCI6IldoYXQgdGhlIHNpdGUgc2hvd3MiLCJzdGF0ZSI6InVua25vd24iLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJzaXRlX3dhbGxldCIsImxhYmVsIjoiV2hhdCBhIGNvbm5lY3RlZCB3YWxsZXQgY2FuIGRvIiwic3RhdGUiOiJtaXNzaW5nIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiQXNzdW1lZDogdGhlIHNpdGUgcmVhZHMgdGhlIGNvbnRyYWN0cyBhbmQgb2ZmZXJzIHRoZWlyIG1haW4gYWN0aW9ucy4ifSx7ImlkIjoidG9rZW5fc3VwcGx5IiwibGFiZWwiOiJTdXBwbHk6IDEsMDAwLDAwMCwwMDAgd2l0aCAxOCBkZWNpbWFscywgbWludGVkIG9uY2UiLCJzdGF0ZSI6ImZpeGVkIiwicmVxdWlyZWQiOmZhbHNlfSx7ImlkIjoidG9rZW5fcnVsZXMiLCJsYWJlbCI6IlRyYW5zZmVyczogcGxhaW4sIHdpdGggbm8gZmVlcywgbGltaXRzLCBwYXVzaW5nIG9yIG1pbnRpbmciLCJzdGF0ZSI6ImZpeGVkIiwicmVxdWlyZWQiOmZhbHNlfSx7ImlkIjoidG9rZW5fc3BsaXQiLCJsYWJlbCI6IlNwbGl0OiAxMCUgdG8gdGhlIHN3YXJtLCB0aGUgb3RoZXIgOTAlIGlzIHlvdXJzOiA4MCUgaW50byB0aGUgcG9vbCB1bmxlc3MgeW91IGNob29zZSBvdGhlcndpc2UsIHRoZSByZXN0IHRvIHlvdXIgd2FsbGV0Iiwic3RhdGUiOiJmaXhlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3Bvb2wiLCJsYWJlbCI6IlBvb2w6IHBhaXJlZCB3aXRoIEVUSCwgb3BlbmluZyBhdCBhIDIwIEVUSCBtYXJrZXQgY2FwIiwic3RhdGUiOiJmaXhlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3RyYWRpbmdfZmVlIiwibGFiZWwiOiJUcmFkaW5nIGZlZTogMS4yNSUgb2YgZXZlcnkgdHJhZGU6IDElIHRvIHlvdSwgMC4yNSUgdG8gSU1ELCBjbGFpbWFibGUgYW55IHRpbWUiLCJzdGF0ZSI6ImZpeGVkIiwicmVxdWlyZWQiOmZhbHNlfV0sImp1ZGdlZCI6dHJ1ZSwiYmxvY2tlcnMiOlt7ImNvZGUiOiJyZWNoZWNrX2ZhaWxlZCIsImRldGFpbCI6IlRoZSBjaGVja2VyIGlzIG5vdCBzdXJlIHRoZSByZXF1ZXN0IHdhbnRzIGFuIGluZGVwZW5kZW50IHNlY3VyaXR5IHJldmlldyBvZiBzbWFydCBjb250cmFjdHMsIHdoaWNoIHRoZSBwbGFuIGluY2x1ZGVzLiBTYXkgd2hldGhlciBpdCBkb2VzLiJ9XSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJ2YWd1ZSIsImRldGFpbCI6IlBhcnRzIG9mIHRoaXMgYXJlIG9wZW4gdG8gaW50ZXJwcmV0YXRpb24uIFRoZSBidWlsZGVycyB3aWxsIGRlY2lkZSB0aGVtOyBzYXkgd2hhdCBtYXR0ZXJzIHRvIHlvdS4ifSx7ImNvZGUiOiJtaXNzaW5nX2ZhY3QiLCJmYWN0IjoibnVtYmVycyIsImRldGFpbCI6Ik5vdCBzYWlkOiB0aGUgbnVtYmVycyB0aGF0IG1hdHRlci4gVGhlIGJ1aWxkZXJzIHdpbGwgY2hvb3NlIHRoZW0gYW5kIHdyaXRlIHRoZW0gaW4gdGhlIFJFQURNRS4ifSx7ImNvZGUiOiJtaXNzaW5nX2ZhY3QiLCJmYWN0Ijoic2l0ZV93YWxsZXQiLCJkZXRhaWwiOiJOb3Qgc2FpZDogd2hhdCBhIGNvbm5lY3RlZCB3YWxsZXQgY2FuIGRvLiBBc3N1bWVkOiB0aGUgc2l0ZSByZWFkcyB0aGUgY29udHJhY3RzIGFuZCBvZmZlcnMgdGhlaXIgbWFpbiBhY3Rpb25zLiJ9XX0=",
+    "body_sha256": "244ec1a161da244b089bdd62af5d655b414a859a6c990c1ceb5bacd8e9d6078d",
+    "body": "{\"action\":\"workflow.open\",\"kind\":\"company\",\"plan\":[],\"facts\":[{\"id\":\"what\",\"label\":\"What each contract does\",\"state\":\"unknown\",\"required\":false},{\"id\":\"access\",\"label\":\"Who can call what\",\"state\":\"unknown\",\"required\":false,\"assumed\":\"Assumed: an owner who can change settings, and anyone for everything else.\"},{\"id\":\"numbers\",\"label\":\"The numbers that matter\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose them and write them in the README.\"},{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"stated\",\"required\":true},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"stated\",\"required\":true},{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"unknown\",\"required\":false},{\"id\":\"site_wallet\",\"label\":\"What a connected wallet can do\",\"state\":\"missing\",\"required\":false,\"assumed\":\"Assumed: the site reads the contracts and offers their main actions.\"},{\"id\":\"token_supply\",\"label\":\"Supply: 1,000,000,000 with 18 decimals, minted once\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_rules\",\"label\":\"Transfers: plain, with no fees, limits, pausing or minting\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_split\",\"label\":\"Split: 10% to the swarm, the other 90% is yours: 80% into the pool unless you choose otherwise, the rest to your wallet\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_pool\",\"label\":\"Pool: paired with ETH, opening at a 20 ETH market cap\",\"state\":\"fixed\",\"required\":false},{\"id\":\"token_trading_fee\",\"label\":\"Trading fee: 1.25% of every trade: 1% to you, 0.25% to IMD, claimable any time\",\"state\":\"fixed\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"recheck_failed\",\"detail\":\"The checker is not sure the request wants an independent security review of smart contracts, which the plan includes. Say whether it does.\"}],\"suggestions\":[{\"code\":\"vague\",\"detail\":\"Parts of this are open to interpretation. The builders will decide them; say what matters to you.\"},{\"code\":\"missing_fact\",\"fact\":\"numbers\",\"detail\":\"Not said: the numbers that matter. The builders will choose them and write them in the README.\"},{\"code\":\"missing_fact\",\"fact\":\"site_wallet\",\"detail\":\"Not said: what a connected wallet can do. Assumed: the site reads the contracts and offers their main actions.\"}]}"
+  },
+  "finished_at": 1790966022.0391953
+}

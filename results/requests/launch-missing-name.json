@@ -1,0 +1,1 @@
+{"action":"launch.open","input":{"onchain":"evm_project","objective":"Build a simple donation contract with tests and deploy it on Sepolia.","template":"impl_tests_review"}}

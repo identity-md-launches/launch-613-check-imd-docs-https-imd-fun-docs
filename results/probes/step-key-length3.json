@@ -1,0 +1,59 @@
+{
+  "id": "step-key-length3",
+  "started_at": 1790965668.3503718,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\"src\"],\"key\":\"a-b\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:27:48 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "n56DHT8qTdKwfYmICx5-qw"
+      ],
+      [
+        "Content-Length",
+        "111"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InN0ZXBzLjAua2V5OiBJbnZhbGlkIHN0cmluZzogbXVzdCBtYXRjaCBwYXR0ZXJuIC9eW2Etel1bYS16MC05X117MCwzMX0kLyJ9",
+    "body_sha256": "95a198ab2c7104b099037a4895ddfb1ce9fff8c768e77c5780d94614544783f0",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"steps.0.key: Invalid string: must match pattern /^[a-z][a-z0-9_]{0,31}$/\"}"
+  },
+  "finished_at": 1790965668.4364772
+}

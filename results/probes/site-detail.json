@@ -1,0 +1,59 @@
+{
+  "id": "site-detail",
+  "started_at": 1790965857.2121851,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/sites/fbb9e6ca-8151-485c-aa22-744275954756",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:57 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ZqoA2QeTQ-KyWkHNGbGh5g"
+      ],
+      [
+        "Content-Length",
+        "800"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJpZCI6ImZiYjllNmNhLTgxNTEtNDg1Yy1hYTIyLTc0NDI3NTk1NDc1NiIsImpvYklkIjoiMDVkN2Y0MjgtZDc4Ni00NGVkLTkwNmMtNTJhM2RkOTExNmJlIiwia2luZCI6ImxhdW5jaCIsInRva2VuSWQiOm51bGwsImFnZW50SWQiOm51bGwsInVybCI6Imh0dHBzOi8vcGVwZS1jb2xsZWN0aXZlLXNtYWxsLWZyb2dzLWJpZy5zaXRlLmlkZW50aXR5bWQuZXRoLmxpbW8iLCJzdGF0dXMiOiJuYW1lZCIsImhvbGRSZWFzb24iOm51bGwsInRha2VuRG93bkF0IjpudWxsLCJ0YWtlbkRvd25SZWFzb24iOm51bGwsImxhYmVsIjoicGVwZS1jb2xsZWN0aXZlLXNtYWxsLWZyb2dzLWJpZyIsImNpZCI6ImJhZnliZWlieHZvcTRyNzJieXllM3lsaWIzY3ZyYmd3NjRubnpteHRoY3VtaWdtNWVhMzZiZXV3dHB5IiwiYnl0ZXMiOjEyMzA2ODksImVuc05hbWUiOiJwZXBlLWNvbGxlY3RpdmUtc21hbGwtZnJvZ3MtYmlnLnNpdGUuaWRlbnRpdHltZC5ldGgiLCJ0eEhhc2giOiIweDcwMTE2ZDgzODk3YjkyOTc1NmZiMjdkMDNjMTBlYTZjMzM4NTc5YmFiNDU5ODRkMGE5OTlmYTcyMGNmMjE4MmEiLCJibG9ja051bWJlciI6MjYxMDYxNDgsImF0dGVtcHRzIjowLCJmYWlsdXJlIjpudWxsLCJwaW5uZWRBdCI6IjIwMjYtMTAtMDJUMTc6MzE6MTIuMjY5WiIsIm5hbWVkQXQiOiIyMDI2LTEwLTAyVDE3OjMxOjQ5LjUyMFoiLCJzdXBlcnNlZGVkQnkiOm51bGwsInN1cGVyc2VkZWRBdCI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxNzozMDo1Ny45ODZaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxNzozMTo0OS41MjBaIn0=",
+    "body_sha256": "4d987262d8cf851372062dcedbe061d7803a7f90f83884f4252a31a60e7ca0b7",
+    "body": "{\"id\":\"fbb9e6ca-8151-485c-aa22-744275954756\",\"jobId\":\"05d7f428-d786-44ed-906c-52a3dd9116be\",\"kind\":\"launch\",\"tokenId\":null,\"agentId\":null,\"url\":\"https://pepe-collective-small-frogs-big.site.identitymd.eth.limo\",\"status\":\"named\",\"holdReason\":null,\"takenDownAt\":null,\"takenDownReason\":null,\"label\":\"pepe-collective-small-frogs-big\",\"cid\":\"bafybeibxvoq4r72byye3ylib3cvrbgw64nnzmxthcumigm5ea36beuwtpy\",\"bytes\":1230689,\"ensName\":\"pepe-collective-small-frogs-big.site.identitymd.eth\",\"txHash\":\"0x70116d83897b929756fb27d03c10ea6c338579bab45984d0a999fa720cf2182a\",\"blockNumber\":26106148,\"attempts\":0,\"failure\":null,\"pinnedAt\":\"2026-10-02T17:31:12.269Z\",\"namedAt\":\"2026-10-02T17:31:49.520Z\",\"supersededBy\":null,\"supersededAt\":null,\"createdAt\":\"2026-10-02T17:30:57.986Z\",\"updatedAt\":\"2026-10-02T17:31:49.520Z\"}"
+  },
+  "finished_at": 1790965857.4207687
+}

@@ -1,0 +1,143 @@
+[
+  {
+    "id": "docs",
+    "started_at": 1790965225.7859173,
+    "request": {
+      "method": "GET",
+      "url": "https://imd.fun/docs/",
+      "headers": {
+        "Host": "imd.fun",
+        "Origin": "https://example.org",
+        "User-agent": "IMD-public-docs-audit/1.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Accept-Ranges": "bytes",
+        "Access-Control-Allow-Origin": "*",
+        "Age": "55291",
+        "Cache-Control": "public, max-age=0, must-revalidate",
+        "Content-Disposition": "inline; filename=\"docs\"",
+        "Content-Length": "355230",
+        "Content-Security-Policy": "frame-ancestors 'none'; object-src 'none'; base-uri 'self'",
+        "Content-Type": "text/html; charset=utf-8",
+        "Date": "Fri, 02 Oct 2026 18:20:25 GMT",
+        "Etag": "\"72772dfc4f462239d628068ba6ae5b35\"",
+        "Last-Modified": "Fri, 02 Oct 2026 02:58:54 GMT",
+        "Referrer-Policy": "strict-origin-when-cross-origin",
+        "Server": "Vercel",
+        "Strict-Transport-Security": "max-age=63072000",
+        "X-Content-Type-Options": "nosniff",
+        "X-Vercel-Cache": "HIT",
+        "X-Vercel-Id": "yul1::cb5sw-1790965225931-4e4066289644",
+        "Connection": "close"
+      },
+      "body_file": "docs.html"
+    }
+  },
+  {
+    "id": "capabilities-initial",
+    "request": {
+      "method": "GET",
+      "url": "https://api.imd.fun/requests/capabilities",
+      "headers": {
+        "Origin": "https://example.org",
+        "User-Agent": "IMD-public-docs-audit/1.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 403
+    },
+    "note": "Initial bootstrap raised HTTPError; body and timestamp not captured. Counted against budget."
+  },
+  {
+    "id": "capabilities",
+    "started_at": 1790965253.5497646,
+    "request": {
+      "method": "GET",
+      "url": "https://api.imd.fun/requests/capabilities",
+      "headers": {
+        "Host": "api.imd.fun",
+        "Origin": "https://example.org",
+        "User-agent": "IMD-public-docs-audit/1.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 403,
+      "headers": {
+        "Cache-Control": "no-store",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Fri, 02 Oct 2026 18:20:53 GMT",
+        "Server": "railway-hikari",
+        "x-railway-request-id": "GVpuyayiQQqse4c5ozsQ6Q",
+        "Content-Length": "30",
+        "x-hikari-trace": "ord1.zmv5",
+        "x-railway-edge": "ord1",
+        "Connection": "close"
+      },
+      "body_file": "capabilities.body"
+    }
+  },
+  {
+    "id": "openapi",
+    "started_at": 1790965255.7724388,
+    "request": {
+      "method": "GET",
+      "url": "https://api.imd.fun/openapi.json",
+      "headers": {
+        "Host": "api.imd.fun",
+        "Origin": "https://example.org",
+        "User-agent": "IMD-public-docs-audit/1.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 403,
+      "headers": {
+        "Cache-Control": "no-store",
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Fri, 02 Oct 2026 18:20:55 GMT",
+        "Server": "railway-hikari",
+        "x-railway-request-id": "_U74bgaiTKG-WGrSGbGh5g",
+        "Content-Length": "30",
+        "x-hikari-trace": "ord1.zmv5",
+        "x-railway-edge": "ord1",
+        "Connection": "close"
+      },
+      "body_file": "openapi.body"
+    }
+  },
+  {
+    "id": "health",
+    "started_at": 1790965257.9598906,
+    "request": {
+      "method": "GET",
+      "url": "https://api.imd.fun/health",
+      "headers": {
+        "Host": "api.imd.fun",
+        "Origin": "https://example.org",
+        "User-agent": "IMD-public-docs-audit/1.0"
+      },
+      "body": null
+    },
+    "response": {
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json; charset=utf-8",
+        "Date": "Fri, 02 Oct 2026 18:20:58 GMT",
+        "Server": "railway-hikari",
+        "x-railway-request-id": "EPb0Vm5HRo2-bIpACx5-qw",
+        "Content-Length": "1417",
+        "x-hikari-trace": "ord1.x8wt",
+        "x-railway-edge": "ord1",
+        "vary": "accept-encoding",
+        "Connection": "close"
+      },
+      "body_file": "health.body"
+    }
+  }
+]

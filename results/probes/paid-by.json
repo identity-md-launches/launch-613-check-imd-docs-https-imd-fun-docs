@@ -1,0 +1,58 @@
+{
+  "id": "paid-by",
+  "started_at": 1790965873.8350577,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/requests/paid-by/0x0000000000000000000000000000000000000000",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:13 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "iPdlA4_ETS23rkBIFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "76"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJwYXllciI6IjB4MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImNvdW50IjowLCJvcmRlcnMiOltdfQ==",
+    "body_sha256": "699d551780c59965d1c09bd13e278bb7f1ddc5faf9ca1ea2168d857f25eda7eb",
+    "body": "{\"payer\":\"0x0000000000000000000000000000000000000000\",\"count\":0,\"orders\":[]}"
+  },
+  "finished_at": 1790965873.9275303
+}

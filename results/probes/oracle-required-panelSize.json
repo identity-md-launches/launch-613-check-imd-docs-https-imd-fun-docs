@@ -1,0 +1,59 @@
+{
+  "id": "oracle-required-panelSize",
+  "started_at": 1790966047.2872634,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"oracle.request\",\"input\":{\"question\":\"How many Ethereum mainnet blocks were produced in the last 24 hours?\"}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:34:07 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "SocWh_nwTcaknx53ozsQ6Q"
+      ],
+      [
+        "Content-Length",
+        "100"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InBhbmVsU2l6ZTogSW52YWxpZCBpbnB1dDogZXhwZWN0ZWQgbnVtYmVyLCByZWNlaXZlZCB1bmRlZmluZWQifQ==",
+    "body_sha256": "2ef0155525b6c23f3bd30fc38651abf5748279acb985be0d44240eb1c0448334",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"panelSize: Invalid input: expected number, received undefined\"}"
+  },
+  "finished_at": 1790966047.4445107
+}

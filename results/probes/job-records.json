@@ -1,0 +1,55 @@
+{
+  "id": "job-records",
+  "started_at": 1790965843.6042566,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/aca5f077-3da7-44bb-a66d-1680dcdb0525/records",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:43 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "fmM-SgdUQkaQxrEsjVra_w"
+      ],
+      [
+        "Content-Length",
+        "33"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJyZWNvcmRzIjpbXSwib3JhY2xlQmF0Y2hlcyI6W119",
+    "body_sha256": "0be1c9305a05af6cb47ea245aab6410c208eca3228f7fbad91d6f91e1d686600",
+    "body": "{\"records\":[],\"oracleBatches\":[]}"
+  },
+  "finished_at": 1790965843.7332006
+}

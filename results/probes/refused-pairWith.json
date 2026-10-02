@@ -1,0 +1,63 @@
+{
+  "id": "refused-pairWith",
+  "started_at": 1790965568.3048823,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"pairWith\":\"eth\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:08 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "d1MnmB-9T8-7HLpfFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "687"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJ3ZWJzaXRlIiwicGxhbiI6W10sImZhY3RzIjpbeyJpZCI6InNpdGVfcGFnZXMiLCJsYWJlbCI6IldoYXQgdGhlIHNpdGUgc2hvd3MiLCJzdGF0ZSI6InN0YXRlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InNpdGVfY29udGVudCIsImxhYmVsIjoiVGhlIHdvcmRzIG9uIGl0Iiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCB3cml0ZSB0aGUgdGV4dC4ifSx7ImlkIjoic2l0ZV9zdHlsZSIsImxhYmVsIjoiVGhlIGxvb2siLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoiaW52YWxpZF9pbnB1dCIsImRldGFpbCI6InBhaXJXaXRoIG5hbWVzIHdoYXQgYSBsYXVuY2gncyBwb29sIHBhaXJzIHdpdGg7IHNldCBvbmNoYWluLCBvciBsZWF2ZSBwYWlyV2l0aCBvdXQifV0sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoibWlzc2luZ19mYWN0IiwiZmFjdCI6InNpdGVfc3R5bGUiLCJkZXRhaWwiOiJOb3Qgc2FpZDogdGhlIGxvb2suIFRoZSBidWlsZGVycyB3aWxsIGNob29zZSBhIGNsZWFuLCBzaW1wbGUgbG9vay4ifV19",
+    "body_sha256": "2db7f160ead5b5fab1bf99c70dd28f208aee54de35cfad2ca2979d7657998025",
+    "body": "{\"action\":\"job.open\",\"kind\":\"website\",\"plan\":[],\"facts\":[{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"stated\",\"required\":false},{\"id\":\"site_content\",\"label\":\"The words on it\",\"state\":\"stated\",\"required\":false,\"assumed\":\"The builders will write the text.\"},{\"id\":\"site_style\",\"label\":\"The look\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose a clean, simple look.\"}],\"judged\":true,\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"pairWith names what a launch's pool pairs with; set onchain, or leave pairWith out\"}],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"site_style\",\"detail\":\"Not said: the look. The builders will choose a clean, simple look.\"}]}"
+  },
+  "finished_at": 1790965568.669162
+}

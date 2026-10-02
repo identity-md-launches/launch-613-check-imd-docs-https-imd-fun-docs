@@ -1,0 +1,59 @@
+{
+  "id": "research-panelSize-0",
+  "started_at": 1790965580.705282,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Compare the purpose of HTTP GET and POST using RFC 9110.\",\"template\":\"research\",\"panelSize\":0,\"panelQuorum\":1}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:20 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "Z97TIm_XQQCRtHR3o3UVLg"
+      ],
+      [
+        "Content-Length",
+        "86"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InBhbmVsU2l6ZTogVG9vIHNtYWxsOiBleHBlY3RlZCBudW1iZXIgdG8gYmUgPj0xIn0=",
+    "body_sha256": "8bc37dbcf9da512e34cfaaec96e4970c9a86e61504ba9f09ea5c46823da16ad1",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"panelSize: Too small: expected number to be >=1\"}"
+  },
+  "finished_at": 1790965580.9044693
+}

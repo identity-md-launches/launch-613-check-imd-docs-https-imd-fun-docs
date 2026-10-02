@@ -1,0 +1,59 @@
+{
+  "id": "health",
+  "started_at": 1790965399.0156593,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/health",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:19 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "bTCGMYbnRZCf2-CXH4GxDA"
+      ],
+      [
+        "Content-Length",
+        "1416"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJzdGF0dXMiOiJvayIsInZlcnNpb24iOiIwLjEuMCsxNTJkNThjMiIsIm9wZXJhdG9yU3VyZmFjZSI6ImF1dGhlbnRpY2F0ZWQiLCJpZGVudGl0eSI6eyJjaGFpbklkIjoxLCJjb2xsZWN0aW9uIjoiMHgwMDAwZWM5MzEyN2JhYTkyOWU1OGU5N2RkMDA5NWEyYmZiMzhlYzFkIiwiYWRhcHRlciI6IjB4ZGUxNTJhZmI3ZGI1MzczZjM0ODc2ZTE0OTlmYmQ4OTNhODJkZDMzNiJ9LCJ0YXNrTmV0d29yayI6dHJ1ZSwicGF5bWVudHMiOnsiZW5hYmxlZCI6dHJ1ZSwibmV0d29yayI6ImVpcDE1NToxIiwiYWN0aW9ucyI6WyJqb2Iub3BlbiIsImpvYi5jb250aW51ZSIsImxhdW5jaC5vcGVuIiwib3JhY2xlLnJlcXVlc3QiLCJ3b3JrZmxvdy5vcGVuIiwic2NoZWR1bGUuY3JlYXRlIiwic2NoZWR1bGUudG9wdXAiXSwiZ2FzV2FsbGV0Ijp7ImFkZHJlc3MiOiIweDRlMGZBNTdCZGU3MjYwNzkzNTY1MzdFMkYzNGQ2NzFFOUY0MUFEYmMiLCJiYWxhbmNlRXRoIjoiMC4wMzA1NDM2OTEwMzI3MzUyMDQiLCJsb3ciOmZhbHNlfSwib3JkZXJzIjp7InF1b3RlZCI6MCwicGF5bWVudF9wZW5kaW5nIjowLCJwYXltZW50X2ZhaWxlZCI6OCwicGFpZCI6NTYzLCJleHBpcmVkIjo4MDh9LCJhdHRlbXB0cyI6eyJwZW5kaW5nIjowLCJwZW5kaW5nUmVhc29ucyI6e30sImNvbmZpcm1lZCI6NTYzLCJmYWlsZWQiOjgsImZhaWxlZFJlYXNvbnMiOnsicGF5bWVudF9wZXJtaXNzaW9uX2V4cGlyZWQiOjcsInRyYW5zYWN0aW9uX3JldmVydGVkIjoxfX0sImFkbWlzc2lvbnMiOjU2MywibGFzdFF1b3RlQXQiOiIyMDI2LTEwLTAyVDE4OjIwOjA5LjM5NVoiLCJsYXN0UGFpZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyNi4wMDBaIn0sImNvbm5lY3RlZERhZW1vbnMiOjU0NiwiZGlzcGF0Y2giOnsicnVubmluZ1NpbmNlIjpudWxsLCJydW5uaW5nTXMiOm51bGwsImxhc3RGaW5pc2hlZEF0IjoiMjAyNi0xMC0wMlQxODoyMzowOS42MTBaIiwibGFzdE1zIjo2MTMsImxhc3RFcnJvciI6bnVsbCwic3RhbGxlZCI6ZmFsc2V9LCJ3b3JraW5nTm93IjoxOCwiYXdhaXRpbmdWZXJkaWN0IjowLCJhY2NlcHRlZExhc3REYXkiOjU5ODM2LCJhY3RpdmVFbnJvbGxtZW50cyI6NTcwLCJwZW5kaW5nVmVyaWZpY2F0aW9uIjowLCJwZW5kaW5nQXR0ZXN0YXRpb24iOjAsInBlbmRpbmdEZXBsb3ltZW50IjowLCJwZW5kaW5nRGVwbG95bWVudEJ5Q2hhaW4iOnsiMTExNTUxMTEiOjB9LCJkZXBsb3lCcmVha2VyIjpudWxsLCJwZW5kaW5nRGVsaXZlcnkiOjAsInBlbmRpbmdGZWVkYmFjayI6NTQwLCJwZW5kaW5nT3JhY2xlIjowLCJwZW5kaW5nRnV6eiI6MCwicGVuZGluZ1NpdGVzIjowLCJ2ZXJpZmllclVwIjp0cnVlLCJwdWJsaXNoZXJVcCI6dHJ1ZSwiZGVwbG95ZXJVcCI6dHJ1ZSwiY29tcHV0ZWRBdCI6IjIwMjYtMTAtMDJUMTg6MjM6MTEuMzA2WiJ9",
+    "body_sha256": "abd00204172e0f44253f3599e03be6b7cf16fdcaa3ee3c57351436b037a90bca",
+    "body": "{\"status\":\"ok\",\"version\":\"0.1.0+152d58c2\",\"operatorSurface\":\"authenticated\",\"identity\":{\"chainId\":1,\"collection\":\"0x0000ec93127baa929e58e97dd0095a2bfb38ec1d\",\"adapter\":\"0xde152afb7db5373f34876e1499fbd893a82dd336\"},\"taskNetwork\":true,\"payments\":{\"enabled\":true,\"network\":\"eip155:1\",\"actions\":[\"job.open\",\"job.continue\",\"launch.open\",\"oracle.request\",\"workflow.open\",\"schedule.create\",\"schedule.topup\"],\"gasWallet\":{\"address\":\"0x4e0fA57Bde726079356537E2F34d671E9F41ADbc\",\"balanceEth\":\"0.030543691032735204\",\"low\":false},\"orders\":{\"quoted\":0,\"payment_pending\":0,\"payment_failed\":8,\"paid\":563,\"expired\":808},\"attempts\":{\"pending\":0,\"pendingReasons\":{},\"confirmed\":563,\"failed\":8,\"failedReasons\":{\"payment_permission_expired\":7,\"transaction_reverted\":1}},\"admissions\":563,\"lastQuoteAt\":\"2026-10-02T18:20:09.395Z\",\"lastPaidAt\":\"2026-10-02T18:20:26.000Z\"},\"connectedDaemons\":546,\"dispatch\":{\"runningSince\":null,\"runningMs\":null,\"lastFinishedAt\":\"2026-10-02T18:23:09.610Z\",\"lastMs\":613,\"lastError\":null,\"stalled\":false},\"workingNow\":18,\"awaitingVerdict\":0,\"acceptedLastDay\":59836,\"activeEnrollments\":570,\"pendingVerification\":0,\"pendingAttestation\":0,\"pendingDeployment\":0,\"pendingDeploymentByChain\":{\"11155111\":0},\"deployBreaker\":null,\"pendingDelivery\":0,\"pendingFeedback\":540,\"pendingOracle\":0,\"pendingFuzz\":0,\"pendingSites\":0,\"verifierUp\":true,\"publisherUp\":true,\"deployerUp\":true,\"computedAt\":\"2026-10-02T18:23:11.306Z\"}"
+  },
+  "finished_at": 1790965399.1658814
+}

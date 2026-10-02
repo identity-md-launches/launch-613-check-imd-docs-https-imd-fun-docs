@@ -1,0 +1,63 @@
+{
+  "id": "missing-paths-refine-project",
+  "started_at": 1790965704.0902965,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"refine-project\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:24 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ESMLpJwpTMik6rijBhdwDg"
+      ],
+      [
+        "Content-Length",
+        "516"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOltdLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoidW5wbGFubmFibGVfc3RlcHMiLCJkZXRhaWwiOiJzdGVwIDEgKHJlZmluZS1wcm9qZWN0KSB0YWtlcyBpdHMgcGF0aHMgZnJvbSB0aGUgam9iLCBzbyB0aGUgc3RlcCBoYXMgdG8gc2F5IHdoYXQgaXQgd3JpdGVzIGluIFwicGF0aHNcIiJ9XSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJraW5kIiwiZGV0YWlsIjoiVGhpcyByZWFkcyBhcyBhIHdlYnNpdGUgd2l0aCBubyBjb250cmFjdHMgb2YgaXRzIG93bi4iLCJzd2l0Y2hUbyI6IndlYnNpdGUifV19",
+    "body_sha256": "939755e36d4b71b45cfb5d061e691ed675bc29c43d46c1e72e9d27cbc2ea2648",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"unplannable_steps\",\"detail\":\"step 1 (refine-project) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790965704.445146
+}

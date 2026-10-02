@@ -1,0 +1,59 @@
+{
+  "id": "step-objective-0",
+  "started_at": 1790965609.4432535,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\"src\"],\"objective\":\"\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:49 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "Cp9jqIa7RTSC6Xiwo3UVLg"
+      ],
+      [
+        "Content-Length",
+        "107"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InN0ZXBzLjAub2JqZWN0aXZlOiBUb28gc21hbGw6IGV4cGVjdGVkIHN0cmluZyB0byBoYXZlID49MSBjaGFyYWN0ZXJzIn0=",
+    "body_sha256": "156a15bde0658c79b5b7cc7829961637fa03ca7448d25d8118613f6c180d4bd0",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"steps.0.objective: Too small: expected string to have >=1 characters\"}"
+  },
+  "finished_at": 1790965609.6517398
+}

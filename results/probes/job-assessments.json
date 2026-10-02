@@ -1,0 +1,55 @@
+{
+  "id": "job-assessments",
+  "started_at": 1790965845.8335242,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/aca5f077-3da7-44bb-a66d-1680dcdb0525/assessments",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:45 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "xDBYADFDSMiFi5dNezItjw"
+      ],
+      [
+        "Content-Length",
+        "18"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhc3Nlc3NtZW50cyI6W119",
+    "body_sha256": "ba1b41e948ad5ecdb810719f3d9ce92173c89060bbff9e3af4f926e8e1c88a78",
+    "body": "{\"assessments\":[]}"
+  },
+  "finished_at": 1790965845.9365742
+}

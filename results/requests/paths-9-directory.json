@@ -1,0 +1,1 @@
+{"action":"job.open","input":{"objective":"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.","shape":"chain","steps":[{"skill":"implement-component","paths":["src/p0","src/p1","src/p2","src/p3","src/p4","src/p5","src/p6","src/p7","src/p8"]}],"github":false}}

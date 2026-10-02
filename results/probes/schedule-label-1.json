@@ -1,0 +1,63 @@
+{
+  "id": "schedule-label-1",
+  "started_at": 1790965806.972287,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"schedule.create\",\"input\":{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false},\"cadence\":{\"every\":\"PT30M\"},\"runs\":1,\"label\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:07 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "-Hj-hPipT6qJIqJiFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "280"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJzY2hlZHVsZS5jcmVhdGUiLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbXSwidW5pdEFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMCIsInJ1bnMiOjEsImFtb3VudCI6IjUwMDAwMDAwMDAwMDAwMDAwMCIsInRlcm1zIjoiUHJpY2VkIHBlciBydW4uIE9ubHkgYSBydW4gdGhhdCBvcGVucyBhIHF1ZXN0aW9uIG9yIGEgam9iIHNwZW5kcyBvbmU7IHNraXBwZWQgYW5kIGZhaWxlZCBydW5zIGNvc3Qgbm90aGluZy4gVW51c2VkIHJ1bnMgYXJlIG5vdCByZWZ1bmRlZC4ifQ==",
+    "body_sha256": "6a0f55a8c4dbabb827cfbfb6849bfefe969fd8d8110eacbbf32b2824271750b0",
+    "body": "{\"action\":\"schedule.create\",\"blockers\":[],\"suggestions\":[],\"unitAmount\":\"500000000000000000\",\"runs\":1,\"amount\":\"500000000000000000\",\"terms\":\"Priced per run. Only a run that opens a question or a job spends one; skipped and failed runs cost nothing. Unused runs are not refunded.\"}"
+  },
+  "finished_at": 1790965807.2814229
+}

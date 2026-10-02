@@ -1,0 +1,59 @@
+{
+  "id": "input-required-submissionHash",
+  "started_at": 1790965739.517413,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"inputs\":[{\"name\":\"report\",\"path\":\"artifacts/report.md\",\"hash\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"mediaType\":\"text/markdown\",\"bytes\":1}]}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:59 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "91tJZj_4RrCjiYXtjVra_w"
+      ],
+      [
+        "Content-Length",
+        "114"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6ImlucHV0cy4wLnN1Ym1pc3Npb25IYXNoOiBJbnZhbGlkIGlucHV0OiBleHBlY3RlZCBzdHJpbmcsIHJlY2VpdmVkIHVuZGVmaW5lZCJ9",
+    "body_sha256": "66ced016ee4245b199217c63d80f7d26c2c38c9873b31afd631401ffbf16745a",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"inputs.0.submissionHash: Invalid input: expected string, received undefined\"}"
+  },
+  "finished_at": 1790965739.601929
+}

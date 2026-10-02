@@ -1,0 +1,59 @@
+{
+  "id": "output-path-116",
+  "started_at": 1790965730.4948142,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"outputs\":[{\"name\":\"report\",\"path\":\"artifacts/../report.md\",\"mediaType\":\"text/markdown\"}]}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:50 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "OivrJ7kMSZeyQFAVFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "89"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6Im91dHB1dHMuMC5wYXRoOiBtdXN0IGJlIGEgbm9ybWFsaXplZCByZWxhdGl2ZSBwYXRoIn0=",
+    "body_sha256": "d985a5c02d38a49091186d8672e116489183e03fda216cb6a01c921bc947a0ff",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"outputs.0.path: must be a normalized relative path\"}"
+  },
+  "finished_at": 1790965730.6481793
+}

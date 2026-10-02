@@ -1,0 +1,59 @@
+{
+  "id": "criteria-count-9",
+  "started_at": 1790965626.0584173,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-component\",\"paths\":[\"src\"],\"acceptanceCriteria\":[\"The page loads.\",\"The page loads.\",\"The page loads.\",\"The page loads.\",\"The page loads.\",\"The page loads.\",\"The page loads.\",\"The page loads.\",\"The page loads.\"]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:27:06 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "93gIi2YpScSobKXAwoOzXw"
+      ],
+      [
+        "Content-Length",
+        "108"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InN0ZXBzLjAuYWNjZXB0YW5jZUNyaXRlcmlhOiBUb28gYmlnOiBleHBlY3RlZCBhcnJheSB0byBoYXZlIDw9OCBpdGVtcyJ9",
+    "body_sha256": "bc837438ad3f74c84935344a998f3585f0133c7c52945bd958896fc27a06bded",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"steps.0.acceptanceCriteria: Too big: expected array to have <=8 items\"}"
+  },
+  "finished_at": 1790965626.2526705
+}

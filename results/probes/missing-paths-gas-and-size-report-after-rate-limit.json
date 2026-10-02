@@ -1,0 +1,63 @@
+{
+  "id": "missing-paths-gas-and-size-report-after-rate-limit",
+  "started_at": 1790966009.429514,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"gas-and-size-report\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:29 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "rWRs-xmZSye6FUZFjVra_w"
+      ],
+      [
+        "Content-Length",
+        "570"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOlt7InRpdGxlIjoiTWVhc3VyZSBhIHByb2plY3QncyBnYXMgdXNlIGFuZCBjb250cmFjdCBzaXplcywgcmVjb3JkIHRoZW0gYXMgYXJ0aWZhY3RzLCBhbmQgcmVmdXNlIGEgY29udHJhY3QgdGhhdCB3aWxsIG5vdCBkZXBsb3kiLCJzaG9ydCI6Imdhcy1hbmQtc2l6ZS1yZXBvcnQiLCJza2lsbCI6Imdhcy1hbmQtc2l6ZS1yZXBvcnQiLCJzdGFnZSI6MH1dLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbXSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJraW5kIiwiZGV0YWlsIjoiVGhpcyByZWFkcyBhcyBhIHdlYnNpdGUgd2l0aCBubyBjb250cmFjdHMgb2YgaXRzIG93bi4iLCJzd2l0Y2hUbyI6IndlYnNpdGUifV19",
+    "body_sha256": "68719d236e441f2fa81d225003529e9be654cd5c65d8a4ef35cc61e65918eb72",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[{\"title\":\"Measure a project's gas use and contract sizes, record them as artifacts, and refuse a contract that will not deploy\",\"short\":\"gas-and-size-report\",\"skill\":\"gas-and-size-report\",\"stage\":0}],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790966009.7499852
+}

@@ -1,0 +1,63 @@
+{
+  "id": "provided-paths-deploy-script",
+  "started_at": 1790966011.8502963,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Write project documentation and scripts.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"deploy-script\",\"paths\":[\"script\",\"artifacts\"]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:32 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "hmxvYtg9QZmeHPPHo3UVLg"
+      ],
+      [
+        "Content-Length",
+        "519"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOltdLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoidW5wbGFubmFibGVfc3RlcHMiLCJkZXRhaWwiOiJzdGVwIDEgKGRlcGxveS1zY3JpcHQpIGRlY2xhcmVzIGl0cyBvd24gYnVkZ2V0LCBzbyB0aGUgc3RlcCBtYXkgbm90IGFsc28gbmFtZSBwYXRocyJ9XSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJ2YWd1ZSIsImRldGFpbCI6IlBhcnRzIG9mIHRoaXMgYXJlIG9wZW4gdG8gaW50ZXJwcmV0YXRpb24uIFRoZSBidWlsZGVycyB3aWxsIGRlY2lkZSB0aGVtOyBzYXkgd2hhdCBtYXR0ZXJzIHRvIHlvdS4ifV19",
+    "body_sha256": "1e4719b4eb2cde26ca6137949fcb3acee013502a1e761508a3a111d73dc66920",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"unplannable_steps\",\"detail\":\"step 1 (deploy-script) declares its own budget, so the step may not also name paths\"}],\"suggestions\":[{\"code\":\"vague\",\"detail\":\"Parts of this are open to interpretation. The builders will decide them; say what matters to you.\"}]}"
+  },
+  "finished_at": 1790966012.1040094
+}

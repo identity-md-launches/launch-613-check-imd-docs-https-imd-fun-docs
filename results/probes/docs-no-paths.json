@@ -1,0 +1,63 @@
+{
+  "id": "docs-no-paths",
+  "started_at": 1790965468.8857353,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Write a README explaining this empty example project.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"write-readme-and-docs\",\"outputs\":[{\"name\":\"readme\",\"path\":\"artifacts/README.md\",\"mediaType\":\"text/markdown\"}]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:24:29 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "m7ud-P6yRrydzCYBFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "565"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOlt7InRpdGxlIjoiRG9jdW1lbnQgYSBkZWxpdmVyZWQgcHJvamVjdCBmb3IgYSBzdHJhbmdlciB3aG8gaGFzIHRvIHJ1biBpdCwgdXNlIGl0IGFuZCBjaGFuZ2UgaXQiLCJzaG9ydCI6IndyaXRlLXJlYWRtZS1hbmQtZG9jcyIsInNraWxsIjoid3JpdGUtcmVhZG1lLWFuZC1kb2NzIiwic3RhZ2UiOjB9XSwiZmFjdHMiOlt7ImlkIjoidG9rZW5fbmFtZSIsImxhYmVsIjoiVG9rZW4gbmFtZSIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJ0b2tlbl9zeW1ib2wiLCJsYWJlbCI6IlRva2VuIHN5bWJvbCIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2V9XSwianVkZ2VkIjp0cnVlLCJibG9ja2VycyI6W10sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoidmFndWUiLCJkZXRhaWwiOiJQYXJ0cyBvZiB0aGlzIGFyZSBvcGVuIHRvIGludGVycHJldGF0aW9uLiBUaGUgYnVpbGRlcnMgd2lsbCBkZWNpZGUgdGhlbTsgc2F5IHdoYXQgbWF0dGVycyB0byB5b3UuIn1dfQ==",
+    "body_sha256": "944689cc839582f3f527b520a3175dc7489e8b60d4c1f8cef40751a9843e1868",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[{\"title\":\"Document a delivered project for a stranger who has to run it, use it and change it\",\"short\":\"write-readme-and-docs\",\"skill\":\"write-readme-and-docs\",\"stage\":0}],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"vague\",\"detail\":\"Parts of this are open to interpretation. The builders will decide them; say what matters to you.\"}]}"
+  },
+  "finished_at": 1790965469.1886
+}

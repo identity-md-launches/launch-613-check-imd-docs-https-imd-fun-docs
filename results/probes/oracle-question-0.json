@@ -1,0 +1,59 @@
+{
+  "id": "oracle-question-0",
+  "started_at": 1790965752.5048642,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"oracle.request\",\"input\":{\"question\":\"\",\"panelSize\":5,\"answerType\":\"uint256\",\"evidence\":\"chain\",\"chainId\":1}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:29:12 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "HnlQhxRbRXWOX7rUqmzx2A"
+      ],
+      [
+        "Content-Length",
+        "98"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InF1ZXN0aW9uOiBUb28gc21hbGw6IGV4cGVjdGVkIHN0cmluZyB0byBoYXZlID49MSBjaGFyYWN0ZXJzIn0=",
+    "body_sha256": "2d7f08892242b1fcc2be72762da8c6eb818d81f7e49758c1099e16ceafe189a9",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"question: Too small: expected string to have >=1 characters\"}"
+  },
+  "finished_at": 1790965752.7039707
+}

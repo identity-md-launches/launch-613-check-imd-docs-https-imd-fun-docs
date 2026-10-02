@@ -1,0 +1,55 @@
+{
+  "id": "version",
+  "started_at": 1790965396.7098012,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/version",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:16 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "nCCFIPscQ5mJZZTdo3UVLg"
+      ],
+      [
+        "Content-Length",
+        "195"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb21taXQiOiIxNTJkNThjMmQ5Y2Y1ZGRjMzRiNGFlYzRhMzgwZDljMzg4ODliNDc1IiwiYnJhbmNoIjoibWFzdGVyIiwiZGVwbG95ZWRBdCI6bnVsbCwicHJvdG9jb2xWZXJzaW9uIjoxLCJmZWF0dXJlcyI6eyJzY2hlZHVsaW5nIjp0cnVlLCJ2ZXJpZmljYXRpb25RdWV1ZSI6dHJ1ZSwic3RhcnRDb21taXRBdHRyaWJ1dGlvbiI6dHJ1ZX19",
+    "body_sha256": "cee5665eb0c4c4d58253936d8da1811a1e9ac6f38cdf24c7bdd6563d49ada0b5",
+    "body": "{\"commit\":\"152d58c2d9cf5ddc34b4aec4a380d9c38889b475\",\"branch\":\"master\",\"deployedAt\":null,\"protocolVersion\":1,\"features\":{\"scheduling\":true,\"verificationQueue\":true,\"startCommitAttribution\":true}}"
+  },
+  "finished_at": 1790965396.9152167
+}

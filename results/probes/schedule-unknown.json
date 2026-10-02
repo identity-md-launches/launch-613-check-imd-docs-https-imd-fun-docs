@@ -1,0 +1,55 @@
+{
+  "id": "schedule-unknown",
+  "started_at": 1790965876.0277748,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/schedules/00000000-0000-4000-8000-000000000000",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 404,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:31:16 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "T-5701-pT_Kh_Zusqmzx2A"
+      ],
+      [
+        "Content-Length",
+        "28"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6InVua25vd25fc2NoZWR1bGUifQ==",
+    "body_sha256": "43f2bb9766f66de883818f7479c937e0aeb753010414d1c901717c5b43ead027",
+    "body": "{\"error\":\"unknown_schedule\"}"
+  },
+  "finished_at": 1790965876.2899117
+}

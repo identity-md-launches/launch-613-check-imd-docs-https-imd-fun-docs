@@ -1,0 +1,59 @@
+{
+  "id": "workflow-required-request",
+  "started_at": 1790966024.139526,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"workflow.open\",\"input\":{\"draft\":{\"objective\":\"Build Example Coin (EXM) and a website.\",\"shape\":\"chain\",\"onchain\":\"evm_project\",\"ipfs\":true,\"steps\":[{\"skill\":\"build-contract-project\"},{\"skill\":\"adversarial-review\"},{\"skill\":\"build-website\"}]},\"permissions\":{\"github\":true,\"ipfs\":true,\"onchain\":{\"kind\":\"evm_project\",\"chainId\":11155111}}}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:44 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "vGvW2-HGQp-fUFGOCx5-qw"
+      ],
+      [
+        "Content-Length",
+        "98"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InJlcXVlc3Q6IEludmFsaWQgaW5wdXQ6IGV4cGVjdGVkIHN0cmluZywgcmVjZWl2ZWQgdW5kZWZpbmVkIn0=",
+    "body_sha256": "dc563033c8d0971be30f400a39b6bbe3f1fc6f70e73a712d9a6f1dd28ab1384e",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"request: Invalid input: expected string, received undefined\"}"
+  },
+  "finished_at": 1790966024.3058047
+}

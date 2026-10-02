@@ -1,0 +1,67 @@
+{
+  "id": "fuzz",
+  "started_at": 1790965422.55482,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/fuzz/results?limit=1",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:42 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "YzKZgkWnR8SCPV_yozsQ6Q"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "776"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6MSwiY29uZmlybWVkIjowLCJyZXN1bHRzIjpbeyJpZCI6IjExNDNmN2U0LTYwYzYtNGNkYS04OWY0LTM0NmYwMmIyNTMzYSIsImpvYklkIjoiN2IxOWQ4MDAtZmFiZS00MDUxLWFmNzgtMjFlOTZkMzdmODZmIiwibm9kZUlkIjoiY2IxOTQ5ZWYtMGYzZi00MDQ0LTk1YmItNjE1Y2UxOTAyZDg4Iiwib3V0Y29tZSI6ImZhaWxlZCIsImRldGFpbCI6InRoZSBoYXJuZXNzIGRpZCBub3QgYnVpbGQ6IHNpb24gaW5zdGFsbGVkIHRoYXQgbWF0Y2hlcyB0aGUgdmVyc2lvbiByZXF1aXJlbWVudDogPTAuOC4xN1xuRW5jb3VudGVyZWQgaW52YWxpZCBjb21waWxlciB2ZXJzaW9uIGluIGxpYi92NC1wZXJpcGhlcnkvbGliL3Blcm1pdDIvc3JjL1Blcm1pdEVycm9ycy5zb2w6IE5vIGNvbXBpbGVyIHZlcnNpb24gaW5zdGFsbGVkIHRoYXQgbWF0Y2hlcyB0aGUgdmVyc2lvbiByZXF1aXJlbWVudDogPTAuOC4xN1xuRW5jb3VudGVyZWQgaW52YWxpZCBjb21waWxlciB2ZXJzaW9uIGluIGxpYi92NC1wZXJpcGhlcnkvbGliL3Blcm1pdDIvc3JjL1NpZ25hdHVyZVRyYW5zZmVyLnNvbDogTm8gY29tcGlsZXIgdmVyc2lvbiBpbnN0YWxsZWQgdGhhdCBtYXRjaGVzIHRoZSB2ZXJzaW9uIHJlcXVpcmVtZW50OiA9MC44LjE3XG4iLCJwcm9wZXJ0eSI6bnVsbCwiaW5wdXQiOm51bGwsInJ1bnMiOjAsInZlcmRpY3RTdGF0dXMiOm51bGwsInZlcmRpY3REZXRhaWwiOm51bGwsInJlcG9ydGVkQXQiOiIyMDI2LTA5LTI0VDA0OjI2OjMyLjg0MloiLCJkZWNpZGVkQXQiOm51bGx9XX0=",
+    "body_sha256": "2acb34ce2448e189b5543bd21bd1bc78653005d63f0623702ddcb1f8f60b41fc",
+    "body": "{\"count\":1,\"confirmed\":0,\"results\":[{\"id\":\"1143f7e4-60c6-4cda-89f4-346f02b2533a\",\"jobId\":\"7b19d800-fabe-4051-af78-21e96d37f86f\",\"nodeId\":\"cb1949ef-0f3f-4044-95bb-615ce1902d88\",\"outcome\":\"failed\",\"detail\":\"the harness did not build: sion installed that matches the version requirement: =0.8.17\\nEncountered invalid compiler version in lib/v4-periphery/lib/permit2/src/PermitErrors.sol: No compiler version installed that matches the version requirement: =0.8.17\\nEncountered invalid compiler version in lib/v4-periphery/lib/permit2/src/SignatureTransfer.sol: No compiler version installed that matches the version requirement: =0.8.17\\n\",\"property\":null,\"input\":null,\"runs\":0,\"verdictStatus\":null,\"verdictDetail\":null,\"reportedAt\":\"2026-09-24T04:26:32.842Z\",\"decidedAt\":null}]}"
+  },
+  "finished_at": 1790965422.7617843
+}

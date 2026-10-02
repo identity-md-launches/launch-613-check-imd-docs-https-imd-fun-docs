@@ -1,0 +1,59 @@
+{
+  "id": "contracts-count-5",
+  "started_at": 1790965723.4911985,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"contracts\":[\"C0\",\"C1\",\"C2\",\"C3\",\"C4\"]}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:43 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "JTZV_271TLKMKxK-Aax-fw"
+      ],
+      [
+        "Content-Length",
+        "91"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6ImNvbnRyYWN0czogVG9vIGJpZzogZXhwZWN0ZWQgYXJyYXkgdG8gaGF2ZSA8PTQgaXRlbXMifQ==",
+    "body_sha256": "9d262ce86fa71192fb48c97e0f79c637a9988f4e16da387712fc41c9e00960d0",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"contracts: Too big: expected array to have <=4 items\"}"
+  },
+  "finished_at": 1790965723.6622562
+}

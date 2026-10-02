@@ -1,0 +1,63 @@
+{
+  "id": "missing-paths-implement-contract",
+  "started_at": 1790965691.9364533,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"implement-contract\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:12 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "N3HBtC26R1yrDzUNFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "520"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJvdGhlciIsInBsYW4iOltdLCJmYWN0cyI6W3siaWQiOiJ0b2tlbl9uYW1lIiwibGFiZWwiOiJUb2tlbiBuYW1lIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InRva2VuX3N5bWJvbCIsImxhYmVsIjoiVG9rZW4gc3ltYm9sIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZX1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoidW5wbGFubmFibGVfc3RlcHMiLCJkZXRhaWwiOiJzdGVwIDEgKGltcGxlbWVudC1jb250cmFjdCkgdGFrZXMgaXRzIHBhdGhzIGZyb20gdGhlIGpvYiwgc28gdGhlIHN0ZXAgaGFzIHRvIHNheSB3aGF0IGl0IHdyaXRlcyBpbiBcInBhdGhzXCIifV0sInN1Z2dlc3Rpb25zIjpbeyJjb2RlIjoia2luZCIsImRldGFpbCI6IlRoaXMgcmVhZHMgYXMgYSB3ZWJzaXRlIHdpdGggbm8gY29udHJhY3RzIG9mIGl0cyBvd24uIiwic3dpdGNoVG8iOiJ3ZWJzaXRlIn1dfQ==",
+    "body_sha256": "0bb86736728e8a244dc6fbd5c56c39b4f9cf94417fc2d460de8b862ce46650ff",
+    "body": "{\"action\":\"job.open\",\"kind\":\"other\",\"plan\":[],\"facts\":[{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false}],\"judged\":true,\"blockers\":[{\"code\":\"unplannable_steps\",\"detail\":\"step 1 (implement-contract) takes its paths from the job, so the step has to say what it writes in \\\"paths\\\"\"}],\"suggestions\":[{\"code\":\"kind\",\"detail\":\"This reads as a website with no contracts of its own.\",\"switchTo\":\"website\"}]}"
+  },
+  "finished_at": 1790965692.188985
+}

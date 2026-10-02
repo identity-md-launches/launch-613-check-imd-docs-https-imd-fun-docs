@@ -1,0 +1,1 @@
+{"action":"job.open","input":{"objective":"Write a README explaining this empty example project.","shape":"chain","steps":[{"skill":"write-readme-and-docs","outputs":[{"name":"readme","path":"artifacts/README.md","mediaType":"text/markdown"}]}],"github":false}}

@@ -1,0 +1,1 @@
+{"action":"workflow.open","input":{"request":"Build a fixed standard launch token named Example Coin (EXM), with no owner controls, and a website displaying the deployed token on Sepolia.","permissions":{"github":true,"ipfs":true,"onchain":{"kind":"evm_project","chainId":11155111}}}}

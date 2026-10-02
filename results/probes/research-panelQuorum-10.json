@@ -1,0 +1,59 @@
+{
+  "id": "research-panelQuorum-10",
+  "started_at": 1790965597.8240497,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Compare the purpose of HTTP GET and POST using RFC 9110.\",\"template\":\"research\",\"panelSize\":9,\"panelQuorum\":10}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:37 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "Rex97YfcT865bwEwyCLmYg"
+      ],
+      [
+        "Content-Length",
+        "86"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InBhbmVsUXVvcnVtOiBUb28gYmlnOiBleHBlY3RlZCBudW1iZXIgdG8gYmUgPD05In0=",
+    "body_sha256": "2466ce9fa89e9598c13bd444122cc5dfbe5f54cd323838c7b0510ea991e65716",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"panelQuorum: Too big: expected number to be <=9\"}"
+  },
+  "finished_at": 1790965597.9849303
+}

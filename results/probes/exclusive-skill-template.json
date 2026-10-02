@@ -1,0 +1,63 @@
+{
+  "id": "exclusive-skill-template",
+  "started_at": 1790965570.7695453,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"template\":\"single\"}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:11 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "J85VNaDSRLiWgqnOozsQ6Q"
+      ],
+      [
+        "Content-Length",
+        "661"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJ3ZWJzaXRlIiwicGxhbiI6W10sImZhY3RzIjpbeyJpZCI6InNpdGVfcGFnZXMiLCJsYWJlbCI6IldoYXQgdGhlIHNpdGUgc2hvd3MiLCJzdGF0ZSI6InN0YXRlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InNpdGVfY29udGVudCIsImxhYmVsIjoiVGhlIHdvcmRzIG9uIGl0Iiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCB3cml0ZSB0aGUgdGV4dC4ifSx7ImlkIjoic2l0ZV9zdHlsZSIsImxhYmVsIjoiVGhlIGxvb2siLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoiaW52YWxpZF9pbnB1dCIsImRldGFpbCI6Im5hbWUgYSB0ZW1wbGF0ZSwgYSBza2lsbCwgb3Igc3RlcHMg4oCUIG5vdCBtb3JlIHRoYW4gb25lIn1dLCJzdWdnZXN0aW9ucyI6W3siY29kZSI6Im1pc3NpbmdfZmFjdCIsImZhY3QiOiJzaXRlX3N0eWxlIiwiZGV0YWlsIjoiTm90IHNhaWQ6IHRoZSBsb29rLiBUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dfQ==",
+    "body_sha256": "ab70d3ad31341cf38216fef3873d45a228d40404b7030fc331722e6081006aed",
+    "body": "{\"action\":\"job.open\",\"kind\":\"website\",\"plan\":[],\"facts\":[{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"stated\",\"required\":false},{\"id\":\"site_content\",\"label\":\"The words on it\",\"state\":\"stated\",\"required\":false,\"assumed\":\"The builders will write the text.\"},{\"id\":\"site_style\",\"label\":\"The look\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose a clean, simple look.\"}],\"judged\":true,\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"name a template, a skill, or steps — not more than one\"}],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"site_style\",\"detail\":\"Not said: the look. The builders will choose a clean, simple look.\"}]}"
+  },
+  "finished_at": 1790965571.0715528
+}

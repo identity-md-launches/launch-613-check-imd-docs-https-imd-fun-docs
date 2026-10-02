@@ -1,0 +1,63 @@
+{
+  "id": "step-count-6",
+  "started_at": 1790965675.3275397,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"chain\",\"steps\":[{\"skill\":\"build-website\"},{\"skill\":\"build-website\"},{\"skill\":\"build-website\"},{\"skill\":\"build-website\"},{\"skill\":\"build-website\"},{\"skill\":\"build-website\"}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:27:55 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "mD6gxQVMTaW9lM68BhdwDg"
+      ],
+      [
+        "Content-Length",
+        "1102"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJ3ZWJzaXRlIiwicGxhbiI6W3sidGl0bGUiOiJCdWlsZCBhbmQgY2hlY2sgdGhlIHdlYnNpdGUiLCJzaG9ydCI6InNpdGUiLCJza2lsbCI6ImJ1aWxkLXdlYnNpdGUiLCJzdGFnZSI6MH0seyJ0aXRsZSI6IkJ1aWxkIGFuZCBjaGVjayB0aGUgd2Vic2l0ZSIsInNob3J0Ijoic2l0ZSIsInNraWxsIjoiYnVpbGQtd2Vic2l0ZSIsInN0YWdlIjoxfSx7InRpdGxlIjoiQnVpbGQgYW5kIGNoZWNrIHRoZSB3ZWJzaXRlIiwic2hvcnQiOiJzaXRlIiwic2tpbGwiOiJidWlsZC13ZWJzaXRlIiwic3RhZ2UiOjJ9LHsidGl0bGUiOiJCdWlsZCBhbmQgY2hlY2sgdGhlIHdlYnNpdGUiLCJzaG9ydCI6InNpdGUiLCJza2lsbCI6ImJ1aWxkLXdlYnNpdGUiLCJzdGFnZSI6M30seyJ0aXRsZSI6IkJ1aWxkIGFuZCBjaGVjayB0aGUgd2Vic2l0ZSIsInNob3J0Ijoic2l0ZSIsInNraWxsIjoiYnVpbGQtd2Vic2l0ZSIsInN0YWdlIjo0fSx7InRpdGxlIjoiQnVpbGQgYW5kIGNoZWNrIHRoZSB3ZWJzaXRlIiwic2hvcnQiOiJzaXRlIiwic2tpbGwiOiJidWlsZC13ZWJzaXRlIiwic3RhZ2UiOjV9XSwiZmFjdHMiOlt7ImlkIjoic2l0ZV9wYWdlcyIsImxhYmVsIjoiV2hhdCB0aGUgc2l0ZSBzaG93cyIsInN0YXRlIjoic3RhdGVkIiwicmVxdWlyZWQiOmZhbHNlfSx7ImlkIjoic2l0ZV9jb250ZW50IiwibGFiZWwiOiJUaGUgd29yZHMgb24gaXQiLCJzdGF0ZSI6InN0YXRlZCIsInJlcXVpcmVkIjpmYWxzZSwiYXNzdW1lZCI6IlRoZSBidWlsZGVycyB3aWxsIHdyaXRlIHRoZSB0ZXh0LiJ9LHsiaWQiOiJzaXRlX3N0eWxlIiwibGFiZWwiOiJUaGUgbG9vayIsInN0YXRlIjoibWlzc2luZyIsInJlcXVpcmVkIjpmYWxzZSwiYXNzdW1lZCI6IlRoZSBidWlsZGVycyB3aWxsIGNob29zZSBhIGNsZWFuLCBzaW1wbGUgbG9vay4ifV0sImp1ZGdlZCI6dHJ1ZSwiYmxvY2tlcnMiOltdLCJzdWdnZXN0aW9ucyI6W3siY29kZSI6Im1pc3NpbmdfZmFjdCIsImZhY3QiOiJzaXRlX3N0eWxlIiwiZGV0YWlsIjoiTm90IHNhaWQ6IHRoZSBsb29rLiBUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dfQ==",
+    "body_sha256": "eae14ffa8e0ec6d10dbed84c7a946e8abd6172d71efb3e58f42780ca7223e39c",
+    "body": "{\"action\":\"job.open\",\"kind\":\"website\",\"plan\":[{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":0},{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":1},{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":2},{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":3},{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":4},{\"title\":\"Build and check the website\",\"short\":\"site\",\"skill\":\"build-website\",\"stage\":5}],\"facts\":[{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"stated\",\"required\":false},{\"id\":\"site_content\",\"label\":\"The words on it\",\"state\":\"stated\",\"required\":false,\"assumed\":\"The builders will write the text.\"},{\"id\":\"site_style\",\"label\":\"The look\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose a clean, simple look.\"}],\"judged\":true,\"blockers\":[],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"site_style\",\"detail\":\"Not said: the look. The builders will choose a clean, simple look.\"}]}"
+  },
+  "finished_at": 1790965675.6013653
+}

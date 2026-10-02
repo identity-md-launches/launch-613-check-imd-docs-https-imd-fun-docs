@@ -1,0 +1,59 @@
+{
+  "id": "ens",
+  "started_at": 1790965443.5316584,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/ens",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 404,
+    "headers": [
+      [
+        "access-control-allow-origin",
+        "*"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:24:03 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "euYfdA58RVKW29i2woOzXw"
+      ],
+      [
+        "Content-Length",
+        "75"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6Im1lbWJlcl9zaXRlc19jbG9zZWQiLCJkZXRhaWwiOiJ0aGlzIHBsYW5lIG5hbWVzIG5vIG1lbWJlciBzaXRlcyJ9",
+    "body_sha256": "bb9c8d796133e198b0b41a13f9ca87ee358c92b6d528db3afa1835ed938d0b76",
+    "body": "{\"error\":\"member_sites_closed\",\"detail\":\"this plane names no member sites\"}"
+  },
+  "finished_at": 1790965443.7461903
+}

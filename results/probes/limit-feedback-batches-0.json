@@ -1,0 +1,67 @@
+{
+  "id": "limit-feedback-batches-0",
+  "started_at": 1790965928.934258,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/feedback/batches?limit=0",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:09 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "b2oRijBUT6aBeu8hyCLmYg"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "1406"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjaGFpbklkIjoxLCJjb2xsZWN0aW9uIjoiMHgwMDAwZWM5MzEyN2JhYTkyOWU1OGU5N2RkMDA5NWEyYmZiMzhlYzFkIiwiYmF0Y2hlcyI6W3siaWQiOiI4N2Q3M2NjMS1lYzYzLTQ4YTYtOTJmYi1lNWJkYmVhY2FlNzMiLCJqb2JJZCI6IjVkMTY0ZTIxLWEyMjQtNGUyNC1iNmVhLTkwN2JlMjgxYjU4MyIsInN0YXR1cyI6InF1ZXVlZCIsImVudHJpZXMiOlt7InRhZzEiOiJyZXZpZXc6c3VibWlzc2lvbiIsInRhZzIiOiJhY2NlcHRhbmNlLXYyIiwidmFsdWUiOjEsImFnZW50SWQiOiI1MDk2MiIsIm5vZGVLZXkiOiJhZHZlcnNhcmlhbF9yZXZpZXciLCJmZWVkYmFja0hhc2giOiIzMDRiMDYzNTRmMWMyMzZkMDI1ZTE3MTY2MjA4YTczMzRhMjc0MGNlNzk1NWZlY2IzZWIxNDE5MDdmYjE2MzQ5Iiwic3VibWlzc2lvbkhhc2giOiIyMjNjZGEwYmZhNDc2ODNkMjJiOWUyOWFlODUzOWMxYjIyYmZmODZiMzljNTZiZThhY2NhMDFjMmRlMmYzMWY0IiwidG9rZW5JZCI6IjQ3In0seyJ0YWcxIjoidmVyaWZpY2F0aW9uOnN0cnVjdHVyYWwiLCJ0YWcyIjoiYWNjZXB0YW5jZS12MiIsInZhbHVlIjoxLCJhZ2VudElkIjoiNTEyMzYiLCJub2RlS2V5IjoicmVmaW5lX3Byb2plY3QiLCJmZWVkYmFja0hhc2giOiI4YzQxZDk3MWE4N2VhOWZiMDU5ZDhkYTc2NmM3NGY0MThlMzllOWMwMzQzNmUwYTVjYjM1YTcwNzRhZWM2OGIxIiwic3VibWlzc2lvbkhhc2giOiI5MWM4Y2E3ZmNiYTVkYWJiMzlmMTlkNTUyZGZlZTg1ZTZkNjdmNmE3YTVhNzc1ZTRiNzFjYThlMjAwYjgzMDU2IiwidG9rZW5JZCI6IjY1MiJ9XSwiY2hhaW5JZCI6MSwid29ya1JlZ2lzdHJ5IjoiMHhiNmQwYTE4N2IwNTBmYTViYjBiODcwMzNhMjAzZjM3YmVjZjRhNzc1IiwiaWRlbnRpdHkiOnsiYWRhcHRlciI6IjB4ZGUxNTJhZmI3ZGI1MzczZjM0ODc2ZTE0OTlmYmQ4OTNhODJkZDMzNiIsImNoYWluSWQiOjEsInJlZ2lzdHJ5IjoiMHg4MDA0YTE2OWZiNGEzMzI1MTM2ZWIyOWZhMGNlYjZkMmU1MzlhNDMyIiwiY29sbGVjdGlvbiI6IjB4MDAwMGVjOTMxMjdiYWE5MjllNThlOTdkZDAwOTVhMmJmYjM4ZWMxZCJ9LCJkb2N1bWVudEhhc2giOiIxYTljZTgxNjg2MDllMjNkMjY3MjdlNTYxMjdkMmQzZWFlMjcyNGEyOTJkY2M2NDhjYjMzNTdiM2JlMjcxNTdkIiwicHJldmlvdXNIYXNoIjoiMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCIsImF0dGVtcHRzIjowLCJ0eEhhc2giOm51bGwsImJhdGNoZXIiOm51bGwsImJsb2NrTnVtYmVyIjpudWxsLCJnYXNVc2VkIjpudWxsLCJmYWlsdXJlIjpudWxsLCJzZW50QXQiOm51bGwsImNyZWF0ZWRBdCI6IjIwMjYtMTAtMDJUMTg6Mjg6MDUuNTk5WiIsInVwZGF0ZWRBdCI6IjIwMjYtMTAtMDJUMTg6Mjg6MDUuNTk5WiJ9XX0=",
+    "body_sha256": "658b5ed285129f2446025ff027b2325c722a9d0f2a909232cb70d8ac3e994278",
+    "body": "{\"chainId\":1,\"collection\":\"0x0000ec93127baa929e58e97dd0095a2bfb38ec1d\",\"batches\":[{\"id\":\"87d73cc1-ec63-48a6-92fb-e5bdbeacae73\",\"jobId\":\"5d164e21-a224-4e24-b6ea-907be281b583\",\"status\":\"queued\",\"entries\":[{\"tag1\":\"review:submission\",\"tag2\":\"acceptance-v2\",\"value\":1,\"agentId\":\"50962\",\"nodeKey\":\"adversarial_review\",\"feedbackHash\":\"304b06354f1c236d025e17166208a7334a2740ce7955fecb3eb141907fb16349\",\"submissionHash\":\"223cda0bfa47683d22b9e29ae8539c1b22bff86b39c56be8acca01c2de2f31f4\",\"tokenId\":\"47\"},{\"tag1\":\"verification:structural\",\"tag2\":\"acceptance-v2\",\"value\":1,\"agentId\":\"51236\",\"nodeKey\":\"refine_project\",\"feedbackHash\":\"8c41d971a87ea9fb059d8da766c74f418e39e9c03436e0a5cb35a7074aec68b1\",\"submissionHash\":\"91c8ca7fcba5dabb39f19d552dfee85e6d67f6a7a5a775e4b71ca8e200b83056\",\"tokenId\":\"652\"}],\"chainId\":1,\"workRegistry\":\"0xb6d0a187b050fa5bb0b87033a203f37becf4a775\",\"identity\":{\"adapter\":\"0xde152afb7db5373f34876e1499fbd893a82dd336\",\"chainId\":1,\"registry\":\"0x8004a169fb4a3325136eb29fa0ceb6d2e539a432\",\"collection\":\"0x0000ec93127baa929e58e97dd0095a2bfb38ec1d\"},\"documentHash\":\"1a9ce8168609e23d26727e56127d2d3eae2724a292dcc648cb3357b3be27157d\",\"previousHash\":\"0000000000000000000000000000000000000000000000000000000000000000\",\"attempts\":0,\"txHash\":null,\"batcher\":null,\"blockNumber\":null,\"gasUsed\":null,\"failure\":null,\"sentAt\":null,\"createdAt\":\"2026-10-02T18:28:05.599Z\",\"updatedAt\":\"2026-10-02T18:28:05.599Z\"}]}"
+  },
+  "finished_at": 1790965929.1485639
+}

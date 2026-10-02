@@ -1,0 +1,55 @@
+{
+  "id": "cursor-invalid-schedules",
+  "started_at": 1790965919.8426116,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/schedules?before=not-a-time",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:00 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "Pbe_99Y9SdWPi2WywoOzXw"
+      ],
+      [
+        "Content-Length",
+        "90"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcXVlcnkiLCJkZXRhaWwiOiJgYmVmb3JlYCBtdXN0IGJlIGEgdGltZSwgc3VjaCBhcyAyMDI2LTA5LTIwVDEyOjAwOjAwWiJ9",
+    "body_sha256": "96d0bfd57ccd95efa64f35608ab6f1b631fb72607021a4fd513c50ae677cee33",
+    "body": "{\"error\":\"invalid_query\",\"detail\":\"`before` must be a time, such as 2026-09-20T12:00:00Z\"}"
+  },
+  "finished_at": 1790965920.0549717
+}

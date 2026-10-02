@@ -1,0 +1,67 @@
+{
+  "id": "jobs",
+  "started_at": 1790965408.434207,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs?limit=5",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=30"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:23:28 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "qwtDkSB6S1yvcDhJBhdwDg"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "2107"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjb3VudCI6NSwiam9icyI6W3siaWQiOiJhY2E1ZjA3Ny0zZGE3LTQ0YmItYTY2ZC0xNjgwZGNkYjA1MjUiLCJzdGF0ZSI6ImV4ZWN1dGluZyIsInRlbXBsYXRlIjoic2hhcGU6Y2hhaW4iLCJvYmplY3RpdmUiOiJXT1JLRkxPVyBDT05UUkFDVCBTVEFHRSBDT05URVhUOiB0aGUgc3RhZ2UgcHJvZHVjZXMgaW1wbGVtZW50ZWQgYW5kIHRlc3RlZCBjb250cmFjdHMsIEFCSSBkb2N1bWVudGF0aW9uIGFuZCBhbiBpbmRlcGVuZGVudGx5IHJldmlld2VkIGxhdW5jaC5qc29uLiBFYWNo4oCmIiwib3JpZ2luYWxSZXF1ZXN0IjpudWxsLCJibG9ja2VkUmVhc29uIjpudWxsLCJkZWxpdmVyeSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyNi44MDNaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoyMDoyOC45NTJaIiwicHJvamVjdCI6bnVsbH0seyJpZCI6IjVkMTY0ZTIxLWEyMjQtNGUyNC1iNmVhLTkwN2JlMjgxYjU4MyIsInN0YXRlIjoiZXhlY3V0aW5nIiwidGVtcGxhdGUiOiJzaGFwZTpjaGFpbiIsIm9iamVjdGl2ZSI6IkZvbGxvd2luZyBza2lsbC1hdXRob3JpbmcvU0tJTEwubWQgYW5kIHNraWxsLWF1dGhvcmluZy9SRUZFUkVOQ0UubWQgaW4gdGhpcyByZXBvc2l0b3J5LCB3cml0ZSBsYXllcnplcm8tb2Z0L1NLSUxMLm1kIChhbmQgYW55IHJlZmVyZW5jZSBmaWxlcyBpdCBuZWVkcykgZm9yIGHigKYiLCJvcmlnaW5hbFJlcXVlc3QiOm51bGwsImJsb2NrZWRSZWFzb24iOm51bGwsImRlbGl2ZXJ5IjpudWxsLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjE5OjQ1LjczOVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjIzOjE1LjMyNVoiLCJwcm9qZWN0IjpudWxsfSx7ImlkIjoiZTk1NDkwYWItOTIzMC00NmQ1LTkzMTEtY2JmZWNmYzNhNWE3Iiwic3RhdGUiOiJleGVjdXRpbmciLCJ0ZW1wbGF0ZSI6InNoYXBlOmNoYWluIiwib2JqZWN0aXZlIjoiRm9sbG93aW5nIHNraWxsLWF1dGhvcmluZy9TS0lMTC5tZCBhbmQgc2tpbGwtYXV0aG9yaW5nL1JFRkVSRU5DRS5tZCBpbiB0aGlzIHJlcG9zaXRvcnksIHdyaXRlIGJ1aWxkLWNoYXQtYm90L1NLSUxMLm1kIChhbmQgYW55IHJlZmVyZW5jZSBmaWxlcyBpdCBuZWVkcykgZm9yIGHigKYiLCJvcmlnaW5hbFJlcXVlc3QiOm51bGwsImJsb2NrZWRSZWFzb24iOm51bGwsImRlbGl2ZXJ5IjpudWxsLCJjcmVhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjE5OjQwLjUxMVoiLCJ1cGRhdGVkQXQiOiIyMDI2LTEwLTAyVDE4OjE5OjQzLjIzNloiLCJwcm9qZWN0IjpudWxsfSx7ImlkIjoiOTM3NGEyNzYtNjNlOS00ZmVkLTgzYjctMTJlODcyMWIxNTI0Iiwic3RhdGUiOiJleGVjdXRpbmciLCJ0ZW1wbGF0ZSI6InNoYXBlOmNoYWluIiwib2JqZWN0aXZlIjoiQ2hlY2sgdGhlIElNRCBkb2NzIChodHRwczovL2ltZC5mdW4vZG9jcykgYWdhaW5zdCB0aGUgbGl2ZSBBUEkgdXNpbmcgb25seSBmcmVlLCBwdWJsaWMgY2FsbHM6IEdFVCByb3V0ZXMgYW5kIFBPU1QgL3JlcXVlc3RzL2NoZWNrLCBuZXZlciBxdW90ZSwgc3VibWl0IG9y4oCmIiwib3JpZ2luYWxSZXF1ZXN0IjpudWxsLCJibG9ja2VkUmVhc29uIjpudWxsLCJkZWxpdmVyeSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoxOTozNS4yMTVaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoxOTo0OC42MzRaIiwicHJvamVjdCI6bnVsbH0seyJpZCI6IjQzMDQ3OGEzLTBiZDMtNDIzMS04MGM5LWNkZTViNDEyZjE1MSIsInN0YXRlIjoiZXhlY3V0aW5nIiwidGVtcGxhdGUiOiJzaGFwZTpjaGFpbiIsIm9iamVjdGl2ZSI6Ik1lYXN1cmUgaG93IGNvbnNpc3RlbnQgdGhlIElNRCBzd2FybSdzIGZyZWUgcmVxdWVzdCBldmFsdWF0b3IgaXMsIGFzIGEgcmVwcm9kdWNpYmxlIFFBIHNldCB0aGUgZGV2ZWxvcGVycyBjYW4gcmV1c2UuIEJ1aWxkIGEgc2NyaXB0IHRoYXQgc2VuZHMgMjAgZml4ZWQgYm9kaWVz4oCmIiwib3JpZ2luYWxSZXF1ZXN0IjpudWxsLCJibG9ja2VkUmVhc29uIjpudWxsLCJkZWxpdmVyeSI6bnVsbCwiY3JlYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoxOTozNC45MzFaIiwidXBkYXRlZEF0IjoiMjAyNi0xMC0wMlQxODoxOTozOC42MzBaIiwicHJvamVjdCI6bnVsbH1dfQ==",
+    "body_sha256": "5eaf34f8ac6c202d457aa57b1c50ad67ee6a57ed783d819766b1226728fd9507",
+    "body": "{\"count\":5,\"jobs\":[{\"id\":\"aca5f077-3da7-44bb-a66d-1680dcdb0525\",\"state\":\"executing\",\"template\":\"shape:chain\",\"objective\":\"WORKFLOW CONTRACT STAGE CONTEXT: the stage produces implemented and tested contracts, ABI documentation and an independently reviewed launch.json. Each…\",\"originalRequest\":null,\"blockedReason\":null,\"delivery\":null,\"createdAt\":\"2026-10-02T18:20:26.803Z\",\"updatedAt\":\"2026-10-02T18:20:28.952Z\",\"project\":null},{\"id\":\"5d164e21-a224-4e24-b6ea-907be281b583\",\"state\":\"executing\",\"template\":\"shape:chain\",\"objective\":\"Following skill-authoring/SKILL.md and skill-authoring/REFERENCE.md in this repository, write layerzero-oft/SKILL.md (and any reference files it needs) for a…\",\"originalRequest\":null,\"blockedReason\":null,\"delivery\":null,\"createdAt\":\"2026-10-02T18:19:45.739Z\",\"updatedAt\":\"2026-10-02T18:23:15.325Z\",\"project\":null},{\"id\":\"e95490ab-9230-46d5-9311-cbfecfc3a5a7\",\"state\":\"executing\",\"template\":\"shape:chain\",\"objective\":\"Following skill-authoring/SKILL.md and skill-authoring/REFERENCE.md in this repository, write build-chat-bot/SKILL.md (and any reference files it needs) for a…\",\"originalRequest\":null,\"blockedReason\":null,\"delivery\":null,\"createdAt\":\"2026-10-02T18:19:40.511Z\",\"updatedAt\":\"2026-10-02T18:19:43.236Z\",\"project\":null},{\"id\":\"9374a276-63e9-4fed-83b7-12e8721b1524\",\"state\":\"executing\",\"template\":\"shape:chain\",\"objective\":\"Check the IMD docs (https://imd.fun/docs) against the live API using only free, public calls: GET routes and POST /requests/check, never quote, submit or…\",\"originalRequest\":null,\"blockedReason\":null,\"delivery\":null,\"createdAt\":\"2026-10-02T18:19:35.215Z\",\"updatedAt\":\"2026-10-02T18:19:48.634Z\",\"project\":null},{\"id\":\"430478a3-0bd3-4231-80c9-cde5b412f151\",\"state\":\"executing\",\"template\":\"shape:chain\",\"objective\":\"Measure how consistent the IMD swarm's free request evaluator is, as a reproducible QA set the developers can reuse. Build a script that sends 20 fixed bodies…\",\"originalRequest\":null,\"blockedReason\":null,\"delivery\":null,\"createdAt\":\"2026-10-02T18:19:34.931Z\",\"updatedAt\":\"2026-10-02T18:19:38.630Z\",\"project\":null}]}"
+  },
+  "finished_at": 1790965408.604648
+}

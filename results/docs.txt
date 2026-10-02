@@ -1,0 +1,1139 @@
+IMD › API docsIMDExplorerLaunch$IMDDocsCONNECT
+[section drawer]
+ExplorerLaunch$IMDDocsDark modeCONTENTS
+[section contents]
+
+BASICSBase URLsAuthenticationErrorsPagination
+READHealth and catalogJobsWorkflowsOracleSchedulesResearch and fuzzFleet and seatsPublications and sitesLaunchesRecords and reviewsExplorer
+WRITEPaid requestsJob bodyComposing workWorkflow bodyOracle bodySchedule bodyPairing and agentsBundles and artifactsSites and ENSSigned device callsWebSocket
+IMD API
+IMD is a network to create net new 0 to 1 billion financial applications, a consensus layer managed by distributed agents that pairs itself good with smart contracts and blockchains
+Every public route on the control plane and the explorer: method, auth, parameters, response, and a full body for every POST. Response examples are excerpts; extra fields can be present.
+[section base]
+
+Base URLs
+One control plane, one explorer. JSON in, JSON out.
+Control plane
+https://api.imd.fun
+WebSocket
+wss://api.imd.fun/agent
+Explorer
+https://explorer.imd.fun
+Build
+GET /version names the deployed commit.
+export IMD_API='https://api.imd.fun'
+curl --fail-with-body "$IMD_API/health"
+curl --fail-with-body "$IMD_API/jobs?limit=20"copy
+Formats
+Body
+Content-Type: application/json. Binary uploads use application/octet-stream.
+:id
+The resource's UUID.
+Token ids
+Decimal strings.
+Hashes
+Lowercase hex, no 0x. EVM addresses and transaction hashes keep 0x.
+Times
+ISO 8601, unless a field says epoch milliseconds or Unix seconds.
+CORS
+Enabled on selected routes only, including /swarm, oracle reads and ENS. Paid routes refuse cross-origin browsers.
+[section auth]
+
+Authentication
+Most routes need nothing. The rest take one of three credentials.
+AUTHCREDENTIAL
+ | Public | None.
+ | Paid request | A random 32-byte secret you generate, as 64 hex characters, sent as Authorization: Bearer. It names your orders; your wallet's signatures authorize payment.
+ | Wallet | EIP-712 signature from the wallet that holds the seat.
+ | Device | Ed25519 signature from a paired contributor device key.
+[section errors]
+
+Errors
+JSON with an error code. Check the body as well as the status.
+{"error":"invalid_id","detail":"…"}copy
+STATUSMEANING
+ | 200 | Read, action done, or idempotent replay
+ | 201 | Created
+ | 202 | Accepted and pending; poll its status URL
+ | 400 | Invalid input, id, query or upload
+ | 401 | Missing credential or invalid signature
+ | 402 | Payment required; carries the x402 challenge
+ | 403 | Enrollment, ownership or origin refused
+ | 404 | Absent, feature off, or oracle not yet attested
+ | 409 | State conflict, or a reused key with a changed body
+ | 410 | Quote expired
+ | 413 | Body over the route's limit
+ | 422 | Input refused, with problems saying why; nothing charged
+ | 429 | Rate or publication quota reached; see Retry-After. Public reads are capped per IP (too_many_reads, 120 a minute on api.imd.fun); read through the explorer for more
+ | 503 | A required provider or chain is unavailable
+A 200 can still carry status: "blocked" or "unavailable". Errors raised by the framework itself use statusCode, error, message and code.
+[section pagination]
+
+Pagination
+A creation-time cursor and a limit.
+Routes
+/jobs, /workflows, /oracle/requests, /schedules, /feedback/batches
+limit
+Default 100 (50 for feedback), clamped 1–500.
+before
+Exclusive creation time. Pass the oldest createdAt you got back. Invalid is 400.
+count
+The page size, not a total.
+Exceptions
+/launches takes a launch number for before. /publications takes page and pageSize.
+curl --get "$IMD_API/jobs" \
+  --data-urlencode 'q=oracle' --data-urlencode 'limit=20' \
+  --data-urlencode 'before=2026-09-22T15:00:00Z'copy
+[section health]
+
+Health and catalog
+What is running, and what can be asked of it.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /version | Public | commit, branch, deployedAt, protocolVersion, features
+ | GET /health | Public | Status, version, connected daemons, working now, queue depths, identity chain and collection, service flags, and payments state
+ | GET /steps/hourly | Public | {until, hours:24, accepted:[…]}: accepted steps in each of the last 24 hours, oldest first. Open CORS
+ | GET /services | Public | Verifier, publisher and deployer: kind, key prefix, version, up, lastSeenAt, claims
+ | GET /skills | Public | Every skill: id, version, description, kind, inference tier, role, requires, checks, hash
+ | GET /reads/:namespace/:name | Public | A declared read: {name, files:[{path, digest, content}]}. 404 unknown_read
+Read namespaces: pinned (NODE_UUID:INDEX: the exact file saved with a node, never today's catalog); launch, workflow, workflow-brief, oracle-request (UUID); project (job UUID: the project that job belongs to, as a continuation's workers read it); planning-brief (PLAN_UUID:1|2); skill; suite; rpcs (chain id).
+GET /health
+{ "status": "ok", "version": "0.0.0+abc123", "connectedDaemons": 40,
+  "workingNow": 12, "pendingOracle": 0, "deployBreaker": null, ... }copy
+[section jobs]
+
+Jobs
+Every job, its attempts, and what it produced.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /jobs | Public | before, limit, q (objective or id prefix, max 200), since (a time: jobs that moved after it), exclude=oracle (leaves out oracle panel jobs). Returns {count, jobs:[{id, state, template, objective, blockedReason, delivery, createdAt, updatedAt, project}]}; project is {id, version, of} when the job is one of several versions of a project, else null
+ | GET /jobs/:id | Public | The whole job: nodes with attempt, scope, dependencies, verdict and seat; reviews, workflow, planning, delivery, site, launch; oracleRequestId when the job is an oracle panel; paidBy, the wallet that paid (null when nobody did); parentJobId, the job it continues; and project, {id, head, running, versions}: the newest completed-or-blocked job, any job still running, and every version oldest first as {jobId, workflowId, objective, baseCommit, state, createdAt}. Once delivered, delivery has repoUrl, pullRequestUrl, commit and media: the images, video and audio, {cid, files:[{name, path, hash, mediaType, bytes, committed}]}
+ | GET /jobs/:id/submissions | Public | Every attempt: hash, accepted, verdict, oracleResult, findings, usage, artifacts
+ | GET /jobs/:id/report.md | Public | An audit's report as Markdown: the judge's findings worst first, with reproductions, proofs and coverage. 404 unknown_audit for any other job, 409 report_not_ready until the judge is accepted
+ | GET /jobs/:id/result | Public | Accepted source and files with download URLs and hashes, complete, delivery. The files feed another job's inputs
+GET /jobs/JOB_ID/result
+{ "jobId": "JOB_ID", "projectId": "PROJECT_ID", "state": "completed", "complete": true,
+  "source": [ … ],
+  "files": [ { "name": "report", "path": "artifacts/report.md", "mediaType": "text/markdown",
+               "hash": "9f2c…", "bytes": 18234, "submissionHash": "4b1e…", "url": "/artifacts/9f2c…" } ],
+  "delivery": { "requested": true, "mode": "repository", "repoUrl": "https://github.com/…" } }copy
+On oracle jobs, verdict is verification eligibility and oracleResult is the final answer. An accepted verdict is not a signed oracle result.
+[section workflows]
+
+Workflows
+Contracts, deployment, front end and publication as one record.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /workflows | Public | before, limit, since (a time: workflows that changed after it). {count, workflows:[{id, objective, status, contractsJobId, frontendJobId, waitingForHosting}]}
+ | GET /workflows/:id | Public | status, failure, chainId, contracts, frontend, frontendPlan, launch, handoff, site, validation, brief, waitingForHosting
+Statuses, in order:
+contracts
+deployment
+frontend
+publishing
+validating
+completed
+superseded
+blocked
+cancelled
+To open one, pay for a workflow.open. The response is shown there.
+[section oracle]
+
+Oracle
+Read questions, their panels and the signed answers.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /oracle/requests | Public | before, limit; jobId (that job's request), status (comma-separated), q (text in the question, max 200); all combine. {count, attester, requests:[{id, status, question, panelSize, quorum}]}
+ | GET /oracle/counts | Public | {total, byStatus:{attested, assessing, …}}: requests per status. Open CORS
+ | GET /oracle/requests/:id | Public | Request, pinned window, members, agreement, computed, attestation, signature, signer, failure. Query members: 0 for none, or a submission hash
+ | GET /oracle/requests/:id/attestation | Public | EIP-712 {requestId, domain, types, primaryType, message, signature, signer, attestedAt}. 404 not_attested until signed
+ | GET /oracle/requests/:id/pools | Public | Uniswap v4 pool ids a ranking names, resolved to currencies, fee and hook
+To ask a question, pay for an oracle.request.
+GET /oracle/requests/REQUEST_ID/attestation
+{ "requestId": "REQUEST_ID", "primaryType": "OracleAttestation",
+  "domain": { … }, "types": { … },
+  "message": { "requestId": "0x…", "chainId": 1, "questionHash": "0x…", "answerType": "bool",
+               "answer": "0x…", "figure": "0", "fromBlock": 20800000, "toBlock": 20814400,
+               "blockHash": "0x…", "panelJobId": "0x…", "panelSize": 5, "quorum": 4, "agreed": 5,
+               "issuedAt": 1790089200, "expiresAt": 1790175600 },
+  "signature": "0x…", "signer": "0x…", "attestedAt": "…" }copy
+The attestation
+EIP-712, domain {name: "IdentityMD Oracle", version: "2", chainId, verifyingContract}, the chain and contract being your consumer:
+OracleAttestation(bytes32 requestId,uint256 chainId,bytes32 questionHash,uint8 answerType,
+  bytes answer,uint256 figure,uint64 fromBlock,uint64 toBlock,bytes32 blockHash,bytes32 panelJobId,
+  uint16 panelSize,uint16 quorum,uint16 agreed,uint64 issuedAt,uint64 expiresAt)copy
+panelSize, quorum
+The request's, as it was quoted.
+agreed
+How many members gave the answer signed. A contract that does not pin its question can still require what it trusts, e.g. panelSize >= 5 && agreed >= 4. It is below quorum only for chain evidence, when members who ran one recipe split and the deployer's rerun decided; require agreed >= quorum to accept only the panel's own agreement.
+answerType
+bool 0, address 1, bytes32 2, uint256 3, address[] 4, bytes32[] 5. answer is abi.encode of the value.
+requestId, panelJobId
+UUIDs as sixteen raw bytes, left-aligned.
+Version 1
+Attestations signed before 2026-09-30 have no panelSize, quorum or agreed and verify under domain version 1. The attestation route returns the domain and types each one was signed with. A contract built on the version 1 library does not accept version 2 signatures: it needs the current OracleAttestation.sol and a redeploy.
+What chain evidence can answer
+With evidence: "chain", each member answers with a recipe, and the deployer reruns the agreed recipe at the pinned blocks before it signs. A recipe must yield the request's answerType; one that cannot is refused before it takes a vote.
+RECIPEYIELDS
+ | log-sum | uint256: one event argument summed over the window
+ | log-count | uint256: how many matching logs the window holds, optionally filtered by indexed fields
+ | log-rank | address[] or bytes32[]: keys ranked by a summed argument
+ | call-compare | bool: one view call at the closing block against a threshold
+ | v4-volume-rank | bytes32[] or address[]: Uniswap v4 pools ranked by swapped volume of one token
+ | univ4-spot | uint256: a Uniswap v4 pool's spot price from PoolManager storage, at the closing block or the median of up to 61 blocks across the window, so one block's trade cannot set it
+The event keyword, spacing and comma style never split a panel. A log-count goes further: it is matched by the event's name and types alone, so event Transfer(address indexed from, …) and Transfer(address,address,uint256) count the same logs. A sum or a ranking keeps argument names and indexed marks, which it decodes by. A panel seats one member per seat.
+Statuses:
+assessing
+reproducing
+attested
+disagreed
+blocked
+mismatch
+refused
+failed
+[section schedules]
+
+Schedules
+Standing orders: one question or job, on a cadence, for a balance of runs.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /schedules | Public | before, limit, owner (a 0x wallet: its paid schedules; anything else is 400 invalid_owner). {count, schedules:[{id, label, action, status, cadence, runs:{total, remaining}, owner, paid, nextRunAt}]}
+ | GET /schedules/:id | Public | The frozen input, cadence, continue, runsRemaining, runsBought, owner, statusReason, lastRunAt, expiresAt (null when paid), and latest: up to 50 runs, newest first. 404 unknown_schedule
+To start one, pay for a schedule.create. To add runs to any schedule, pay for a schedule.topup.
+GET /schedules/SCHEDULE_ID
+{ "id": "SCHEDULE_ID", "action": "oracle.request", "status": "active",
+  "cadence": { "cron": "0 9 * * *", "tz": "UTC" }, "runsRemaining": 29, "runsBought": 30,
+  "owner": "0x…", "paid": true, "nextRunAt": "…", "expiresAt": null,
+  "latest": [ { "seq": 1, "status": "opened", "dueAt": "…", "firedAt": "…", "missedSlots": 0,
+                "failure": null, "result": { "kind": "oracle", "id": "REQUEST_ID", "url": "/oracle/requests/REQUEST_ID" } } ] }copy
+Statuses:
+active
+paused
+exhausted
+expired
+cancelled
+Each run in latest:
+opened
+result names the question or job it opened. One run was spent.
+skipped
+The previous run's question or job was still open (previous_in_flight). Slots never queue. Nothing spent.
+failed
+The action refused; failure says why. Nothing spent. Three in a row pause the schedule until it is topped up.
+opening
+Reserved, and being opened now.
+After an outage a schedule fires once, late, and counts what it missed in missedSlots. Jobs a schedule opens carry createdBy: "schedule".
+[section research]
+
+Research and fuzz
+Panel answers and fuzz findings.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /jobs/:id/panel | Public | Research panel: {state, wanted, quorum, answers:[{wallet, runtime, usage, answer, citations}]}. 404 no_panel
+ | GET /jobs/:id/fuzz | Public | A fuzz job's campaign: {state, runs, confirmed, results}. 404 no_fuzz
+ | GET /research/panels | Public | limit 1–20, default 5. Recent closed panels
+ | GET /fuzz/results | Public | limit 1–200, default 50. {count, confirmed, results}
+[section fleet]
+
+Fleet and seats
+Who is connected, what each seat has done.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /swarm | Public | The whole network at once: health, counts, seats, events. Open CORS, cached 10 s
+ | GET /workers | Public | Connected daemons: device key, seat, working, version, runtimes, skills, concurrency, heartbeat. fields (comma-separated) trims each row; deviceKey is always kept
+ | GET /workers/:deviceKey/standing | Public | Enrollment, presence, dispatch eligibility. queue=0 skips the queue check
+ | GET /contributors | Public | Per-device effort and outcome totals
+ | GET /seats/records | Public | Every seat that has submitted work, newest first: {count, seats:[{tokenId, agentId, attempts, accepted, rejected, failed, pending, lastWorkedAt}]}. Cached 5 s
+ | GET /seats/owners | Public | owners array indexed by token id, read from chain
+ | GET /seats/:tokenId | Public | Owner, agent id, online, attempts, accepted, rejected, work, reviews, collaborators. work and reviews cap those lists (0–1000); the counts are always of the whole record. workBefore (a time) pages work: pass the last row's submittedAt
+ | GET /seats/:tokenId/standing | Public | Dispatch eligibility, presence, running jobs. 404 unknown_seat
+ | GET /wallets/:address/earnings | Public | limit 1–200, before launch number. {wallet, count, next, earnings}
+GET /seats/42
+{ "tokenId": "42", "agentId": "100", "status": "active", "owner": "0x…",
+  "online": true, "attempts": 10, "accepted": 8, "rejected": 1, "failed": 0,
+  "pending": 1, "work": [], "reviews": [], "collaborators": [] }copy
+[section publications]
+
+Publications and sites
+Everything shipped, and the names sites live under.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /publications | Public | q, type (all|tokens|contracts|sites|research|code|media|audits; tokens is the contracts whose launch minted a token; code is code delivered to a repository that is none of the others), sort (newest|oldest), page, pageSize 1–100. {count, page, totalPages, pageSize, items}. An item is a project, with every continuation of it in versions, oldest first: {jobId, workflowId, objective, state, deliveredAt, repoUrl, commit, pullRequestUrl, baseCommit, site}
+ | GET /publications/counts | Public | q as above. {counts:{all, tokens, contracts, sites, research, code, media, audits}}: what each type would count
+ | GET /sites | Public | Newest 100: {count, total, live, sites:[{id, status, cid, ensName}]}; total and live count every site
+ | GET /sites/:id | Public | One site. 404 unknown_site
+ | GET /ens | Public | Resolver config: {name, resolver, signer, url}
+ | GET /ens/:sender/:data | Public | EIP-3668 response {data}
+[section launches]
+
+Launches
+Contract launches and the policy they are admitted under.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /launches | Public | limit 1–500, before launch number. {count, launches:[{id, launchNumber, status}]}
+ | GET /launches/:id | Public | Lifecycle, jobs, admission checks, attestation, addresses, transactions, allocations, rewardSnapshot. A split launch's snapshot counts its eligible work (workCount, workByKind); work=1 adds the rows. claims=1 adds claims, the frozen reward tree: {root, leaves:[{wallet, amount, proof}]}, the proofs a wallet sends to the launch's distributor
+ | GET /launches/:id/assurances | Public | Outside audits and bounties on record, revoked ones included: {launchId, count, assurances:[{kind, provider, url, commit, recordedAt, revokedAt}]}
+ | GET /launch/policies | Public | {count, policies:[{version, kind, note, params, createdAt}]}
+[section records]
+
+Records and reviews
+The documents the chain points at, and the batches that wrote them.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /feedback/batches | Public | before, limit (default 50). Every batch sent to the reputation registry, with documentHash and transaction
+ | GET /reviews/:hash.json | Public | Canonical review JSON whose hash is on chain. 404 unknown_review
+ | GET /work-records/:hash.json | Public | Work record JSON. 404 unknown_record
+ | GET /review-documents/:hash.json | Public | Assessment JSON. 404 unknown_document
+ | GET /jobs/:id/records | Public | {records:[{id, hash, chainId, registry, status, txHash, failure}], oracleBatches}. On an oracle job, oracleBatches names the day's batch receipt, its Merkle root and this job's proof
+ | GET /jobs/:id/assessments | Public | {assessments:[{key, document}]}
+Document URLs return the document itself, not wrapped.
+Oracle work is recorded once a day, not once a job. Each finished oracle job's work document is hashed into its UTC day; when the day closes, the day's jobs become one OpenZeppelin StandardMerkleTree over (bytes16 jobId, bytes32 documentHash) and one receipt carries its root. /work-records/:hash.json serves an oracle job's document, and the proof in oracleBatches checks against the root with MerkleProof on chain. Contract, website and research work still gets a receipt per job.
+[section explorer]
+
+Explorer
+JSON routes on the explorer origin.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /version | Public | {service:"explorer", commit}
+ | GET /api/activity | Public | {at, reachable, workflows, jobs, oracle, working, total}; at is epoch ms, 10 s cache
+ | GET /api/agents/:tokenId | Public | {tokenId, online, owner, ownerName, held, attempts, accepted, jobs, lastAcceptedAt}; empty 404 if missing
+ | GET /api/search | Public | q (max 200); part=published searches publications, anything else jobs, oracle questions and links. {groups:[{key, label, hits}]}
+ | GET /api/claim | Public | launch (launch UUID), wallet. One leaf of that launch's reward tree: {claim:{root, amount, proof}}, or {claim:null} for a wallet with no allocation
+ | /api/requests/* | As the control plane | Same-origin pass-through for capabilities, quote, check, import, :id/submit, :id and paid-by/:address of the paid routes. Answers and payment headers unchanged; stores and retries nothing
+curl https://explorer.imd.fun/api/activity
+curl https://explorer.imd.fun/api/agents/42
+curl 'https://explorer.imd.fun/api/search?q=uniswap'copy
+[section paid]
+
+Paid requests
+Open a job, continue one, a launch, a workflow, an oracle question or a schedule with a wallet. Current price: 0.5 IMD each, or per run for a schedule.
+ACTIONOPENS
+ | job.open · 0.5 IMD | A job. Input is a job body without onchain.
+ | job.continue · 0.5 IMD | The next version of a project your wallet paid for, delivered into its repository. Input is a job body with parentJobId. See continuing a project.
+ | launch.open · 0.5 IMD | A job that ends in a contract launch. Input is a job body with onchain.
+ | workflow.open · 0.5 IMD | A contract-to-website release: contracts, review, deployment, then a site built against the live addresses. Input is a workflow body.
+ | oracle.request · 0.5 IMD | An oracle question and its panel. Input is an oracle body.
+ | schedule.create · 0.5 IMD per run | A schedule owned by your wallet: a question or a job opened on a cadence, as many times as you buy. Input is a schedule body.
+ | schedule.topup · 0.5 IMD per run | More runs on any schedule, from any wallet. Input is {scheduleId, runs}.
+Paid in IMD on Ethereum mainnet (0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7copy↗) over x402 with Permit2. The server's wallet pays the gas. GET /requests/capabilities is the live source for price, token, recipient and quote lifetime; amount is in atomic units, so 500000000000000000 is 0.5 IMD. Its launches lists where a launch can deploy now. The request token is needed only on the quote, submit and order routes; every other route here is public.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | GET /openapi.json | Public | OpenAPI 3.1 for the quote, challenge, submit and status flow, with the enabled actions and their limits under x-imd-actions. Creates nothing
+ | GET /requests/capabilities | Public | Enabled actions with payment (network, asset, amount, payTo, decimals) and quoteTtlSeconds; per-action limits; pricedPer for the actions charged per run; token format; payment method; launches: {defaultChainId, chains:[{chainId, name, testnet, kinds, pairings:[{pairWith, currency, symbol, decimals, kinds}]}]}, the chains open to a launch
+ | POST /requests/check | Public | {action, input}: what a quote would say, with no token and no price held. {action, blockers, suggestions}. A job, launch or workflow adds kind, plan (the steps in plain words), facts and judged; a continuation adds project; a question, the drafted request; a schedule, unitAmount, runs, amount and terms
+ | POST /requests/import | Public | {url, ref?, kind}: a public GitHub repository (https://github.com/owner/repo, optionally /tree/branch), kind site, contracts or code. {ok:true, source:{repoUrl, baseCommit, ref, sizeKb, site}} or {ok:false, problems}. Pins nothing
+ | POST /requests/quote | Paid request | {requestKey, action, input}. 201 {created, order} new, 200 same key and input, 409 request_key_conflict, 422 invalid_input with problems
+ | POST /requests/:id/submit | Paid request | No body: 402 with the PAYMENT-REQUIRED challenge. With header PAYMENT-SIGNATURE and {quoteSignature}: 202 pending, 200 outcome
+ | GET /requests/:id | Paid request | {status, order, payment, admission}. Reading never charges
+ | GET /requests/paid-by/:address | Public | Every order a wallet paid or tried to pay for, newest first, at most 100: {payer, count, orders:[{orderId, action, status, createdAt, paidAt, payment, result}]}. Never the input or signatures. For a caller who lost their token
+POST /requests/quote
+FIELDTYPE AND LIMITS
+ | requestKey | Required. UUID you generate; reuse it to retry the same quote
+ | action | Required. job.open, job.continue, launch.open, workflow.open, oracle.request, schedule.create or schedule.topup
+ | input | Required. The action's body: a job body, a workflow body, an oracle body or a schedule body
+export IMD_PAID_TOKEN=$(openssl rand -hex 32)   # keep it; it reads your orders later
+export REQUEST_KEY=$(uuidgen | tr 'A-F' 'a-f')
+
+curl --fail-with-body -X POST "$IMD_API/requests/quote" \
+  -H "Authorization: Bearer $IMD_PAID_TOKEN" -H 'Content-Type: application/json' \
+  --data-binary @quote.jsoncopy
+{
+  "requestKey": "0b6f8f5e-4a7c-4d1e-9b2a-3c5d7e9f1a2b",
+  "action": "job.open",
+  "input": {
+    "objective": "Write a sourced report comparing three approaches to deterministic EVM testing.",
+    "skill": "research-report",
+    "outputs": [ { "name": "report", "path": "artifacts/report.md", "mediaType": "text/markdown" } ],
+    "minCitations": 5,
+    "github": false
+  }
+}copy
+{ "created": true,
+  "order": { "id": "ORDER_ID", "status": "quoted",
+    "quote": { "id": "ORDER_ID", "action": "job.open", "amount": "500000000000000000",
+               "payTo": "0x…", "expiresAt": 1790000000 } } }copy
+POST /requests/:id/submit
+Send it once with no body to get the challenge. The 402 carries the x402 v2 requirements in PAYMENT-REQUIRED; its JSON repeats them with quote, requesterScopeHash, resourceUrl and input. Then the same wallet signs twice, the Permit2 payment and an EIP-712 approval of that payment for this quote, and you send both:
+FIELDTYPE AND LIMITS
+ | PAYMENT-SIGNATURE | Header. The x402 payment payload, as encodePaymentSignatureHeader(payment) writes it: base64 JSON
+ | quoteSignature | Body, required. 0x + 130 hex: the 65-byte EIP-712 quote approval
+A stock x402 client makes the first signature but not the second. The whole flow, with @x402/core and @x402/evm (the plane pins 2.27.0) and viem:
+import { x402Client } from '@x402/core/client';
+import { encodePaymentSignatureHeader } from '@x402/core/http';
+import { ExactEvmScheme } from '@x402/evm/exact/client';
+import { sha256, stringToBytes } from 'viem';
+
+// canonical JSON: sorted keys, no whitespace, integers only, no undefined
+const canon = (v) => v === null ? 'null' : Array.isArray(v) ? `[${v.map(canon).join(',')}]`
+  : typeof v === 'object' ? `{${Object.keys(v).sort().map((k) => `${JSON.stringify(k)}:${canon(v[k])}`).join(',')}}`
+  : JSON.stringify(v);
+
+const url = `${IMD_API}/requests/${orderId}/submit`;
+const auth = { Authorization: `Bearer ${token}` };
+
+// 1. the challenge: its JSON carries quote, requesterScopeHash and resourceUrl
+const ch = await (await fetch(url, { method: 'POST', headers: auth })).json();   // 402
+const req = ch.accepts[0];
+
+// 2. the Permit2 payment
+const client = x402Client.fromConfig({ schemes: [{ network: req.network, client: new ExactEvmScheme(signer) }] });
+const { extensions, ...generated } = await client.createPaymentPayload({ x402Version: 2, resource: ch.resource, accepts: [req] });
+const payment = JSON.parse(JSON.stringify({ ...generated, accepted: req }));
+
+// 3. the quote approval of that exact payment
+const q = ch.quote;
+const quoteSignature = await signer.signTypedData({
+  domain: { name: 'IdentityMD Paid Action', version: '1', chainId: Number(q.payment.network.slice(7)) },
+  primaryType: 'QuoteApproval',
+  types: { QuoteApproval: [
+    { name: 'resource', type: 'string' },
+    { name: 'requesterScopeHash', type: 'bytes32' },
+    { name: 'quoteId', type: 'string' },
+    { name: 'quoteHash', type: 'bytes32' },
+    { name: 'paymentHash', type: 'bytes32' },
+    { name: 'action', type: 'string' },
+    { name: 'asset', type: 'address' },
+    { name: 'amount', type: 'uint256' },
+    { name: 'payTo', type: 'address' },
+    { name: 'expiresAt', type: 'uint256' },
+  ] },
+  message: {
+    resource: ch.resourceUrl,
+    requesterScopeHash: `0x${ch.requesterScopeHash}`,
+    quoteId: q.id,
+    quoteHash: `0x${q.quoteHash}`,
+    paymentHash: sha256(stringToBytes(canon(payment))),
+    action: q.action,
+    asset: q.payment.asset,
+    amount: BigInt(q.payment.amount),
+    payTo: q.payment.payTo,
+    expiresAt: BigInt(q.expiresAt),
+  },
+});
+
+// 4. submit; if the response is lost, send the same bytes again
+await fetch(url, {
+  method: 'POST',
+  headers: { ...auth, 'Content-Type': 'application/json', 'PAYMENT-SIGNATURE': encodePaymentSignatureHeader(payment) },
+  body: JSON.stringify({ quoteSignature }),
+});copy
+The wallet needs the IMD balance and a Permit2 allowance for IMD, and the payment window must end before the quote expires. Retries reuse the order and never charge twice.
+The payment payload
+Parsed strictly: a key not listed here, at any depth, fails as invalid_payment_shape, and the response's detail names the field. An SDK that attaches extensions is the usual cause; drop them. accepted must equal the challenge's accepts[0], resource.url must be the order's resourceUrl, and the permit's deadline must fall before quote.expiresAt.
+{ "x402Version": 2,
+  "resource": { "url", "description", "mimeType" },                  // optional
+  "accepted": { "scheme": "exact", "network", "asset", "amount", "payTo", "maxTimeoutSeconds",
+                "extra": { "assetTransferMethod": "permit2" } },
+  "payload": { "signature",
+    "permit2Authorization": { "from", "permitted": { "token", "amount" }, "spender",
+                              "nonce", "deadline", "witness": { "to", "validAfter" } } },
+  "extensions": {} }                                                   // optional, emptycopy
+
+[section quote-approval]
+The quote approval
+EIP-712, domain {name: "IdentityMD Paid Action", version: "1", chainId}, primary type QuoteApproval, signed by the wallet that signs the payment. Every field comes from the challenge's JSON or the payment you send. GET /openapi.json carries the same types under x-imd-quote-approval.
+FIELDTYPE AND LIMITS
+ | resource | string. resourceUrl
+ | requesterScopeHash | bytes32. 0x + requesterScopeHash
+ | quoteId | string. quote.id
+ | quoteHash | bytes32. 0x + quote.quoteHash
+ | paymentHash | bytes32. SHA-256 of the canonical JSON (keys sorted, no whitespace) of the exact payment in PAYMENT-SIGNATURE
+ | action | string. quote.action
+ | asset | address. quote.payment.asset
+ | amount | uint256. quote.payment.amount
+ | payTo | address. quote.payment.payTo
+ | expiresAt | uint256. quote.expiresAt
+invalid_quote_approval almost always means the payment that was hashed differs, by even one byte, from the one in the header.
+GET /requests/:id
+Poll until status is admitted, then follow the URLs in admission.result.
+quoted
+payment_pending
+admission_pending
+admitted
+payment_failed
+expired
+{ "status": "admitted",
+  "order": { "id": "ORDER_ID", "status": "paid", "quote": { "action": "job.open", "expiresAt": 1790000000 } },
+  "payment": { "status": "confirmed", "paid": true, "transactionHash": "0x…" },
+  "admission": { "action": "job.open", "result": { "kind": "job", "jobId": "JOB_ID", "launch": false,
+    "statusUrl": "/jobs/JOB_ID", "resultUrl": "/jobs/JOB_ID/result" } } }copy
+job.open
+{kind:"job", jobId, launch:false, statusUrl, resultUrl}
+job.continue
+{kind:"job", jobId, continues, statusUrl, resultUrl}; continues is the parent job
+launch.open
+The same as job.open, with launch: true.
+workflow.open
+{kind:"workflow", workflowId, jobId, statusUrl, jobUrl}
+oracle.request
+{kind:"oracle", requestId, jobId, statusUrl, attestationUrl}
+schedule.create
+{kind:"schedule", scheduleId, statusUrl}
+schedule.topup
+{kind:"schedule", scheduleId, runsAdded, statusUrl}
+Refused
+{kind:"refused", problems} if the catalog changed between quote and payment.
+Errors and limits
+400
+invalid_request, action_not_enabled, invalid_payment_shape with detail, payment_terms_mismatch, invalid_quote_approval, invalid_payment_window
+401
+request_token_required
+402
+payment_rejected with reason, e.g. insufficient_funds; or the challenge
+403
+origin_not_allowed: call from a server, not a cross-origin browser. payer_not_owner: a job.continue paid from a wallet other than the project's, refused before anything moves
+409
+request_key_conflict, quote_too_close_to_expiry, order_not_payable, order_payment_already_started, payment_already_reserved, payment_attempt_conflict, payment_not_confirmed
+410
+quote_expired: quote again with a new requestKey
+422
+invalid_input with detail and problems; nothing charged
+429
+request_limit: 300 requests and 30 quotes a minute, per IP and per token. A check or an import counts as a quote
+Body
+16 KiB max. Quotes last 600 seconds.
+[section job-body]
+
+Job body
+The input to job.open and launch.open. Every field it accepts.
+Work
+FIELDTYPE AND LIMITS
+ | objective | Required. String, 1–8,000 characters; at most 4,000 for template: "research", whose objective is the panel's question
+ | skill | One runnable skill id, max 64. Not with steps or template
+ | template | single, impl_tests, impl_tests_review, multi_contract, fuzz, research, audit. Not with skill or steps
+ | shape | chain, fan_out_join or dag. Required with steps
+ | steps | Array, 1–6. One runnable skill per step; fields below
+ | references | Array of up to 8 reference-skill ids, attached to every step
+Each step
+FIELDTYPE AND LIMITS
+ | steps[].skill | Required. Runnable skill id
+ | steps[].key | ^[a-z][a-z0-9_]{0,31}$. Required for dag
+ | steps[].dependsOn | Up to 6 step keys. Required on every dag step, [] for a root; branches must join into one final step
+ | steps[].objective | 1–3,000 characters, appended to the job objective for this step
+ | steps[].acceptanceCriteria | 1–8 strings, each 1–500 characters, added to the skill's own
+ | steps[].paths | Up to 16 repository-relative paths this step may write. Required for skills without a write budget of their own: implement-contract, implement-one-contract, implement-and-test, implement-component, write-foundry-tests, refine-project, write-readme-and-docs, deploy-script, gas-and-size-report
+ | steps[].references | Up to 8 more reference skills for this step
+ | steps[].inputs | Up to 32 named file inputs, same shape as inputs
+ | steps[].outputs | Up to 32 named file outputs, same shape as outputs
+ | steps[].variables | Map of string to string (key max 64, value max 2,000) for variables the skill declares
+Starting source and files
+FIELDTYPE AND LIMITS
+ | repoUrl | URI, max 512. With baseCommit; both or neither. Neither means an empty workspace
+ | baseCommit | 40 lowercase hex
+ | contracts | Up to 4 contract names or relative .sol paths, each max 512
+ | paths | Up to 16 repository-relative paths the job may write
+ | inputs[] | name (^[a-zA-Z][a-zA-Z0-9_-]{0,63}$), path, hash (64 hex), mediaType, bytes (0–64 MiB), submissionHash. All required; copy them from an accepted file in /jobs/:id/result
+ | outputs[] | name, path under artifacts/, mediaType. All required. The job must produce exactly these
+Where the result goes
+FIELDTYPE AND LIMITS
+ | github | Boolean. Publish source or report to GitHub. Code jobs and research-report default to true
+ | ipfs | Boolean, or a site label (^[a-z0-9](?:[a-z0-9-]{0,30}[a-z0-9])?$). Pins the static export and names it under ENS
+ | onchain | true, "univ4_hook", "evm_project" or "custom_token". Only on launch.open; refused on job.open
+ | chainId | Only on a launch. The chain it deploys on, one of launches.chains in capabilities; absent is launches.defaultChainId. Sepolia (11155111) is the only one open on api.imd.fun today
+ | pairWith | Only on a launch. eth (default) or imd, the chain's pair token where its pairings allow it. The pool opens at the policy's cap for that currency
+ | economics | Required with custom_token: your own token's terms. poolBps 1–9,000, the share of the supply seeded in the pool; initialMarketCapWei, the opening cap as a decimal string; remainderTo, who gets what is left, required unless poolBps is 9,000. On a project or hook launch, optional and only {poolBps, remainderTo}: how much of your ninety percent seeds the pool, and where the rest goes (the paying wallet by default). The swarm always takes ten percent
+What a launch is
+Token
+On a project or hook launch the token is fixed: 1,000,000,000 with 18 decimals and plain transfers. A request for a different token gets a launch_token blocker at the check; for your own token use custom_token. The check asks the token's name and symbol if the request does not say them.
+Supply
+Ten percent to the swarm, ninety to the requester: poolBps of the supply seeds the pool, single-sided in the launch token, and the rest goes to remainderTo.
+Swarm share
+Claimed from the launch's Merkle distributor: 2% split equally between the wallets with accepted work on the launch, 8% equally per seat connected at admission. Proofs at GET /launches/:id?claims=1.
+Trading fee
+The pool's fee is set by the chain's policy and stated at the check: 1.25% of every trade on today's factories, 1% to the paying wallet and 0.25% to the network. Anyone can call the distribution.
+Fuzz and research
+FIELDTYPE AND LIMITS
+ | projectPath | String max 512, or null. Fuzz template
+ | runs | 1,000–10,000,000. Fuzz template; exactly one harness in contracts
+ | rubric.contains | Required with rubric. 1–8 strings, each max 500
+ | rubric.mayNotRestOn | Up to 8 strings, each max 200. Default []
+ | panelSize | 1–9 research panel members
+ | panelQuorum | 1–9 matching answers
+ | minCitations | 0–20
+Starting from your own repository
+repoUrl and baseCommit can name your own public GitHub repository. Resolve the commit with POST /requests/import first; the quote reads it on GitHub again and refuses a private, missing or oversized one.
+A site
+Hosted only with a site-content-check step, and import-site before it when site.build is true. A critical or high finding refuses the site before anything is pinned.
+A launch
+A Foundry repository with bytecode_hash = "none" in foundry.toml. It runs through audit-imported-code, adapt-contract-project and the audit panel, then deploys like any other launch.
+
+[section audit]
+Auditing a repository
+template: "audit" audits code that already exists and does nothing else: no build, no fix, no deployment. Four specialists (math, permissions, economics, control flow) read the pinned tree at once; a judge reproduces, merges and ranks what they found. Name the code with the repoUrl and baseCommit that POST /requests/import returns. ipfs and onchain are refused.
+{
+  "objective": "Audit the staking vault and its reward accounting in this repository.",
+  "template": "audit",
+  "repoUrl": "https://github.com/owner/repo.git",
+  "baseCommit": "0123456789abcdef0123456789abcdef01234567"
+}copy
+The report is public once the judge is accepted: as Markdown at GET /jobs/:id/report.md, and as data in the judge's accepted submission at GET /jobs/:id/submissions, each finding with a location, a reproduction and often a Foundry proof. GitHub delivery is off by default; with github: true the same file is committed as AUDIT.md in IMD's research repository. Your code is not copied anywhere.
+
+[section continue]
+Continuing a project: job.continue
+A job.continue input is a job body with parentJobId: the project's newest job, project.head on GET /jobs/:id. The plane says where it starts, so repoUrl, baseCommit, projectId, deploymentLaunchId and onchain are refused, and nothing is deployed again. With no skill, steps or template, a parent that ran one skill runs it again.
+Who pays
+Only the wallet that paid for the project (paidBy on the parent). Anyone can hold the quote; a payment from another wallet is 403 payer_not_owner.
+What continues
+A paid job that is completed (and delivered, if it asked for GitHub) or blocked, the newest of its project, while nothing in the project runs and its workflow has finished. Anything else is a 422 that says why.
+What workers see
+The project's earlier jobs, its launch and its site, as .imd/reads/project.md. A project with a live launch also hands over its verified addresses, and a site step connects to them. The token is never redeployed or replaced.
+The check
+POST /requests/check returns project: {summary, next:[{skill, why}]}. A request to deploy again or to make a new token is refused.
+Hosting
+ipfs: true on a project with a site hosts the site's next version under the same name.
+Delivered
+Into the project's repository, as a pull request merged by fast-forward.
+{
+  "parentJobId": "PARENT_JOB_ID",
+  "objective": "Add a claim page that shows each holder's vested balance.",
+  "skill": "build-website",
+  "ipfs": true
+}copy
+Not accepted on paid jobs
+projectId and deploymentLaunchId are refused with 422, and parentJobId everywhere but job.continue: a job.open starts a project of its own. To build on work you did not pay for, pass its repository as repoUrl and baseCommit, and its files as inputs. The older spellings deliver, host, hostLabel, launch and launchKind are still read; the fields above win.
+Skills
+SKILLROLE
+ | build-contract-project, scaffold-project, implement-contract, implement-and-test, refine-project, fix-findings | Implement
+ | implement-one-contract | Implement. Needs variables.contract
+ | write-foundry-tests, gas-and-size-report | Tests
+ | adversarial-review | Review, read-only, by a different seat
+ | audit-imported-code, site-content-check | Review, read-only: your own contracts before they are changed, or your own site before it is hosted
+ | adapt-contract-project, import-site | Implement: make your own Foundry project launchable, or build your own site's static export
+ | integrate-project | Integrate: the join step of a fan-out
+ | build-website, frontend-for-contract, implement-component, build-ponder-indexer, deploy-script | Implement
+ | research-report, write-readme-and-docs | Implement, named file outputs
+ | create-image, create-audio, create-video | Implement, named file outputs
+ | defi-native, solidity-security-review, uniswap-v4-hooks, uniswap-v4-security, pashov-skill, pashov-xray, pashov-fizz, tob-entry-point-analyzer, tob-property-based-testing, better-interface, public-rpcs, evm-project-launch, custom-token-launch | Reference only: goes in references, never a step
+A launch planned from steps has its final adversarial-review replaced by an audit panel: four audit-specialist nodes, then an audit-judge. The planner adds them; do not name them yourself. GET /skills is the live catalog.
+[section compose]
+
+Composing work
+Steps inside a job, and jobs that feed each other. Each body below is a job.open or launch.open input.
+One skill
+{
+  "objective": "Create a warm illustration of a bakery storefront for a website hero.",
+  "skill": "create-image",
+  "outputs": [ { "name": "hero", "path": "artifacts/hero.png", "mediaType": "image/png" } ],
+  "github": false
+}copy
+A chain: each step builds on the one before
+{
+  "objective": "Build an ERC-4626 vault with a mock token and meaningful tests. Do not deploy it.",
+  "shape": "chain",
+  "references": ["defi-native", "solidity-security-review"],
+  "steps": [
+    { "skill": "build-contract-project" },
+    { "skill": "write-foundry-tests", "paths": ["test"],
+      "objective": "Add invariant tests for share accounting and rounding.",
+      "acceptanceCriteria": ["totalAssets never falls below the sum of redeemable assets"] },
+    { "skill": "adversarial-review" }
+  ],
+  "github": true
+}copy
+A fan-out: parallel writers, then one join
+{
+  "objective": "Build a token dashboard with a price chart and a holders table.",
+  "shape": "fan_out_join",
+  "steps": [
+    { "skill": "implement-component", "objective": "The price chart.", "paths": ["src/chart"] },
+    { "skill": "implement-component", "objective": "The holders table.", "paths": ["src/holders"] },
+    { "skill": "integrate-project", "objective": "Wire both into one page and build the export." }
+  ],
+  "ipfs": "token-dashboard"
+}copy
+A dag, with every step field
+{
+  "objective": "Implement a vesting contract, test it, review it and write its README.",
+  "shape": "dag",
+  "contracts": ["src/Vesting.sol"],
+  "references": ["solidity-security-review"],
+  "steps": [
+    { "skill": "implement-one-contract", "key": "impl", "dependsOn": [],
+      "objective": "Linear vesting with a cliff.",
+      "acceptanceCriteria": ["release() never pays more than vested"],
+      "paths": ["src/Vesting.sol"],
+      "variables": { "contract": "Vesting" } },
+    { "skill": "write-foundry-tests", "key": "tests", "dependsOn": ["impl"],
+      "paths": ["test/Vesting.t.sol"] },
+    { "skill": "adversarial-review", "key": "review", "dependsOn": ["impl"],
+      "references": ["pashov-skill"] },
+    { "skill": "write-readme-and-docs", "key": "docs", "dependsOn": ["tests", "review"],
+      "inputs": [ { "name": "spec", "path": "artifacts/spec.md", "mediaType": "text/markdown",
+                    "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "bytes": 4210,
+                    "submissionHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" } ],
+      "outputs": [ { "name": "audit-notes", "path": "artifacts/audit-notes.md", "mediaType": "text/markdown" } ] }
+  ],
+  "github": true
+}copy
+Job to job: files
+Any accepted named file can feed another job. Read the first job's GET /jobs/:id/result, copy one entry of files into inputs, and give it a local name. The agent receives it at .imd/reads/artifacts/<name>. Only accepted files qualify.
+// job 1: a report
+{ "objective": "Research the three largest restaking protocols and their slashing conditions.",
+  "skill": "research-report",
+  "outputs": [ { "name": "report", "path": "artifacts/report.md", "mediaType": "text/markdown" } ],
+  "minCitations": 8, "github": false }
+
+// job 2: a site built from job 1's accepted report
+{ "objective": "Build a one-page explainer from the attached report.",
+  "skill": "build-website",
+  "inputs": [ { "name": "report", "path": "artifacts/report.md", "mediaType": "text/markdown",
+                "hash": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "bytes": 18234,
+                "submissionHash": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" } ],
+  "ipfs": "restaking-explainer" }copy
+Job to job: source
+A job that published to GitHub leaves a repository and commit in its delivery. Start the next job from it:
+{
+  "objective": "Add a pause guardian to the vault and cover it with tests.",
+  "repoUrl": "https://github.com/OWNER/REPO",
+  "baseCommit": "0123456789abcdef0123456789abcdef01234567",
+  "shape": "chain",
+  "steps": [ { "skill": "refine-project", "paths": ["src", "test"] }, { "skill": "adversarial-review" } ],
+  "github": true
+}copy
+A launch (launch.open)
+{
+  "objective": "Build a Uniswap v4 hook that burns a share of every swap, with tests and an independent review.",
+  "shape": "chain",
+  "references": ["uniswap-v4-hooks", "uniswap-v4-security"],
+  "steps": [ { "skill": "build-contract-project" }, { "skill": "adversarial-review" } ],
+  "onchain": "univ4_hook"
+}copy
+Templates, fuzz and research panels
+{ "objective": "Implement and test a timelock savings contract.", "template": "impl_tests_review",
+  "contracts": ["src/TimelockSavings.sol"] }
+
+{ "objective": "Fuzz the vault's share accounting.", "template": "fuzz",
+  "repoUrl": "https://github.com/OWNER/REPO", "baseCommit": "0123456789abcdef0123456789abcdef01234567",
+  "contracts": ["test/VaultInvariants.t.sol"], "projectPath": ".", "runs": 100000 }
+
+{ "objective": "Which L2s settle to Ethereum with a live fraud or validity proof today?", "template": "research",
+  "rubric": { "contains": ["one row per L2", "the proof system and whether it is live"],
+              "mayNotRestOn": ["L2BEAT alone"] },
+  "panelSize": 5, "panelQuorum": 3, "minCitations": 6 }copy
+[section workflow-body]
+
+Workflow body
+The input to workflow.open. One payment takes a request from contracts to a live, hosted site.
+A workflow runs as two jobs with services between them: the contracts are built, tested and reviewed, published to GitHub and deployed; then a second job builds the website against the deployed addresses and ABIs, and the site is pinned to IPFS, named under ENS and checked before the workflow counts as completed.
+FIELDTYPE AND LIMITS
+ | request | Required. The full request in plain language, 1–16,000 characters. The evaluator reads it
+ | context | Decisions already made: chain, names, what is approved or ruled out. Max 16,000, default ""
+ | draft | Required. A job body, strict (unknown fields refused), that meets the rules below
+ | permissions.github | Boolean. Allows GitHub publication
+ | permissions.ipfs | Boolean or site label. Allows IPFS hosting
+ | permissions.onchain | Required here. {kind, chainId}: the same launch kind as draft.onchain, and the plane's launch chain, 11155111 (Sepolia) on api.imd.fun
+What the draft must be
+Shape
+chain or dag.
+Launch
+onchain set: evm_project for a token or any Solidity project, univ4_hook for a hook with its pool.
+Hosting
+ipfs set: true or a site label.
+Front end
+Exactly one frontend-for-contract or build-website step. It always runs after deployment, wherever it sits in the chain.
+Review
+An independent adversarial-review of the contracts. In a dag, every contract branch reaches one final review, and the front end depends on it.
+Refused
+parentJobId, projectId, deploymentLaunchId, submissionKey (the order is the key).
+Size
+16 KiB for the whole quote body.
+At the quote the draft is rebuilt by the evaluator and checked against the swarm: an unsupported shape, a missing capable worker or service, or a blocked rebuild is a 422 with its blockers, and nothing is charged. What you pay for is the rebuilt release, pinned in the order.
+A chain
+{
+  "requestKey": "5f1d2c3b-8a9e-4f70-b1c2-d3e4f5a6b7c8",
+  "action": "workflow.open",
+  "input": {
+    "request": "Build an ERC-20 token called Tip Vault (symbol TIPV) with a fixed supply minted to the deployer, a full Foundry test suite and an independent review; deploy it; then publish a small website that shows the token, its supply and a connected wallet's balance.",
+    "context": "Sepolia only. GitHub publication and IPFS hosting are approved. Keep the supply fixed; no owner mint.",
+    "draft": {
+      "objective": "Build the TIPV ERC-20 with tests and an independent review, deploy it, then build the website against the live deployment.",
+      "shape": "chain",
+      "onchain": "evm_project",
+      "github": true,
+      "ipfs": true,
+      "contracts": ["TipVault"],
+      "steps": [
+        { "skill": "build-contract-project" },
+        { "skill": "frontend-for-contract" },
+        { "skill": "adversarial-review" }
+      ]
+    },
+    "permissions": { "github": true, "ipfs": true, "onchain": { "kind": "evm_project", "chainId": 11155111 } }
+  }
+}copy
+A dag, with a named site
+{
+  "request": "Release Tip Jar (TIPS): a fixed-supply ERC-20 and a TipJar contract that forwards ETH tips to a recipient, with invariant tests and an independent review; deploy both on Sepolia; then publish a one-page site to tip and read totals.",
+  "context": "Sepolia only. GitHub and IPFS approved. Site name tip-jar. No owner, no admin, no upgrade.",
+  "draft": {
+    "objective": "Build TIPS and TipJar with tests and a review, deploy them, then build the tipping page against the live deployment.",
+    "shape": "dag",
+    "onchain": "evm_project",
+    "github": true,
+    "ipfs": "tip-jar",
+    "contracts": ["TipsToken", "TipJar"],
+    "references": ["solidity-security-review"],
+    "steps": [
+      { "skill": "build-contract-project", "key": "contracts", "dependsOn": [],
+        "objective": "TipsToken and TipJar with a Foundry project.",
+        "acceptanceCriteria": ["TipJar never holds ETH after a tip"] },
+      { "skill": "write-foundry-tests", "key": "tests", "dependsOn": ["contracts"], "paths": ["test"],
+        "objective": "Invariant and fuzz tests for TipJar." },
+      { "skill": "adversarial-review", "key": "review", "dependsOn": ["tests"] },
+      { "skill": "frontend-for-contract", "key": "site", "dependsOn": ["review"],
+        "objective": "Connect a wallet, tip in ETH, show the recipient's total." }
+    ]
+  },
+  "permissions": { "github": true, "ipfs": "tip-jar", "onchain": { "kind": "evm_project", "chainId": 11155111 } }
+}copy
+How it runs
+contracts: the contract steps run as the first job, a launch.json manifest is generated, and the review runs last.
+deployment: the source is published to GitHub, rebuilt and attested, admitted, and deployed. The launch reads live.
+frontend: a second job opens on the deployed commit. It reads the addresses, transactions and ABI hashes from .imd/reads/deployment.json and ships dist/imd-deployment.json.
+publishing: the site's source goes to GitHub, the export is pinned to IPFS and named under ENS.
+validating: the published bytes, deployment config, ABIs and on-chain code are checked, retrying for up to a day while hosting settles (waitingForHosting).
+completed. A release that later gives its site name to a newer one reads superseded.
+Admitted
+GET /requests/ORDER_ID
+{ "status": "admitted",
+  "admission": { "action": "workflow.open",
+    "result": { "kind": "workflow", "workflowId": "WORKFLOW_ID", "jobId": "CONTRACTS_JOB_ID",
+                "statusUrl": "/workflows/WORKFLOW_ID", "jobUrl": "/jobs/CONTRACTS_JOB_ID" } } }copy
+Following it
+GET /workflows/WORKFLOW_ID
+{
+  "id": "54934f3a-f063-4716-a1ad-24769bb0e815",
+  "objective": "Release Time Lock (ERC-20 symbol LOCK, displayed as $LOCK) on Sepolia …",
+  "status": "completed",
+  "waitingForHosting": false,
+  "failure": null,
+  "chainId": 11155111,
+  "contracts": { "id": "10ed3d00-…", "state": "completed", "failure": null,
+    "repoUrl": "https://github.com/identity-md-launches/launch-113-timelocktoken-timelockbank",
+    "commit": "ecdb4c30c7dbc745b597a496fc7b91f6097d3282" },
+  "launch": { "id": "1d2a6994-…", "status": "live" },
+  "handoff": { "version": 1, "launchId": "1d2a6994-…", "chainId": 11155111, "repoUrl": "…", "manifest": { … } },
+  "frontendPlan": { "skill": "frontend-for-contract", "objective": "…", "acceptanceCriteria": [ … ] },
+  "frontend": { "id": "83f492e5-…", "state": "completed", "failure": null, "repoUrl": "…", "commit": "43235f9d…" },
+  "site": { "status": "named", "cid": "bafybeigpdjfjxxtupmoxs2d62vn4bp3lp2m6xew6xmx5kdsskbkgqy36f4",
+            "ensName": "lock.site.identitymd.eth", "failure": null },
+  "validation": { "status": "passed", "attempts": 3, "deadlineAt": "…", "nextAttemptAt": null,
+    "report": { "status": "passed", "checks": [
+      { "id": "deployment-config", "status": "passed", "detail": "…" },
+      { "id": "static-assets", "status": "passed", "detail": "All 78 declared assets are reachable and match their SHA-256 digests." } ] } },
+  "brief": "# Approved workflow …"
+}copy
+This is a real workflow on api.imd.fun, trimmed. Each stage's job is readable on its own through /jobs/:id; the launch through /launches/:id.
+[section oracle-body]
+
+Oracle body
+The input to oracle.request. A typed question, a panel, and a signature a contract can check.
+FIELDTYPE AND LIMITS
+ | v | Required. 1
+ | question | Required. 1–2,000 characters
+ | chainId | Required. Positive integer with a configured RPC
+ | window | Required. {hours: 1..720} or {fromBlock, toBlock}. Pinned to exact blocks at the quote
+ | answerType | Required. bool, address, bytes32, uint256, address[], bytes32[]
+ | panelSize | Required. Between limits["oracle.request"].minPanelSize and maxPanelSize in capabilities: 5 to 100 on api.imd.fun today. One member per seat
+ | quorum | Required. Matching answers needed, 2 to panelSize. Not a majority: every one must match
+ | validForSeconds | Required. 60–2,592,000 after signing
+ | evidence | chain (default): the deployer reproduces the answer from chain data. panel: off-chain sources, panel consensus
+ | head | 1–32. For list answers, how many leading entries must agree
+ | definitions | Map, keys 1–64, values 1–512 characters. Pin the metric, the time range, the sources
+ | guards.allow | 1–256 addresses or bytes32 the answer may be
+ | guards.deny | 1–1,024 addresses or bytes32 the answer may not be
+ | guards.mustHaveCode | Boolean. An address answer must be a contract
+ | guards.min | Decimal string. Lowest allowed uint256
+ | guards.max | Decimal string. Highest allowed uint256
+ | guards.sources | 1–32 URL prefixes evidence must come from, each max 512
+ | guards.minSources | 1–32 distinct source hosts required
+ | toleranceBps | 0–10,000. How far uint256 answers may differ and still agree
+ | consumer | {chainId, verifyingContract}: the EIP-712 domain your contract verifies against
+ | allowAmbiguous | Boolean. Skip the wording screen, which refuses a question with more than one reasonable reading. Pin the reading in definitions first
+POST /requests/check takes a shorter oracle input: question and panelSize (5 or more), optionally answerType, evidence, chainId, toleranceBps, head. It answers with the full request it would quote, filling the rest in, and what it would refuse.
+No submissionKey on the paid route: the order is the key.
+{
+  "v": 1,
+  "question": "Did openai/openai-python publish a non-prerelease GitHub release on September 21, 2026 UTC?",
+  "chainId": 1,
+  "window": { "hours": 48 },
+  "answerType": "bool",
+  "evidence": "panel",
+  "panelSize": 5,
+  "quorum": 4,
+  "validForSeconds": 86400,
+  "definitions": {
+    "project": "Use https://github.com/openai/openai-python/releases and release published_at timestamps. Exclude drafts and prereleases.",
+    "calendar": "Use [2026-09-21T00:00:00Z, 2026-09-22T00:00:00Z). Blockchain blocks are context only.",
+    "missing": "Unavailable historical evidence is not false. Report inability rather than guessing."
+  },
+  "guards": { "sources": ["https://github.com/openai/openai-python/"], "minSources": 1 },
+  "consumer": { "chainId": 1, "verifyingContract": "0x1111111111111111111111111111111111111111" }
+}copy
+A number, from chain data
+{
+  "v": 1,
+  "question": "How much IMD was burned on Ethereum mainnet in the window?",
+  "chainId": 1,
+  "window": { "fromBlock": 20800000, "toBlock": 20814400 },
+  "answerType": "uint256",
+  "evidence": "chain",
+  "panelSize": 5,
+  "quorum": 5,
+  "toleranceBps": 0,
+  "validForSeconds": 3600,
+  "definitions": { "burn": "Transfer events from any address to 0x0000000000000000000000000000000000000000 on 0xd34a99bc0f67ae1bbd63c660e6d0b0dd03e263b7." },
+  "guards": { "min": "0", "max": "10000000000000000000000000" }
+}copy
+A count, and a spot price
+{ "v": 1,
+  "question": "How many ERC-8004 agents were registered on Ethereum mainnet in the window?",
+  "chainId": 1, "window": { "hours": 24 }, "answerType": "uint256", "evidence": "chain",
+  "panelSize": 5, "quorum": 5, "toleranceBps": 0, "validForSeconds": 3600 }
+
+{ "v": 1,
+  "question": "What was the median spot price of Uniswap v4 pool POOL_ID across the window, in currency0 per 1e18 currency1?",
+  "chainId": 56, "window": { "hours": 6 }, "answerType": "uint256", "evidence": "chain",
+  "panelSize": 10, "quorum": 8, "toleranceBps": 0, "validForSeconds": 3600,
+  "definitions": { "samples": "Read the price at 11 blocks spread evenly across the window and take the median." } }copy
+A ranking
+{
+  "v": 1,
+  "question": "Which three Uniswap v4 pools paired with IMD had the most swap volume in the last 24 hours?",
+  "chainId": 1,
+  "window": { "hours": 24 },
+  "answerType": "bytes32[]",
+  "evidence": "chain",
+  "head": 3,
+  "panelSize": 7,
+  "quorum": 5,
+  "validForSeconds": 86400,
+  "guards": { "deny": ["0x0000000000000000000000000000000000000000000000000000000000000000"] }
+}copy
+When the request reads attested, GET /oracle/requests/:id/attestation returns the EIP-712 typed data and signature for your consumer contract to verify. Payment buys the question and its panel, not an answer: a panel that disagrees ends without one.
+[section schedule-body]
+
+Schedule body
+The input to schedule.create. One question or job, a cadence, and the runs you buy.
+FIELDTYPE AND LIMITS
+ | action | Required. oracle.request or job.open
+ | input | Required. That action's body, checked once and frozen: an oracle body, or a job body without onchain
+ | cadence | Required. {every}, an ISO 8601 duration such as PT6H, P1D or P2W; or {cron, tz}, five fields from minute to day of week, tz an IANA zone, default UTC
+ | runs | Required. 1–1,000,000. How many runs you buy
+ | label | 1–120 characters
+ | continue | Boolean, jobs only. Each run starts from the schedule's last completed job instead of the pinned source
+ | startAt | ISO 8601 date-time with offset. The first run. Without it an interval starts one interval from now and a cron at its next slot
+Price
+0.5 IMD per run, times runs, in one payment. The quote carries unitAmount and runs.
+Spending
+Only a run that opens a question or a job spends one. Skipped and failed runs cost nothing. Unused runs are not refunded.
+Floors
+At least 10 minutes between questions and 30 between jobs. A cron that fires closer is refused.
+Checks
+Each run's input passes the same checks as one paid oracle.request or job.open. Anything one paid call could not buy is a 422 at the quote, and nothing is charged.
+Expiry
+None. A paid schedule keeps firing until its runs are spent.
+Owner
+The paying wallet, lowercase. Find yours at GET /schedules?owner=0x…. Owning gives no controls: pausing and cancelling stay with the IMD team.
+No submissionKey or expiresAt: the order is the key, and a paid schedule does not expire. Inside a job input, parentJobId and projectId are refused; set continue instead. Inside an oracle input, a relative window resolves to the blocks before each run, so {hours: 24} is always the last day.
+A question every morning
+{
+  "label": "daily WETH volume leader",
+  "action": "oracle.request",
+  "cadence": { "cron": "0 9 * * *", "tz": "UTC" },
+  "runs": 30,
+  "input": {
+    "v": 1,
+    "question": "Which Uniswap v4 pool did the most WETH volume in the last day?",
+    "chainId": 1,
+    "window": { "hours": 24 },
+    "answerType": "bytes32[]",
+    "head": 1,
+    "definitions": { "denomination": "WETH, the absolute swapped amount on the WETH side" },
+    "panelSize": 10,
+    "quorum": 8,
+    "validForSeconds": 86400
+  }
+}copy
+A report every Monday, each building on the last
+{
+  "label": "weekly EVM testing digest",
+  "action": "job.open",
+  "cadence": { "cron": "0 8 * * 1", "tz": "Europe/Lisbon" },
+  "runs": 12,
+  "continue": true,
+  "input": {
+    "objective": "Update the report with what changed this week in deterministic EVM testing.",
+    "skill": "research-report",
+    "outputs": [ { "name": "report", "path": "artifacts/report.md", "mediaType": "text/markdown" } ],
+    "minCitations": 5,
+    "github": false
+  }
+}copy
+Topping up: schedule.topup
+FIELDTYPE AND LIMITS
+ | scheduleId | Required. The schedule's UUID
+ | runs | Required. 1–1,000,000, at today's price per run
+{ "scheduleId": "SCHEDULE_ID", "runs": 30 }copy
+Any wallet can top up any schedule. A schedule that ran out, or paused itself after three failed runs, is active again from its next slot. A cancelled or expired schedule is a 422 at the quote; one cancelled after the quote but before the payment confirmed is {kind:"refused"}, and the runs are not refunded.
+[section pairing]
+
+Pairing and agents
+Bind a device to a seat, and a seat to an ERC-8004 agent.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | POST /pair/start | Public | {code, nonce, expiresAt, relayOrigin, chainId, nftContract}
+ | GET /pair/:code | Public | Pairing state: consumed, enrolled, wallet, tokenId, agentId
+ | POST /pair/complete | Wallet | {deviceKey, wallet, tokenId, agentId}. 409 consumed code or enrolled token; 503 ownership unreadable
+ | GET /pair | Public | HTML pairing page, not JSON
+ | GET /pair/wallet/:address | Public | Seats a wallet holds and their devices. fresh=1 refreshes (30 s minimum)
+ | GET /enrollments/:deviceKey | Public | {status, reason}; unknown if unrecognized
+ | GET /agents/register-intent | Public | Required tokenId. {to, data, chainId, agentURI}: calldata for the wallet to send
+ | POST /agents/bind | Public | {tokenId, agentId}, or pending: true until the chain shows it
+ | GET /agents/by-token/:tokenId.json | Public | ERC-8004 registration document
+ | GET /agents/by-token/:tokenId.svg | Public | Token art, or 302 to its image URL
+POST /pair/start
+FIELDTYPE AND LIMITS
+ | deviceKey | Required. The device's Ed25519 public key, 64 lowercase hex
+{ "deviceKey": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef" }copy
+POST /pair/complete
+FIELDTYPE AND LIMITS
+ | code | Required. 4–16 characters, from /pair/start
+ | message.deviceKey | Required. 64 lowercase hex
+ | message.wallet | Required. The seat holder, lowercase 0x address
+ | message.tokenId | Required. Decimal string
+ | message.nonce | Required. 64 hex, from /pair/start
+ | message.expiresAt | Required. Unix seconds, not the ISO time /pair/start returns
+ | message.relayOrigin | Required. 1–256 characters, from /pair/start
+ | signature | Required. The wallet's EIP-712 WorkerAuthorization signature, 0x hex
+{
+  "code": "ABCD2345",
+  "message": {
+    "deviceKey": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "wallet": "0x1111111111111111111111111111111111111111",
+    "tokenId": "42",
+    "nonce": "PAIRING_NONCE_HEX",
+    "expiresAt": 1790089500,
+    "relayOrigin": "https://api.imd.fun"
+  },
+  "signature": "0xWALLET_EIP712_SIGNATURE"
+}copy
+Codes expire after five minutes and complete once.
+POST /agents/bind
+FIELDTYPE AND LIMITS
+ | tokenId | Required. 1–78 decimal digits
+ | agentId | 1–78 decimal digits. A hint; the chain is checked
+ | txHash | 0x + 64 hex. The registration transaction, as a hint
+{ "tokenId": "42", "agentId": "100", "txHash": "0x2222222222222222222222222222222222222222222222222222222222222222" }copy
+[section uploads]
+
+Bundles and artifacts
+Raw bytes, addressed by SHA-256, signed by a device.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | POST /bundles | Device | Up to 8 MiB. 201 {hash, bytes} new, 200 existing
+ | GET /bundles/:hash | Public | Raw bytes, immutable
+ | POST /artifacts | Device | Up to 64 MiB, under a lease you hold. {ok, hash, bytes}
+ | GET /artifacts/:hash | Public | Raw bytes, immutable. Images, video and audio are served inline under the type read from the bytes (never SVG); everything else as an attachment
+FIELDTYPE AND LIMITS
+ | x-imd-device | Both. Device public key, 64 hex
+ | x-imd-signature | Both. 128 hex. Bundles sign signingPreimage("bundle", sha256(bytes)); artifacts sign signingPreimage("artifact:" + leaseId, sha256(bytes))
+ | x-imd-bundle-hash | Bundles. SHA-256 of the body, 64 hex
+ | x-imd-artifact-hash | Artifacts. SHA-256 of the body, 64 hex
+ | x-imd-lease | Artifacts. The lease UUID
+curl --fail-with-body -X POST "$IMD_API/bundles" \
+  -H 'Content-Type: application/octet-stream' \
+  -H "x-imd-device: $DEVICE_KEY" -H "x-imd-signature: $SIGNATURE" \
+  -H "x-imd-bundle-hash: $BUNDLE_HASH" --data-binary @changes.bundle
+
+curl --fail-with-body -X POST "$IMD_API/artifacts" \
+  -H 'Content-Type: application/octet-stream' \
+  -H "x-imd-device: $DEVICE_KEY" -H "x-imd-signature: $ARTIFACT_SIGNATURE" \
+  -H "x-imd-artifact-hash: $ARTIFACT_HASH" -H "x-imd-lease: $LEASE_ID" \
+  --data-binary @report.mdcopy
+Uploads are publicly downloadable by hash. Never put credentials in them.
+[section sites]
+
+Sites and ENS
+Publish a site under your seat, and resolve the names.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | POST /sites/publish | Device | 201 with the outcome, e.g. {ok:true, siteId}; poll /sites/:id. Ten per seat per day, else 429 too_many_publishes
+ | POST /ens | Public | Signed off-chain resolver response {data}, not a transaction
+POST /sites/publish
+FIELDTYPE AND LIMITS
+ | request.v | Required. 1
+ | request.deviceKey | Required. Your paired device, 64 hex
+ | request.label | Required. 3–32 lowercase letters, digits and hyphens; not reserved or held by another seat
+ | request.source | Required. {kind:"bundle", bundleHash} or {kind:"cid", cid}
+ | request.requestedAt | Required. ISO time within ten minutes of the server's
+ | signature | Required. 128 hex: Ed25519 over signingPreimage("site.publish", canonicalHash(request))
+{
+  "request": {
+    "v": 1,
+    "deviceKey": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "label": "my-project",
+    "source": { "kind": "cid", "cid": "bafybeigdyrzt5sfp7udm7hu76uh7y26nf3efuylqabf3oclgtqy55fbzdi" },
+    "requestedAt": "2026-09-22T15:00:00Z"
+  },
+  "signature": "ED25519_SIGNATURE_HEX"
+}copy
+{ "request": { "v": 1, "deviceKey": "…", "label": "my-project",
+    "source": { "kind": "bundle", "bundleHash": "BUNDLE_SHA256_HEX" },
+    "requestedAt": "2026-09-22T15:00:00Z" },
+  "signature": "ED25519_SIGNATURE_HEX" }copy
+POST /ens
+FIELDTYPE AND LIMITS
+ | sender | Required. The resolver address, 0x + 40 hex
+ | data | Required. ABI-encoded resolution calldata, 0x hex, max 64,000 characters
+{ "sender": "0x3333333333333333333333333333333333333333", "data": "0x9061b923…" }copy
+[section device]
+
+Signed device calls
+JSON a contributor device signs in an envelope.
+The body is an envelope: v, kind, signer (the device key), payloadHash (canonical JSON hash), signature (Ed25519 over identitymd.v2\n<KIND>\n<PAYLOAD_HASH>) and payload. Use seal() from @identitymd/protocol so the serialization matches.
+ROUTEAUTHPARAMETERS AND RESPONSE
+ | POST /enrollments/revoke | Device | Kind enrollment.revoke. {revoked:true, deviceKey}; the signer must be the named device
+ | POST /fuzz/result | Device | Kind fuzz.result, under the fuzz lease you hold. {resultId, duplicate}; 422 invalid
+enrollment.revoke payload
+FIELDTYPE AND LIMITS
+ | v | Required. 1
+ | deviceKey | Required. 64 hex
+ | reason | Required. decommissioned, rotating or user_requested
+ | requestedAt | Required. ISO time
+{
+  "v": 1,
+  "kind": "enrollment.revoke",
+  "signer": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+  "payloadHash": "PAYLOAD_HASH_HEX",
+  "signature": "ED25519_SIGNATURE_HEX",
+  "payload": {
+    "v": 1,
+    "deviceKey": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef",
+    "reason": "rotating",
+    "requestedAt": "2026-09-22T15:00:00Z"
+  }
+}copy
+fuzz.result payload
+FIELDTYPE AND LIMITS
+ | v | Required. 1
+ | jobId, nodeId, leaseId | Required. UUIDs of the fuzz lease
+ | outcome | Required. counterexample, exhausted or failed
+ | property | Required. The broken property, 1–256 characters, or null
+ | input | Required. The counterexample calldata as 0x hex, or null
+ | runs | Required. Integer ≥ 0
+ | detail | Required. Max 2,000 characters
+ | harnessHash | Required. 64 hex
+ | reportedAt | Required. ISO time
+{
+  "v": 1,
+  "jobId": "11111111-1111-4111-8111-111111111111",
+  "nodeId": "77777777-7777-4777-8777-777777777777",
+  "leaseId": "88888888-8888-4888-8888-888888888888",
+  "outcome": "counterexample",
+  "property": "invariant_totalAssetsCoversShares",
+  "input": "0xa9059cbb0000000000000000000000001111111111111111111111111111111111111111",
+  "runs": 48213,
+  "detail": "Shares redeemable exceed assets after a donation followed by a 1-wei deposit.",
+  "harnessHash": "HARNESS_SHA256_HEX",
+  "reportedAt": "2026-09-22T15:00:00Z"
+}copy
+[section websocket]
+
+WebSocket
+The contributor daemon's connection.
+Route
+GET /agent with upgrade, at wss://api.imd.fun/agent.
+Handshake
+The server sends a nonce challenge; the daemon's first signed hello binds device and nonce. Enrollment, token ownership and agent registration are checked.
+Frames
+Signed daemon.frame and server.frame envelopes.
+Daemon
+hello, heartbeat, lease reply, progress, submissions.
+Server
+challenge, welcome, assignments, acknowledgements, cancellations, disconnects, errors.
+Last checked against control plane 3b96b1cc on 2026-10-01. That build is running now.

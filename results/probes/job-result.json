@@ -1,0 +1,67 @@
+{
+  "id": "job-result",
+  "started_at": 1790965838.9538605,
+  "request": {
+    "method": "GET",
+    "url": "https://api.imd.fun/jobs/aca5f077-3da7-44bb-a66d-1680dcdb0525/result",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "public, max-age=5"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:30:39 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "JREXnWe_SjGXvvoKg4a9AQ"
+      ],
+      [
+        "x-read-cache",
+        "miss"
+      ],
+      [
+        "Content-Length",
+        "440"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJqb2JJZCI6ImFjYTVmMDc3LTNkYTctNDRiYi1hNjZkLTE2ODBkY2RiMDUyNSIsInByb2plY3RJZCI6ImFjYTVmMDc3LTNkYTctNDRiYi1hNjZkLTE2ODBkY2RiMDUyNSIsInN0YXRlIjoiZXhlY3V0aW5nIiwiY29tcGxldGUiOmZhbHNlLCJsYXVuY2giOnsicmVxdWVzdGVkIjp0cnVlLCJraW5kIjoiZXZtX3Byb2plY3QiLCJpZCI6bnVsbCwic3RhdHVzIjpudWxsLCJjaGFpbklkIjpudWxsfSwic291cmNlIjpbXSwiZmlsZXMiOltdLCJkZWxpdmVyeSI6eyJyZXF1ZXN0ZWQiOnRydWUsIm1vZGUiOiJyZXBvc2l0b3J5IiwicmVwb1VybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS9pZGVudGl0eS1tZC1sYXVuY2hlcy9sYXVuY2gtNjE2LXdvcmtmbG93LWNvbnRyYWN0LXN0YWdlLWNvbnRleHQiLCJjb21taXQiOm51bGwsImRlbGl2ZXJlZEF0IjpudWxsLCJmYWlsdXJlIjpudWxsfX0=",
+    "body_sha256": "d392a3414aba0178cc4ba1e1057c9a98a63c0c2ff7226be8d56cce54e52cbe23",
+    "body": "{\"jobId\":\"aca5f077-3da7-44bb-a66d-1680dcdb0525\",\"projectId\":\"aca5f077-3da7-44bb-a66d-1680dcdb0525\",\"state\":\"executing\",\"complete\":false,\"launch\":{\"requested\":true,\"kind\":\"evm_project\",\"id\":null,\"status\":null,\"chainId\":null},\"source\":[],\"files\":[],\"delivery\":{\"requested\":true,\"mode\":\"repository\",\"repoUrl\":\"https://github.com/identity-md-launches/launch-616-workflow-contract-stage-context\",\"commit\":null,\"deliveredAt\":null,\"failure\":null}}"
+  },
+  "finished_at": 1790965839.1863532
+}

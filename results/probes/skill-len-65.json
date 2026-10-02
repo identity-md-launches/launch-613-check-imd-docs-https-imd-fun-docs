@@ -1,0 +1,59 @@
+{
+  "id": "skill-len-65",
+  "started_at": 1790965551.5282693,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\"github\":false}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:25:51 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "rcNIaBdjQsylwQ90jVra_w"
+      ],
+      [
+        "Content-Length",
+        "94"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6InNraWxsOiBUb28gYmlnOiBleHBlY3RlZCBzdHJpbmcgdG8gaGF2ZSA8PTY0IGNoYXJhY3RlcnMifQ==",
+    "body_sha256": "260d80a0e843d5c9c320e5f044a333a2825da4e3e96735060862cb4a8e637072",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"skill: Too big: expected string to have <=64 characters\"}"
+  },
+  "finished_at": 1790965551.6123505
+}

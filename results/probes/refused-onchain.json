@@ -1,0 +1,63 @@
+{
+  "id": "refused-onchain",
+  "started_at": 1790965563.353399,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"skill\":\"build-website\",\"github\":false,\"onchain\":true}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:26:03 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "ih46GyoaSNifd3EDozsQ6Q"
+      ],
+      [
+        "Content-Length",
+        "1488"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJjb250cmFjdHMiLCJwbGFuIjpbXSwiZmFjdHMiOlt7ImlkIjoid2hhdCIsImxhYmVsIjoiV2hhdCBlYWNoIGNvbnRyYWN0IGRvZXMiLCJzdGF0ZSI6InVua25vd24iLCJyZXF1aXJlZCI6ZmFsc2V9LHsiaWQiOiJhY2Nlc3MiLCJsYWJlbCI6IldobyBjYW4gY2FsbCB3aGF0Iiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZSwiYXNzdW1lZCI6IkFzc3VtZWQ6IGFuIG93bmVyIHdobyBjYW4gY2hhbmdlIHNldHRpbmdzLCBhbmQgYW55b25lIGZvciBldmVyeXRoaW5nIGVsc2UuIn0seyJpZCI6Im51bWJlcnMiLCJsYWJlbCI6IlRoZSBudW1iZXJzIHRoYXQgbWF0dGVyIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZSwiYXNzdW1lZCI6IlRoZSBidWlsZGVycyB3aWxsIGNob29zZSB0aGVtIGFuZCB3cml0ZSB0aGVtIGluIHRoZSBSRUFETUUuIn0seyJpZCI6InVwZ3JhZGVzIiwibGFiZWwiOiJVcGdyYWRlcyBhbmQgcGF1c2luZyIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJBc3N1bWVkOiBub3QgdXBncmFkZWFibGUgYW5kIG5vdCBwYXVzYWJsZS4ifSx7ImlkIjoiZGVwZW5kZW5jaWVzIiwibGFiZWwiOiJPdXRzaWRlIGNvbnRyYWN0cyIsInN0YXRlIjoibm90X2FwcGxpY2FibGUiLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJBc3N1bWVkOiBub25lIGJleW9uZCBzdGFuZGFyZCBsaWJyYXJpZXMuIn0seyJpZCI6InRva2VuX25hbWUiLCJsYWJlbCI6IlRva2VuIG5hbWUiLCJzdGF0ZSI6Im5vdF9hcHBsaWNhYmxlIiwicmVxdWlyZWQiOmZhbHNlfSx7ImlkIjoidG9rZW5fc3ltYm9sIiwibGFiZWwiOiJUb2tlbiBzeW1ib2wiLCJzdGF0ZSI6Im5vdF9hcHBsaWNhYmxlIiwicmVxdWlyZWQiOmZhbHNlfSx7ImlkIjoidG9rZW5fc3VwcGx5IiwibGFiZWwiOiJUb3RhbCBzdXBwbHkiLCJzdGF0ZSI6Im5vdF9hcHBsaWNhYmxlIiwicmVxdWlyZWQiOmZhbHNlfSx7ImlkIjoidG9rZW5fbWludGluZyIsImxhYmVsIjoiTWludGluZyBhZnRlciBsYXVuY2giLCJzdGF0ZSI6Im5vdF9hcHBsaWNhYmxlIiwicmVxdWlyZWQiOmZhbHNlLCJhc3N1bWVkIjoiQXNzdW1lZDogYSBmaXhlZCBzdXBwbHkgdGhhdCBub2JvZHkgY2FuIG1pbnQgbW9yZSBvZi4ifSx7ImlkIjoidG9rZW5fcnVsZXMiLCJsYWJlbCI6IlRyYW5zZmVyIHJ1bGVzIiwic3RhdGUiOiJub3RfYXBwbGljYWJsZSIsInJlcXVpcmVkIjpmYWxzZSwiYXNzdW1lZCI6IkFzc3VtZWQ6IHBsYWluIHRyYW5zZmVycyB3aXRoIG5vIGZlZSBvciBsaW1pdC4ifV0sImp1ZGdlZCI6dHJ1ZSwiYmxvY2tlcnMiOlt7ImNvZGUiOiJpbnZhbGlkX2lucHV0IiwiZGV0YWlsIjoiYSBsYXVuY2ggaXMgbm90IGNvdmVyZWQgYnkgdGhlIGpvYiBwcmljZTsgYXNrIGZvciBsYXVuY2gub3BlbiBpbnN0ZWFkIn1dLCJzdWdnZXN0aW9ucyI6W119",
+    "body_sha256": "51cb765d56d7e432451442b950a55d779efa61a657bd5b2b97e059993498115d",
+    "body": "{\"action\":\"job.open\",\"kind\":\"contracts\",\"plan\":[],\"facts\":[{\"id\":\"what\",\"label\":\"What each contract does\",\"state\":\"unknown\",\"required\":false},{\"id\":\"access\",\"label\":\"Who can call what\",\"state\":\"not_applicable\",\"required\":false,\"assumed\":\"Assumed: an owner who can change settings, and anyone for everything else.\"},{\"id\":\"numbers\",\"label\":\"The numbers that matter\",\"state\":\"not_applicable\",\"required\":false,\"assumed\":\"The builders will choose them and write them in the README.\"},{\"id\":\"upgrades\",\"label\":\"Upgrades and pausing\",\"state\":\"not_applicable\",\"required\":false,\"assumed\":\"Assumed: not upgradeable and not pausable.\"},{\"id\":\"dependencies\",\"label\":\"Outside contracts\",\"state\":\"not_applicable\",\"required\":false,\"assumed\":\"Assumed: none beyond standard libraries.\"},{\"id\":\"token_name\",\"label\":\"Token name\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_symbol\",\"label\":\"Token symbol\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_supply\",\"label\":\"Total supply\",\"state\":\"not_applicable\",\"required\":false},{\"id\":\"token_minting\",\"label\":\"Minting after launch\",\"state\":\"not_applicable\",\"required\":false,\"assumed\":\"Assumed: a fixed supply that nobody can mint more of.\"},{\"id\":\"token_rules\",\"label\":\"Transfer rules\",\"state\":\"not_applicable\",\"required\":false,\"assumed\":\"Assumed: plain transfers with no fee or limit.\"}],\"judged\":true,\"blockers\":[{\"code\":\"invalid_input\",\"detail\":\"a launch is not covered by the job price; ask for launch.open instead\"}],\"suggestions\":[]}"
+  },
+  "finished_at": 1790965563.7806742
+}

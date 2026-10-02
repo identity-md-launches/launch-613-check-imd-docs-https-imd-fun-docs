@@ -1,0 +1,75 @@
+{
+  "id": "explorer-claim",
+  "started_at": 1790965960.341994,
+  "request": {
+    "method": "GET",
+    "url": "https://explorer.imd.fun/api/claim?launch=87513a53-cb12-4e4e-9599-293a69a373ac&wallet=0x0000000000000000000000000000000000000000",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Origin": "https://example.org"
+    },
+    "body": null
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "content-security-policy",
+        "frame-ancestors 'none'; object-src 'none'; base-uri 'self'"
+      ],
+      [
+        "Content-Type",
+        "application/json"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:32:40 GMT"
+      ],
+      [
+        "referrer-policy",
+        "strict-origin-when-cross-origin"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "vary",
+        "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch"
+      ],
+      [
+        "x-content-type-options",
+        "nosniff"
+      ],
+      [
+        "x-railway-request-id",
+        "5FOFf7NqTaK5xklzU79b0g"
+      ],
+      [
+        "Transfer-Encoding",
+        "chunked"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJjbGFpbSI6bnVsbH0=",
+    "body_sha256": "bd89b4c5abe1fbf062e9deefdb56e57022fc3175256551815e1dc4638f16c9b0",
+    "body": "{\"claim\":null}"
+  },
+  "finished_at": 1790965960.604969
+}

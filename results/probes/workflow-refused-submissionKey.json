@@ -1,0 +1,59 @@
+{
+  "id": "workflow-refused-submissionKey",
+  "started_at": 1790966035.873287,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"workflow.open\",\"input\":{\"request\":\"Build a fixed standard launch token named Example Coin (EXM), with no owner controls, and a website displaying the deployed token on Sepolia.\",\"draft\":{\"objective\":\"Build Example Coin (EXM) and a website.\",\"shape\":\"chain\",\"onchain\":\"evm_project\",\"ipfs\":true,\"steps\":[{\"skill\":\"build-contract-project\"},{\"skill\":\"adversarial-review\"},{\"skill\":\"build-website\"}],\"submissionKey\":\"11111111-1111-4111-8111-111111111111\"},\"permissions\":{\"github\":true,\"ipfs\":true,\"onchain\":{\"kind\":\"evm_project\",\"chainId\":11155111}}}}"
+  },
+  "response": {
+    "status": 400,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:33:56 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "oy6WvdMTSTSBYrrzo3UVLg"
+      ],
+      [
+        "Content-Length",
+        "81"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.zmv5"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJlcnJvciI6ImludmFsaWRfcmVxdWVzdCIsImRldGFpbCI6ImRyYWZ0OiBVbnJlY29nbml6ZWQga2V5OiBcInN1Ym1pc3Npb25LZXlcIiJ9",
+    "body_sha256": "36f29d5d617bdb1a63f656f3df790814ee52390715e056609356689bb099192f",
+    "body": "{\"error\":\"invalid_request\",\"detail\":\"draft: Unrecognized key: \\\"submissionKey\\\"\"}"
+  },
+  "finished_at": 1790966036.0729735
+}

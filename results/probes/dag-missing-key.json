@@ -1,0 +1,63 @@
+{
+  "id": "dag-missing-key",
+  "started_at": 1790965682.4358587,
+  "request": {
+    "method": "POST",
+    "url": "https://api.imd.fun/requests/check",
+    "headers": {
+      "User-agent": "IMD-public-docs-audit/1.0",
+      "Accept": "application/json",
+      "Content-type": "application/json"
+    },
+    "body": "{\"action\":\"job.open\",\"input\":{\"objective\":\"Build a static one-page website displaying Hello world. No wallet, backend, hosting or deployment.\",\"shape\":\"dag\",\"steps\":[{\"skill\":\"build-website\",\"dependsOn\":[]}],\"github\":false}}"
+  },
+  "response": {
+    "status": 200,
+    "headers": [
+      [
+        "Cache-Control",
+        "no-store"
+      ],
+      [
+        "Content-Type",
+        "application/json; charset=utf-8"
+      ],
+      [
+        "Date",
+        "Fri, 02 Oct 2026 18:28:02 GMT"
+      ],
+      [
+        "Server",
+        "railway-hikari"
+      ],
+      [
+        "x-railway-request-id",
+        "JZuHFHgJSxOKP6xxFFmdQQ"
+      ],
+      [
+        "Content-Length",
+        "641"
+      ],
+      [
+        "x-hikari-trace",
+        "ord1.x8wt"
+      ],
+      [
+        "x-railway-edge",
+        "ord1"
+      ],
+      [
+        "vary",
+        "accept-encoding"
+      ],
+      [
+        "Connection",
+        "close"
+      ]
+    ],
+    "body_base64": "eyJhY3Rpb24iOiJqb2Iub3BlbiIsImtpbmQiOiJ3ZWJzaXRlIiwicGxhbiI6W10sImZhY3RzIjpbeyJpZCI6InNpdGVfcGFnZXMiLCJsYWJlbCI6IldoYXQgdGhlIHNpdGUgc2hvd3MiLCJzdGF0ZSI6InN0YXRlZCIsInJlcXVpcmVkIjpmYWxzZX0seyJpZCI6InNpdGVfY29udGVudCIsImxhYmVsIjoiVGhlIHdvcmRzIG9uIGl0Iiwic3RhdGUiOiJzdGF0ZWQiLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCB3cml0ZSB0aGUgdGV4dC4ifSx7ImlkIjoic2l0ZV9zdHlsZSIsImxhYmVsIjoiVGhlIGxvb2siLCJzdGF0ZSI6Im1pc3NpbmciLCJyZXF1aXJlZCI6ZmFsc2UsImFzc3VtZWQiOiJUaGUgYnVpbGRlcnMgd2lsbCBjaG9vc2UgYSBjbGVhbiwgc2ltcGxlIGxvb2suIn1dLCJqdWRnZWQiOnRydWUsImJsb2NrZXJzIjpbeyJjb2RlIjoidW5wbGFubmFibGVfc3RlcHMiLCJkZXRhaWwiOiJEQUcgc3RlcHMgbmVlZCB1bmlxdWUgdmFsaWQga2V5cyJ9XSwic3VnZ2VzdGlvbnMiOlt7ImNvZGUiOiJtaXNzaW5nX2ZhY3QiLCJmYWN0Ijoic2l0ZV9zdHlsZSIsImRldGFpbCI6Ik5vdCBzYWlkOiB0aGUgbG9vay4gVGhlIGJ1aWxkZXJzIHdpbGwgY2hvb3NlIGEgY2xlYW4sIHNpbXBsZSBsb29rLiJ9XX0=",
+    "body_sha256": "ff6b86d965c5cb7fca90a12bd14eadf092ce9a52ad5a8ec8615a214beeb250ac",
+    "body": "{\"action\":\"job.open\",\"kind\":\"website\",\"plan\":[],\"facts\":[{\"id\":\"site_pages\",\"label\":\"What the site shows\",\"state\":\"stated\",\"required\":false},{\"id\":\"site_content\",\"label\":\"The words on it\",\"state\":\"stated\",\"required\":false,\"assumed\":\"The builders will write the text.\"},{\"id\":\"site_style\",\"label\":\"The look\",\"state\":\"missing\",\"required\":false,\"assumed\":\"The builders will choose a clean, simple look.\"}],\"judged\":true,\"blockers\":[{\"code\":\"unplannable_steps\",\"detail\":\"DAG steps need unique valid keys\"}],\"suggestions\":[{\"code\":\"missing_fact\",\"fact\":\"site_style\",\"detail\":\"Not said: the look. The builders will choose a clean, simple look.\"}]}"
+  },
+  "finished_at": 1790965682.7317903
+}
